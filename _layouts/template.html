@@ -48,6 +48,8 @@
 	<script src="/template/js/template.ui.js"></script>
 	<script src="/js/site.ui.js"></script>
 	
+	{% if page.js %}
 	<script src="{{ page.js }}"></script>
+	{% endif %}
 </body>
 </html>
