@@ -20,7 +20,8 @@ layout: template
   </header>
 
 {{ content }}
-{{ page }}
+
 	<script>
-		var disqus_url = '{{ page.url }}';
+		var disqus_url = '{{ page.url }}',
+				disqus_shortname = 'stephband';
 	</script>
