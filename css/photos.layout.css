@@ -1,0 +1,55 @@
+html,
+body {
+  background: #515356;
+  color: #cbd0d5;
+  height:100%;
+  width:100%;
+}
+
+.site_header_panel {
+  background-image: url('../images/bg_invert_header.png');
+  
+  /*-webkit-box-shadow: inset 0 -8px 32px rgba( 20, 21, 24, 0.1 );
+     -moz-box-shadow: inset 0 -8px 32px rgba( 20, 21, 24, 0.1 );
+          box-shadow: inset 0 -8px 32px rgba( 20, 21, 24, 0.1 );*/
+}
+
+.site_logo_thumb {
+  background-image: url('../images/logo_invert_stephband.png');
+}
+
+.site_wrap {
+  max-width: 960px;
+}
+
+.photo_wrap,
+.photos_wrap {
+  max-width: 960px;
+}
+
+/* Colours */
+
+h1
+  {color: #111;}
+h2
+  {color: #262728;}
+h3,
+.photos_title
+  {color: #9099a0;}
+h4
+  {color: #878f96;}
+a:focus, a:hover
+  {color: #a1c2e4;}
+a
+  {color: #858b95;}
+
+
+
+
+h2 a:focus, h2 a:hover
+  {text-decoration:none; color:#767f8e;}
+h2 a
+  {color: #858b95;}
+   
+/*dl.options dt
+  { font-family: 'lucida console', 'andale mono', monospace; font-size: 1.1em; color:black;}*/
