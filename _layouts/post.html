@@ -1,0 +1,15 @@
+---
+layout: site
+---
+<div class="site_wrap wrap">
+{{ content }}
+</div>
+
+<div class="site_wrap wrap">
+  <h2>Related Posts</h2>
+  <ul class="posts_index index">
+    {% for post in site.related_posts limit:3 %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
