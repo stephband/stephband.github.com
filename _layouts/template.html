@@ -29,8 +29,8 @@
 	<!--[if IE 8]><link rel="stylesheet" type="text/css" href="/template/css/template.ie8.css" /><![endif]-->
 	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/template/css/template.ie7.css" /><![endif]-->
 	<!--[if IE 6]><link rel="stylesheet" type="text/css" href="/template/css/template.ie6.css" /><![endif]-->
-
-	<link rel="stylesheet" type="text/css" href="{{ page.css }}" />
+	
+	{% if page.css %}<link rel="stylesheet" type="text/css" href="{{ page.css }}" />{% endif %}
 </head>
 
 <body>
@@ -48,8 +48,6 @@
 	<script src="/template/js/template.ui.js"></script>
 	<script src="/js/site.ui.js"></script>
 	
-	{% if page.js %}
-	<script src="{{ page.js }}"></script>
-	{% endif %}
+	{% if page.js %}<script src="{{ page.js }}"></script>{% endif %}
 </body>
 </html>
