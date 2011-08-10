@@ -1,2 +1,2 @@
 pygments: true
-permalink: /:year/:title.html
+permalink: /:categories/:title.html
