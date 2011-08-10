@@ -32,7 +32,9 @@
 	<link rel="stylesheet" type="text/css" href="/css/site.layout.css" />
 	<link rel="stylesheet" type="text/css" href="/css/syntax.css" />
 	{% if page.css %}
-	<link rel="stylesheet" type="text/css" href="{{ page.css }}" dink />
+		{% for css in page.css %}
+			<link rel="stylesheet" type="text/css" href="{{ css }}" />
+		{% endfor %}
 	{% endif %}
 </head>
 
