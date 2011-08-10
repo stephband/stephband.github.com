@@ -53,6 +53,10 @@
 	<script src="/template/js/template.ui.js"></script>
 	<script src="/js/site.ui.js"></script>
 	
-	{% if page.js %}<script src="{{ page.js }}"></script>{% endif %}
+	{% if page.js %}
+		{% for js in page.js %}
+			<script src="{{ js }}"></script>
+		{% endfor %}
+	{% endif %}
 </body>
 </html>
