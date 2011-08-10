@@ -2,7 +2,7 @@ html {
 	overflow: hidden;
 }
 
-body {
+.site_wrap {
 	position: fixed;
 	top: 0;
 	width: 62%;
@@ -17,4 +17,7 @@ body {
 	width: 38%;
 	height: 100%;
 	overflow: auto;
+	
+	background-color: #aabbcc;
+	border-left: 1px solid #666666;
 }
