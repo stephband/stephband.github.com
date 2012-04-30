@@ -11,6 +11,10 @@ body > header {
 	left: -47px;
 }
 
+.site_wrap > h1 {
+	margin-bottom: 2em;
+}
+
 
 /* .wrap */
 
