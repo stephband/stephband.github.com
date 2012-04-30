@@ -26,6 +26,12 @@ body > footer {
   border-top: 1px solid rgb(230,230,230);
 }
 
+a,
+a:hover,
+a:active {
+  color: #5B85AE;
+}
+
 /* manage layers */
 
 .site_wrap    { z-index: 1; }
