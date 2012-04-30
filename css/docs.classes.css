@@ -2,12 +2,35 @@ body > h1 {
 	margin-bottom: 2.8571em;
 }
 
+body > header {
+	height: 56px;
+}
+
+.site_wrap > .logo_thumb {
+	top: 25px;
+	left: -47px;
+}
+
+
 /* .wrap */
 
 .site_wrap {
 	width: 48rem;
 	min-width: 292px;
 	max-width: 92%;
+}
+
+
+/* .thumb */
+
+.logo_thumb {
+	width: 240px;
+	padding-top: 52px;
+	-webkit-background-size: 240px 52px;
+	   -moz-background-size: 240px 52px;
+	    -ms-background-size: 240px 52px;
+	     -o-background-size: 240px 52px;
+	        background-size: 240px 52px;
 }
 
 
