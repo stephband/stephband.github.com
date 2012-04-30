@@ -1,0 +1,25 @@
+body > h1 {
+	margin-bottom: 2.8571em;
+}
+
+/* .wrap */
+
+.site_wrap {
+	width: 48rem;
+	min-width: 292px;
+	max-width: 92%;
+}
+
+
+/* pre */
+		
+pre {
+	padding: 0.6429em;
+	background-color: #eeeeee;
+	border: 1px solid #cccccc;
+	
+	-webkit-border-radius: 0.3571em;
+		 -moz-border-radius: 0.3571em;
+			 -o-border-radius: 0.3571em;
+					border-radius: 0.3571em;
+}
