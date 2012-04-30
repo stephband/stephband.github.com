@@ -9,10 +9,11 @@ body {
   padding-top: 120px;
   /* Set as position parent */
   position: relative;
-  color: rgb(80,80,80);
+  color: #444444;
 }
 
 body > header {
+  position: absolute;
   top: 0; left: 0; right: 0;
   /* Must be matched with padding-top on the body */
   height: 64px;
