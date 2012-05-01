@@ -1,0 +1,9 @@
+/* .index */
+
+.repos_index > li {
+  margin-bottom: 1.4286em;
+}
+
+.repos_index > li > h3 {
+  margin-bottom: 0;
+}
