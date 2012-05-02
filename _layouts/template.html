@@ -40,7 +40,7 @@
 	{{ content }}
 	
 	<script src="/template/js/js.extensions.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery.js"%3E%3C/script%3E'));</script>
 	<script src="/template/js/jquery.extensions.js"></script>
 	<script src="/template/js/jquery.validator.js"></script>
@@ -54,6 +54,12 @@
 	{% for js in page.js %}
 	<script src="{{ js }}"></script>
 	{% endfor %}
+	{% endif %}
+
+	{% if page.script %}
+	<script>
+	{{ page.script }}
+	</script>
 	{% endif %}
 </body>
 </html>
