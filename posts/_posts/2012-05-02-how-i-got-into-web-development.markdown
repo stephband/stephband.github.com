@@ -35,13 +35,13 @@ My colleagues at work are suitably encouraging, but they are probably just happy
 
 After three weeks I get curious and decide to google 'jParallax', just to see if anyone has picked it up and looked at it. Google says:
 
-<bockquote>About 40,000 results.</blockquote>
+<blockquote>About 40,000 results.</blockquote>
 
 Exc-u-u-use me?
 
 I can't believe it. I run the search again.
 
-<bockquote>40,000 results.</blockquote>
+<blockquote>40,000 results.</blockquote>
 
 Oh my... jParallax has been blogged on <a href="http://ajaxian.com/archives/jparallax-turns-elements-into-a-viewport">Ajaxian</a> and from there has spread across the nets, and I have no idea. Frankly, I am embarrassed. My little learn-to-code-JavaScript project has just gone global, warts and all: it's appallingly badly coded, very ill-tested, and my server has gone down as a result of the traffic. Now I have to actually make it work.
 
