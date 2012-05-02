@@ -1,6 +1,7 @@
 ---
 layout: site
 title: How I got into web development - an epiphany
+css: ['/css/docs.classes.css']
 ---
 
 How I got into web development - an epiphany.
