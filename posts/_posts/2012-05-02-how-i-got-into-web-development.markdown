@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: site
 title: How I got into web development - an epiphany
 ---
 
@@ -15,7 +15,7 @@ When I am around 12 my dad brings home an Acorn Electrons. It has no hard drive.
 
 I don't touch a word of JavaScript until 2007.
 
-In the intervening period I grow up in Scotland, quit Architecture, tour America as a guitar tech, spend several years making music in Edinburgh, then London, then Manchester, win a BBC award for playing sax, go back to university to study acoustics, get a degree, set up a touring theatre company, make a couple of albums that can still be found on iTunes if you know where to look, and spend three winters working in ski resorts.
+In the intervening period I grow up in Scotland, quit Architecture, tour America as a guitar tech, spend several years making music in Edinburgh, then London, then Manchester, win a BBC award for playing sax, go back to university to study acoustics, get a degree, set up a touring theatre company, make a couple of albums (that can still be found on iTunes if you know where to look), then lose the plot and spend several winters working in ski resorts.
 
 Somewhere along the line I fall into making websites. None of the musicians I work with have the patience to fight Internet Explorer, but projects need to be promoted and there's no question of being able to pay someone else to do it. I'm the one who's mug enough to spend days cursing at a screen until something presentable emerges. This is more or less the standard process for dealing with Internet Explorer, but I am not to know this, because I don't yet know any other web developers. I know Photoshop, I'm teaching myself HTML and CSS, and I have patience.
 
