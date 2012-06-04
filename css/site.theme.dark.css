@@ -34,9 +34,4 @@ h2 a {
 .logo_thumb {
 	background-position: 0 0;
 	background-image: url('../images/logo_stephband_dark.png');
-
-	-webkit-background-size: 359px 76px;
-	   -moz-background-size: 359px 76px;
-	     -o-background-size: 359px 76px;
-	        background-size: 359px 76px;
 }
