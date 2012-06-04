@@ -1,0 +1,42 @@
+html, body {
+	background: #515356;
+	color: #cbd0d5;
+	height:100%;
+	width:100%;
+}
+
+/* Colours */
+
+a:focus,
+a:hover {color: #a1c2e4;}
+a {color: #858b95;}
+
+h1 {color: #111;}
+h2 {color: #262728;}
+h3 {color: #9099a0;}
+h4 {color: #878f96;}
+
+h2 a:focus,
+h2 a:hover {
+	text-decoration:none;
+	color:#767f8e;
+}
+
+h2 a {
+	color: #858b95;
+}
+
+.site_header {
+	background-image: url('../images/bg_invert_header.png');
+	background-position: 0 -8px;
+}
+
+.logo_thumb {
+	background-position: 0 0;
+	background-image: url('../images/logo_stephband_grey.png');
+
+	-webkit-background-size: 359px 76px;
+	   -moz-background-size: 359px 76px;
+	     -o-background-size: 359px 76px;
+	        background-size: 359px 76px;
+}
