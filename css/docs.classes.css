@@ -42,6 +42,8 @@ body > header {
 		
 pre {
 	padding: 0.6429em;
+	
+	color: #003369;
 	background-color: #e8ecf0;
 	border: 1px solid #cccccc;
 	
