@@ -19,9 +19,9 @@ body > header {
 /* .wrap */
 
 .site_wrap {
-	width: 48rem;
+	width: 88%;
+	max-width: 60rem;
 	min-width: 292px;
-	max-width: 92%;
 }
 
 
@@ -35,18 +35,4 @@ body > header {
 	    -ms-background-size: 240px 52px;
 	     -o-background-size: 240px 52px;
 	        background-size: 240px 52px;
-}
-
-
-/* pre */
-		
-pre {
-	padding: 0.6429em;
-	background-color: #e8ecf0;
-	border: 1px solid #cccccc;
-	
-	-webkit-border-radius: 0.3571em;
-		 -moz-border-radius: 0.3571em;
-			 -o-border-radius: 0.3571em;
-					border-radius: 0.3571em;
 }

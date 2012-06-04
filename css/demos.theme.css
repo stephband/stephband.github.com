@@ -26,10 +26,24 @@ h2 a {
 	color: #858b95;
 }
 
+/* header */
+
 .site_header {
 	background-image: url('../images/bg_invert_header.png');
 	background-position: 0 -8px;
 }
+
+
+/* .wrap */
+
+.site_wrap {
+	width: 88%;
+	max-width: 60rem;
+	min-width: 292px;
+}
+
+
+/* .thumb */
 
 .logo_thumb {
 	background-position: 0 0;
