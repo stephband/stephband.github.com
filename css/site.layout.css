@@ -38,6 +38,15 @@ a:active {
 #flash        { z-index: 3; }
 
 
+/* .wrap */
+
+.full_wrap {
+  max-width: 1200px;
+  max-width: 75rem;
+  width: 88%;
+}
+
+
 /* header */
 
 .site_header {
@@ -65,16 +74,73 @@ a:active {
           background-size: 359px 76px;
 }
 
+
+/* footer */
+
+.site_footer {
+  height: auto;
+  color: #cbd0d5;
+  background-image: url('../images/bg_invert_header.png');
+  background-color: #515356;
+  padding-top: 3.2em;
+  padding-bottom: 3.2em;
+}
+
+.site_footer a:focus,
+.site_footer a:hover {
+  color: #858b95;
+}
+
+.site_footer a {
+  color: #858b95;
+}
+
+.site_footer > .full_wrap {
+  padding-right: 4.8em;
+}
+
+
+/* .col */
+
+.bio_col    { width: 50%; left: 0; }
+.repo_col   { width: 25%; left: 2.4em; }
+.social_col { width: 25%; left: 4.8em; }
+
+
+
+
+
+
+
+
+
 .site_nav_index {
   position: absolute;
   right: 0;
   bottom: 0;
 }
 
-.site_nav_index>li {
+.site_nav_index > li {
   margin-right: 5px;
   top: 0.75em;
 }
+
+.social_index > li {
+  line-height: 2.0667em;
+  border-bottom: 1px solid #cbd0d5;
+}
+
+.social_index > li:last-child {
+  border-bottom: 0;
+}
+
+.social_index > li > a,
+.repo_index > li > a {
+  display: block;
+}
+
+
+
 
 .nav_tab_button:hover {
   color: rgb(130,162,194);
