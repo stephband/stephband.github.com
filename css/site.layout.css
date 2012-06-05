@@ -80,10 +80,13 @@ a:active {
 .site_footer {
   height: auto;
   color: #cbd0d5;
-  background-image: url('../images/bg_invert_header.png');
-  background-color: #515356;
   padding-top: 3.2em;
   padding-bottom: 3.2em;
+
+  background-color: #515356;
+  background-image: url('../images/bg_invert_header.png');
+  background-repeat: repeat-x;
+  background-position: 0 -36px;
 }
 
 .site_footer a:focus,
