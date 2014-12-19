@@ -61,19 +61,19 @@ a:active {
 
 .logo_thumb {
   position: absolute;
-  top: 16px;
+  top: 1.25rem;
   left: 0;
   width: 359px;
+  max-width: 87.5%;
   padding-top: 76px;
   margin-top: 0;
   
-  background-position: 0 0;
+  background-position: 0 66.6667%;
   background-image: url('../images/logo_stephband.png');
+
+  background-size: 359px 76px;
+  background-size: contain;
   
-  -webkit-background-size: 359px 76px;
-     -moz-background-size: 359px 76px;
-       -o-background-size: 359px 76px;
-          background-size: 359px 76px;
 }
 
 
