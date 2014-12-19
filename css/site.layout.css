@@ -52,6 +52,7 @@ a:active {
 .site_header {
   background-image: url('../images/bg_header.png');
   background-position: 0 -8px;
+  background-repeat: repeat-x;
   
   /*-webkit-box-shadow: inset 0 -8px 32px rgba( 20, 21, 24, 0.1 );
      -moz-box-shadow: inset 0 -8px 32px rgba( 20, 21, 24, 0.1 );
@@ -64,6 +65,7 @@ a:active {
   left: 0;
   width: 359px;
   padding-top: 76px;
+  margin-top: 0;
   
   background-position: 0 0;
   background-image: url('../images/logo_stephband.png');

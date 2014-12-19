@@ -1,29 +1,95 @@
----
-layout: site
-css: ['/css/index.classes.css']
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="author" content="">
+	<meta name="description" content="">
+	
+	<title>stephband.info | {{ page.title }}</title>
+	
+	<script>document.documentElement.className = 'js';</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<!-- Force latest IE rendering engine & Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Make IE recognise HTML5 elements for styling -->
+	<!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+	<link rel="icon" type="image/png" href="images/favicon.png" />
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	
+	<link rel="stylesheet" href="bolt/css/bolt.normalise.css" />
+	<link rel="stylesheet" href="bolt/css/bolt.typography.css" />
+	<link rel="stylesheet" href="bolt/css/bolt.typography.15_24.css" />
+	<link rel="stylesheet" href="bolt/css/bolt.forms.css" />
+	<link rel="stylesheet" href="bolt/css/bolt.classes.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/template/css/template.ie.css" /><![endif]-->
+	<!--[if IE 8]><link rel="stylesheet" type="text/css" href="/template/css/template.ie8.css" /><![endif]-->
+	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/template/css/template.ie7.css" /><![endif]-->
+	<link rel="stylesheet" href="css/site.layout.css" />
+	<link rel="stylesheet" href="css/page.classes.css" />
+	<link rel="stylesheet" href="css/syntax.css" />
+	<link rel="stylesheet" href="css/index.classes.css" />
+</head>
 
-<div class="site_wrap wrap">
-	<ul class="repos_index index">
-		<li>
-			<h3><a href="http://stephband.info/bolt/">Bolt</a></h3>
-			A CSS class-based, jQuery event driven front-end framework for making sweet interfaces.
-		</li>
-		<li>
-			<h3><a href="http://stephband.info/jparallax/">jQuery.parallax</a></h3>
-			Moves nodes in response to mouse movement, in a parallaxy kind of way.
-		</li>
-		<li>
-			<h3><a href="http://stephband.info/jquery.event.tap">jQuery.event.tap</a></h3>
-			jQuery special event <b>tap</b> for speeding up touch interfaces.
-		</li>
-		<li>
-			<h3><a href="http://stephband.info/jquery.event.move">jQuery.event.move</a></h3>
-			jQuery special events <b>movestart</b>, <b>move</b> and <b>moveend</b> for tracking touch and mouse moves, throttled to browser animation frames.
-		</li>
-		<li>
-			<h3><a href="http://stephband.info/jquery.event.swipe">jQuery.event.swipe</a></h3>
-			jQuery special events for the gestures <b>swipeleft</b>, <b>swiperight</b>, <b>swipeup</b> and <b>swipedown</b>.
-		</li>
-	</ul>
-</div>
+<body>
+	<header class="site_header" id="page_header">
+		<div class="header_wrap wrap">
+			<a href="http://stephband.info" title="stephband" rel="index">
+				<h1 class="logo_thumb thumb">stephband.info</h1>
+			</a>
+		</div>
+	</header>
+
+	<div class="site_wrap wrap">
+		<ul class="repos_index index">
+			<!--li>
+				<h3><a href="http://stephband.info/bolt/">Bolt</a></h3>
+				A CSS class-based, jQuery event driven front-end framework for making sweet interfaces.
+			</li>
+			<li>
+				<h3><a href="http://stephband.info/jparallax/">jQuery.parallax</a></h3>
+				Moves nodes in response to mouse movement, in a parallaxy kind of way.
+			</li>
+			<li>
+				<h3><a href="http://stephband.info/jquery.event.tap">jQuery.event.tap</a></h3>
+				jQuery special event <b>tap</b> for speeding up touch interfaces.
+			</li>
+			<li>
+				<h3><a href="http://stephband.info/jquery.event.move">jQuery.event.move</a></h3>
+				jQuery special events <b>movestart</b>, <b>move</b> and <b>moveend</b> for tracking touch and mouse moves, throttled to browser animation frames.
+			</li>
+			<li>
+				<h3><a href="http://stephband.info/jquery.event.swipe">jQuery.event.swipe</a></h3>
+				jQuery special events for the gestures <b>swipeleft</b>, <b>swiperight</b>, <b>swipeup</b> and <b>swipedown</b>.
+			</li-->
+		</ul>
+	</div>
+
+	<footer class="site_footer">
+		<div class="full_wrap wrap">
+			<div class="bio_col col">
+				<p>I come from Scotland and I live in Lausanne, Switzerland. I make web things at <a href="http://cruncher.ch">Cruncher</a>. I miss Branston Pickle. When I'm not glued to a screen I play music and hike mountains.</p>
+			</div
+			><div class="repo_col col">
+				<h3>More code</h3>
+				<ul class="repo_index index">
+					<li><a href="http://stephband.info/bolt">Bolt</a></li>
+					<li><a href="http://stephband.info/jparallax/">jQuery.parallax</a></li>
+					<li><a href="http://stephband.info/jquery.event.tap/">jQuery.event.tap</a></li>
+					<li><a href="http://stephband.info/jquery.event.move/">jQuery.event.move</a></li>
+					<li><a href="http://stephband.info/jquery.event.swipe/">jQuery.event.swipe</a></li>
+				</ul>
+			</div
+			><div class="social_col col">
+				<h3>Find me on...</h3>
+				<ul class="social_index index">
+					<li><a href="http://twitter.com/stephband">twitter</a></li>
+					<li><a href="http://github.com/stephband">github</a></li>
+					<li><a href="http://plus.google.com/114566808430966059989/photos">google+</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
