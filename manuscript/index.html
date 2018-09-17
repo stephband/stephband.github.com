@@ -10,6 +10,26 @@
 	<link rel="stylesheet" href="/dom/css/dom.css" />
 
     <style>
+        body {
+            display: grid;
+            padding: 1.875rem;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 3.75rem;
+            align-items: stretch;
+            align-content: stretch;
+            justify-content: stretch;
+            justify-items: stretch;
+        }
+
+        body > .block {
+            margin: 0;
+        }
+
+        body > h1 {
+            width: 100%;
+            grid-column: 1 / span 2;
+        }
+
         .file-index > li {
 
         }
@@ -52,12 +72,11 @@
     <h1 class="block text-2">Manuscript</h1>
 
 	<div class="block">
-		<h2 class="text-3">Mixes</h2>
 		<ul class="file-index index">
-			<li><a href="A4-8-stave.svg">A4 8 Stave</a></li>
-            <li><a href="A4-10-stave.svg">A4 10 Stave</a></li>
-            <li><a href="A4-11-stave.svg">A4 11 Stave</a></li>
-            <li><a href="A3-16-stave.svg">A3 16 Stave</a></li>
+			<li><a href="A4-8-stave.svg">A4 8 stave manuscript <small>(SVG)</small></a></li>
+            <li><a href="A4-10-stave.svg">A4 10 stave manuscript <small>(SVG)</small></a></li>
+            <li><a href="A4-11-stave.svg">A4 11 stave manuscript <small>(SVG)</small></a></li>
+            <li><a href="A3-16-stave.svg">A3 16 stave manuscript <small>(SVG)</small></a></li>
 		</ul>
 	</div>
 </body>
