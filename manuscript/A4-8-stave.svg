@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1190px" height="1684px" viewBox="0 0 1190 1684" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>A4 8 Stave Manuscript</title>
+    <g id="A4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g transform="translate(55.000000, 269.000000)" stroke="#000000" stroke-width="0.75">
+            <path d="M0,0.375 L1080,0.375" id="Line"></path>
+            <path d="M0,11.38 L1080,11.38" id="Line"></path>
+            <path d="M0,22.38 L1080,22.38" id="Line"></path>
+            <path d="M0,33.38 L1080,33.38" id="Line"></path>
+            <path d="M0,44.38 L1080,44.38" id="Line"></path>
+        </g>
+        <g transform="translate(55.000000, 443.000000)" stroke="#000000" stroke-width="0.75">
+            <path d="M0,0.375 L1080,0.375" id="Line"></path>
+            <path d="M0,11.38 L1080,11.38" id="Line"></path>
+            <path d="M0,22.38 L1080,22.38" id="Line"></path>
+            <path d="M0,33.38 L1080,33.38" id="Line"></path>
+            <path d="M0,44.38 L1080,44.38" id="Line"></path>
+        </g>
+        <g transform="translate(55.000000, 617.000000)" stroke="#000000" stroke-width="0.75">
+            <path d="M0,0.375 L1080,0.375" id="Line"></path>
+            <path d="M0,11.38 L1080,11.38" id="Line"></path>
+            <path d="M0,22.38 L1080,22.38" id="Line"></path>
+            <path d="M0,33.38 L1080,33.38" id="Line"></path>
+            <path d="M0,44.38 L1080,44.38" id="Line"></path>
+        </g>
+        <g transform="translate(55.000000, 791.000000)" stroke="#000000" stroke-width="0.75">
+            <path d="M0,0.375 L1080,0.375" id="Line"></path>
+            <path d="M0,11.38 L1080,11.38" id="Line"></path>
+            <path d="M0,22.38 L1080,22.38" id="Line"></path>
+            <path d="M0,33.38 L1080,33.38" id="Line"></path>
+            <path d="M0,44.38 L1080,44.38" id="Line"></path>
+        </g>
+        <g transform="translate(55.000000, 965.000000)" stroke="#000000" stroke-width="0.75">
+            <path d="M0,0.375 L1080,0.375" id="Line"></path>
+            <path d="M0,11.38 L1080,11.38" id="Line"></path>
+            <path d="M0,22.38 L1080,22.38" id="Line"></path>
+            <path d="M0,33.38 L1080,33.38" id="Line"></path>
+            <path d="M0,44.38 L1080,44.38" id="Line"></path>
+        </g>
+        <g transform="translate(55.000000, 1139.000000)" stroke="#000000" stroke-width="0.75">
+            <path d="M0,0.375 L1080,0.375" id="Line"></path>
+            <path d="M0,11.38 L1080,11.38" id="Line"></path>
+            <path d="M0,22.38 L1080,22.38" id="Line"></path>
+            <path d="M0,33.38 L1080,33.38" id="Line"></path>
+            <path d="M0,44.38 L1080,44.38" id="Line"></path>
+        </g>
+        <g transform="translate(55.000000, 1313.000000)" stroke="#000000" stroke-width="0.75">
+            <path d="M0,0.375 L1080,0.375" id="Line"></path>
+            <path d="M0,11.38 L1080,11.38" id="Line"></path>
+            <path d="M0,22.38 L1080,22.38" id="Line"></path>
+            <path d="M0,33.38 L1080,33.38" id="Line"></path>
+            <path d="M0,44.38 L1080,44.38" id="Line"></path>
+        </g>
+        <g transform="translate(55.000000, 1490.000000)" stroke="#000000" stroke-width="0.75">
+            <path d="M0,0.375 L1080,0.375" id="Line"></path>
+            <path d="M0,11.38 L1080,11.38" id="Line"></path>
+            <path d="M0,22.38 L1080,22.38" id="Line"></path>
+            <path d="M0,33.38 L1080,33.38" id="Line"></path>
+            <path d="M0,44.38 L1080,44.38" id="Line"></path>
+        </g>
+    </g>
+</svg>
