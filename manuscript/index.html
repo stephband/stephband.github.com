@@ -8,7 +8,44 @@
 
 	<link rel="stylesheet" href="/bolt/dist/bolt.css" />
 	<link rel="stylesheet" href="/dom/css/dom.css" />
-	<link rel="stylesheet" href="//sound.stephen.band/css/index.css" />
+
+    <style>
+        .file-index > li {
+
+        }
+
+        .file-index > li:nth-child(2n + 1) > a {
+            background-color: #f2f2f2;
+        }
+
+        .file-index > li > a {
+            display: block;
+            line-height: 1.5625rem;
+            margin-left: -0.375rem;
+            margin-right: -0.375rem;
+            padding-left: 0.375rem;
+            padding-right: 0.375rem;
+            padding-top: 0.125rem;
+            height: 1.6875rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+        .file-index > li > a:hover {
+            color: white;
+            background-color: #e80054;
+        }
+
+        .file-index > li > a > small {
+            opacity: 0.6;
+        }
+
+        .file-index > li > a:hover > small {
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
