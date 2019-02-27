@@ -1,0 +1,640 @@
+<style>
+    body {
+        margin: 0;
+        padding: 9px;
+        font-family: sans-serif;
+    }
+
+    body > * {
+        padding-left: 9px;
+    }
+
+    ul {
+        list-style-type: none;
+        position: relative;
+        display: inline-flex;
+        vertical-align: top;
+        padding: 0;
+        margin: 9px;
+        width: 15rem;
+        height: 15rem;
+        background-color: #e9dec6;
+    }
+
+    ul::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: left;
+        content: attr(style);
+        padding: 9px;
+        white-space: pre-wrap;
+        font-size: 14px;
+        font-family: monospace;
+        line-height: 1.25rem;
+    }
+
+    li {
+        padding: 0;
+        margin: 0;
+        line-height: 1.875rem;
+        min-width: 1.875rem;
+        text-align: center;
+        color: white;
+        background-color: #e0b649;
+    }
+
+    li::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: left;
+        content: attr(style);
+        padding: 9px;
+        white-space: pre-wrap;
+        font-size: 12px;
+        font-family: monospace;
+    }
+
+    ul > li:nth-child(2) {
+        line-height: 2.5rem;
+        min-width: 2.5rem;
+    }
+
+    dt, dd {
+        display: block;
+        margin: 0;
+        padding: 0;
+        font-family: "Lucida Console", Monaco, monospace;
+        font-size: 14px;
+    }
+
+    dt {
+        font-weight: 700;
+        margin-top: 0.375rem;
+    }
+
+    dd {
+        font-weight: 300;
+        opacity: 0.6;
+    }
+
+    dt::after {
+        content: ':';
+    }
+
+    .warn {
+        color: red;
+    }
+
+    .shorthand {
+        opacity: 0.4;
+    }
+</style>
+
+
+<h1>display: flex</h1>
+
+<div style="display: inline-block; max-width: 40%; vertical-align: top;">
+    <h2>Parent properties</h2>
+
+    <dl>
+        <dt>flex-direction</dt><dd>row|column</dd>
+        <dt>flex-wrap</dt><dd>nowrap|wrap|wrap-reverse</dd>
+        <dt>align-items</dt><dd>flex-start|flex-end|center|stretch|baseline</dd>
+        <dt>justify-content</dt><dd>flex-start|flex-end|center|space-between|space-around|space-evenly</dd>
+        <dt>align-content</dt><dd>flex-start|flex-end|center|stretch|space-between|space-around<br/>
+        <span class="warn">Has no effect if content is not wrapped.</span></dd>
+    </dl>
+
+    <dl>
+        <dt>flex-flow</dt><dd>Shorthand for: flex-direction flex-wrap</dd>
+    </dl>
+</div>
+
+<div style="display: inline-block; max-width: 40%; vertical-align: top;">
+    <h2>Child properties</h2>
+
+    <dl>
+        <dt>flex-grow</dt><dd>number</dd>
+        <dt>flex-shrink</dt><dd>number</dd>
+        <dt>flex-basis</dt><dd>value|auto</dd>
+        <dt>align-self</dt><dd>flex-start|flex-end|center|baseline|stretch</dd>
+        <dt>margin</dt><dd>value|auto</dd>
+        <dt>order</dt><dd>number</dd>
+    </dl>
+
+    <dl>
+        <dt>flex</dt><dd>Shorthand for: flex-grow flex-shrink flex-basis</dd>
+    </dl>
+</div>
+
+<h3>flex-direction: row</h3>
+
+<ul style="flex-direction: row;
+justify-content: flex-start;
+align-items: flex-start;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: center;
+align-items: flex-start;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: flex-end;
+align-items: flex-start;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: space-around;
+align-items: flex-start;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: space-evenly;
+align-items: flex-start;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<br/>
+
+<ul style="flex-direction: row;
+justify-content: flex-start;
+align-items: center;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: center;
+align-items: center;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: flex-end;
+align-items: center;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: space-between;
+align-items: center;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: space-around;
+align-items: center;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: space-evenly;
+align-items: center;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<br/>
+
+<ul style="flex-direction: row;
+justify-content: flex-start;
+align-items: flex-end;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: center;
+align-items: flex-end;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: flex-end;
+align-items: flex-end;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: space-between;
+align-items: flex-end;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: space-around;
+align-items: flex-end;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: space-evenly;
+align-items: flex-end;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<br/>
+
+
+
+<ul style="flex-direction: row;
+justify-content: flex-start;
+align-items: stretch;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: center;
+align-items: stretch;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: flex-end;
+align-items: stretch;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: space-between;
+align-items: stretch;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: space-around;
+align-items: stretch;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: space-evenly;
+align-items: stretch;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<br/>
+
+
+
+<ul style="flex-direction: row;
+justify-content: flex-start;
+align-items: baseline;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: center;
+align-items: baseline;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: flex-end;
+align-items: baseline;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: space-between;
+align-items: baseline;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: space-around;
+align-items: baseline;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: row;
+justify-content: space-evenly;
+align-items: baseline;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+
+
+<h3>flex-direction: column</h3>
+
+<ul style="flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: flex-start;
+align-items: center;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: flex-start;
+align-items: flex-end;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: flex-start;
+align-items: stretch;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: flex-start;
+align-items: baseline;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<br/>
+
+<ul style="flex-direction: column;
+justify-content: center;
+align-items: flex-start;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: center;
+align-items: center;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: center;
+align-items: flex-end;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: center;
+align-items: stretch;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: center;
+align-items: baseline;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<br/>
+
+<ul style="flex-direction: column;
+justify-content: flex-end;
+align-items: start;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: flex-end;
+align-items: center;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: flex-end;
+align-items: flex-end;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: flex-end;
+align-items: stretch;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: flex-end;
+align-items: baseline;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<br/>
+
+<ul style="flex-direction: column;
+justify-content: space-between;
+align-items: start;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: space-between;
+align-items: center;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: space-between;
+align-items: flex-end;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: space-between;
+align-items: stretch;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: space-between;
+align-items: baseline;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+
+<br/>
+
+<ul style="flex-direction: column;
+justify-content: space-around;
+align-items: start;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: space-around;
+align-items: center;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: space-around;
+align-items: flex-end;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: space-around;
+align-items: stretch;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: space-around;
+align-items: baseline;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+
+<br/>
+
+<ul style="flex-direction: column;
+justify-content: space-evenly;
+align-items: start;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: space-evenly;
+align-items: center;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: space-evenly;
+align-items: flex-end;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: space-evenly;
+align-items: stretch;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<ul style="flex-direction: column;
+justify-content: space-evenly;
+align-items: baseline;">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
