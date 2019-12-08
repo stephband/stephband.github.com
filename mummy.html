@@ -1,5 +1,9 @@
 <!doctype html>
 
+<h1>Charlie</h1>
+<p id="mummy">Click here to hear what I think about mummy.</p>
+
+
 <script>
     var synth = window.speechSynthesis;
 
@@ -8,7 +12,7 @@
         synth.speak(utterThis);
     }
 
-    document.addEventListener('click', function() {
+    document.getElementById('mummy').addEventListener('click', function() {
         say('mummy is a bum face and a meanie');
     });
 </script>
