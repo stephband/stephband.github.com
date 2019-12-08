@@ -1,0 +1,14 @@
+<!doctype html>
+
+<script>
+    var synth = window.speechSynthesis;
+
+    function say(text) {
+        var utterThis = new SpeechSynthesisUtterance(text);
+        synth.speak(utterThis);
+    }
+
+    document.addEventListener('click', function() {
+        say('mummy is a bum face and a meanie');
+    });
+</script>
