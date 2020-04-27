@@ -1,0 +1,10 @@
+/* */
+
+.panels-grid {
+    column-gap: 0;
+    row-gap: 0;
+}
+
+.panels-grid > * {
+    margin: 0;
+}

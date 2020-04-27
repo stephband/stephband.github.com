@@ -1,60 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<meta name="author" content="">
-	<meta name="description" content="">
+<!DOCTYPE html><html lang="en" is="sparky" class="js"><head>
+    <meta charset="utf-8">
 
-	<title>stephen.band</title>
+    <meta name="author" content="@">
+    <meta name="description" content="Documentation for . A front-end toolkit of classes and evented behaviours.">
+    <meta name="viewport" content="width=device-width">
 
-	<script>document.documentElement.className = 'js';</script>
+    <title></title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <script>
+    document.documentElement.className += ' js content-loading loading';
+    window.addEventListener('DOMContentLoaded', () => document.documentElement.classList.remove('content-loading'));
+    window.addEventListener('load', () => document.documentElement.classList.remove('loading'));
+    window.DEBUG = false;
+    </script>
 
-	<link rel="icon" type="image/png" href="images/favicon.png" />
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="shortcut icon" href="images/logo-64x64.ico">
+    <link rel="icon" type="image/png" href="images/logo-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/logo-64x64.png" sizes="64x64">
+    <link rel="icon" type="image/png" href="images/logo-128x128.png" sizes="128x128">
 
-	<link rel="stylesheet" href="/bolt/package/css/bolt-0.9.8.css" />
-	<link rel="stylesheet" href="css/site.layout.css" />
-	<link rel="stylesheet" href="css/page.classes.css" />
-	<link rel="stylesheet" href="css/index.classes.css" />
+    <!--link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700"-->
+
+    <link rel="stylesheet" href="/bolt/fonts/source-sans-pro/source-sans-pro.css">
+    <link rel="stylesheet" href="/bolt/fonts/inconsolata/stylesheet.css">
+    <link rel="stylesheet" href="/bolt/dist/bolt.min.css">
+    <link rel="stylesheet" href="/dom/css/dom.css">
+
+    <link rel="stylesheet" href="components/root.css">
+    <link rel="stylesheet" href="components/text.css">
+    <link rel="stylesheet" href="components/header.css">
+    <link rel="stylesheet" href="components/panels-grid.css">
+    <link rel="stylesheet" href="components/panel-block.css">
 </head>
 
 <body>
-	<header class="site_header" id="page_header">
-		<div class="grid-block block">
-			<div class="block grid-1/1">
-				<a class="block" href="http://stephen.band" title="stephband" rel="index">
-					<h1 class="logo_thumb thumb">stephen.band</h1>
-				</a>
-			</div>
-		</div>
-	</header>
+    <header class="site-header">
+        <a class="logo-thumb thumb" href="http://stephen.band" rel="index">
+            <h1>stephen.band</h1>
+        </a>
+    </header>
 
-	<div class="grid-block block">
-		<div class="block @1-grid-1/2 @2-grid-3/4">
-			<p>
-				Hello world.
-			</p>
-			<p>
-				I make things.
-				Mainly on the web.
-				I'm co-founder of web agency <a href="http://cruncher.ch">Cruncher</a>, designer-developer behind <a href="http://sound.io">sound.io</a>, and an audio engineer and musician.
-			</p>
-		</div
+    <section class="panels-grid 2x-grid grid">
+        <div class="panel-block block 9x-grid grid x-1" style="color: #202223; background-color: #ffb700; background-image: linear-gradient(173deg, #ff006a82, #0000);">
+            <h2 class="x-2 xspan-6 x-stretch black-fg">
+                MIDI
+                <template is="sparky-template" fn="fetch:'/midi/package.json'">
+                    <span class="text-09">{[version]}</span>
+                </template>
+            </h2>
+            <p class="x-2 xspan-6 x-stretch">A JavaScript library for processing MIDI in the browser</p>
+            <a class="x-2 xspan-3 button white-fg" style="background-color: #202223;" href="/midi/monitor/">MIDI Monitor</a>
+        </div>
 
-		><div class="block @1-grid-1/2 @2-grid-1/4">
-			<h3>Find me on...</h3>
-			<ul class="social_index index">
-				<li><a href="http://twitter.com/stephband">twitter</a></li>
-				<li><a href="http://github.com/stephband">github</a></li>
-				<li><a href="http://plus.google.com/114566808430966059989/photos">google+</a></li>
-			</ul>
-		</div>
-	</div>
+        <div class="panel-block block 9x-grid grid x-2" style="background: linear-gradient(9deg, #e67f9f, #7f007f);">
+            <h2 class="x-2 xspan-6 x-stretch" style="color: #e1c3d1;">Happy Birthday, Dear Laura.</h2>
+            <audio class="x-2 xspan-6 x-stretch" controls src="//sound.stephen.band/stephen/happy-birthday-dear-laura.m4a">
+                Your browser does not support the <code>audio</code> element.
+            </audio>
+        </div>
 
-	<footer class="site_footer">
+        <div class="panel-block block 9x-grid grid x-1 white-fg" style="background: linear-gradient(9deg, #005477, #016881);">
+            <h2 class="x-2 xspan-6 x-stretch">
+                Bolt
+                <template is="sparky-template" fn="fetch:'/bolt/package.json'">
+                    <span class="text-09">{[version]}</span>
+                </template>
+            </h2>
+            <p class="x-2 xspan-6 x-stretch">A library of base classes, components and custom&nbsp;elements</p>
+        </div>
 
-	</footer>
-</body>
-</html>
+        <div class="panel-block block 9x-grid grid x-2 rotate-bg" style="color: #062d3d; background: url(manuscript/A3-16-stave.svg) 50% 50%, linear-gradient(3deg, grey, white);">
+            <h2 class="x-2 xspan-6 x-stretch">Manuscript.</h2>
+            <p class="x-2 xspan-6 x-stretch">Elusive, innit? I can never find any when I really need it.</p>
+            <ul class="x-2 xspan-3 index">
+                <li><a href="manuscript/A4-8-stave.svg">A4-8-stave.svg</a></li>
+                <li><a href="manuscript/A4-8-stave.svg">A4-8-stave.pdf</a></li>
+                <li><a href="manuscript/A4-10-stave.svg">A4-10-stave.svg</a></li>
+                <li><a href="manuscript/A4-10-stave.svg">A4-10-stave.pdf</a></li>
+            </ul>
+
+            <ul class="x-5 xspan-3 index">
+                <li><a href="manuscript/A4-11-stave.svg">A4-11-stave.svg</a></li>
+                <li><a href="manuscript/A4-11-stave.svg">A4-11-stave.pdf</a></li>
+                <li><a href="manuscript/A3-16-stave.svg">A3-16-stave.svg</a></li>
+                <li><a href="manuscript/A3-16-stave.svg">A3-16-stave.pdf</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Document interactivity -->
+    <script type="module">
+        import '/sparky/module.js';
+        import '/bolt/module.js';
+    </script>
+
+</body></html>

@@ -1,0 +1,41 @@
+
+
+.text-08, body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+p + .button {
+    margin-top: 0.9375rem;
+}
+
+p + .index,
+.index + .index {
+    margin-top: 0.9375rem;
+}
+
+* + audio {
+    margin-top: 0.9375rem;
+}
+
+.rotate-bg {
+    overflow: hidden;
+}
+
+.rotate-bg > * {
+    z-index: 1;
+}
+
+.rotate-bg::before {
+    content: '';
+    background-image: inherit;
+    background-position: 50% 50%;
+    background-size: 250% auto;
+    transform: rotate(-3deg);
+    position: absolute;
+    z-index: 0;
+    left: -5%;
+    right: -5%;
+    bottom: -5%;
+    top: -5%;
+}

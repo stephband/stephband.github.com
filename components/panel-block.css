@@ -1,0 +1,12 @@
+
+/* */
+
+.panel-block {
+    width: 50vw;
+    min-height: 28.125vw;
+    padding-top: 6.25vw;
+    padding-bottom: 3.125vw;
+    column-gap: 0;
+    row-gap: 0;
+    grid-auto-rows: minmax(min-content, 16.66666667%);
+}

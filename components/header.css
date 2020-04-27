@@ -1,0 +1,30 @@
+/* header */
+
+.site-header {
+  background-image: url('../images/bg_invert_header.png');
+  background-position: 0 -0.5rem;
+  background-repeat: repeat-x;
+
+  /*-webkit-box-shadow: inset 0 -8px 32px rgba( 20, 21, 24, 0.1 );
+     -moz-box-shadow: inset 0 -8px 32px rgba( 20, 21, 24, 0.1 );
+          box-shadow: inset 0 -8px 32px rgba( 20, 21, 24, 0.1 );*/
+    height: 3.75rem;
+    z-index: 2;
+    position: relative;
+}
+
+.logo-thumb {
+    position: absolute;
+    top: 0.75rem;
+    left: 5.55555556vw;
+    width: 17.5rem;
+    max-width: 87.5%;
+    padding-top: 76px;
+    margin-top: 0;
+
+    background-position: 0 66.6667%;
+    background-image: url('../images/logo_stephband_dark.png');
+
+    background-size: 359px 76px;
+    background-size: contain;
+}
