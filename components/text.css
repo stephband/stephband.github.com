@@ -1,9 +1,34 @@
 
 
+
+
 .text-08, body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
 }
+
+.text-01, h1   { font-size: calc(1.92788571rem + 2.02457143vw); line-height: 1.2em; }
+.text-02, h2   { font-size: calc(1.64693909rem + 1.48530454vw); line-height: 1.2em; }
+.text-03, h3   { font-size: calc(1.41281691rem + 1.03591547vw); }
+.text-04, h4   { font-size: calc(1.21771508rem + 0.66142458vw); }
+.text-05, h5   { font-size: calc(1.05513023rem + 0.34934883vw); }
+.text-08, body { font-size: calc(0.91964286rem + 0.08928571vw); line-height: 1.4em; }
+.text-09       { font-size: calc(0.8744804rem + 0.00259801vw); }
+.text-10       { font-size: calc(0.96480532rem + 0.17597342vw); }
+
+@media (min-width: 90em) {
+    .text-01, h1   { font-size: 3.75rem; }
+    .text-02, h2   { font-size: 2.98371318rem; }
+    .text-03, h3   { font-size: 2.34514083rem; }
+    .text-04, h4   { font-size: 1.8129972rem; }
+    .text-05, h5   { font-size: 1.36954418rem; }
+    .text-08, body { font-size: 1rem; }
+    .text-09       { font-size: 0.87681861rem; }
+    .text-10       { font-size: 1.12318139rem; }
+}
+
+
+
 
 p + .button {
     margin-top: 0.9375rem;

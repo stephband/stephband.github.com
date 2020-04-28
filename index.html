@@ -28,6 +28,7 @@
 
     <link rel="stylesheet" href="components/root.css">
     <link rel="stylesheet" href="components/text.css">
+    <link rel="stylesheet" href="components/content.css">
     <link rel="stylesheet" href="components/header.css">
     <link rel="stylesheet" href="components/panels-grid.css">
     <link rel="stylesheet" href="components/panel-block.css">
@@ -42,18 +43,17 @@
 
     <section class="panels-grid 2x-grid grid">
         <div class="panel-block block 9x-grid grid x-1" style="color: #202223; background-color: #ffb700; background-image: linear-gradient(173deg, #ff006a82, #0000);">
-            <h2 class="x-2 xspan-6 x-stretch black-fg">
-                MIDI
+            <h2 class="x-2 xspan-6 x-stretch midi-before before">MIDI
                 <template is="sparky-template" fn="fetch:'/midi/package.json'">
                     <span class="text-09">{[version]}</span>
                 </template>
             </h2>
-            <p class="x-2 xspan-6 x-stretch">A JavaScript library for processing MIDI in the browser</p>
+            <p class="x-2 xspan-6 x-stretch">Receive, monitor, manipulate and transmit MIDI messages in the browser.</p>
             <a class="x-2 xspan-3 button white-fg" style="background-color: #202223;" href="/midi/monitor/">MIDI Monitor</a>
         </div>
 
         <div class="panel-block block 9x-grid grid x-2" style="background: linear-gradient(9deg, #e67f9f, #7f007f);">
-            <h2 class="x-2 xspan-6 x-stretch" style="color: #e1c3d1;">Happy Birthday, Dear Laura.</h2>
+            <h2 class="x-2 xspan-6 x-stretch" style="color: #e1c3d1;">Happy Birthday<br/>Dear Laura.</h2>
             <audio class="x-2 xspan-6 x-stretch" controls src="//sound.stephen.band/stephen/happy-birthday-dear-laura.m4a">
                 Your browser does not support the <code>audio</code> element.
             </audio>
