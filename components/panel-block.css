@@ -10,3 +10,14 @@
     row-gap: 0;
     grid-auto-rows: minmax(min-content, 16.66666667%);
 }
+
+.panel-block.xspan-2 {
+    width: 33.33333333vw;
+    min-height: 18.75vw;
+    padding-top: 4.16666667vw;
+    padding-bottom: 2.08333333vw;
+}
+
+.panel-block.xspan-3 {
+    width: 50vw;
+}
