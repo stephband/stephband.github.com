@@ -1,0 +1,91 @@
+.logo_svg {
+	width: 9em;
+	height: 10.6em;
+
+
+
+
+
+/* ---- This is just an experiment to mess about with SVG ---- */
+	/*
+	-webkit-transition-property: -webkit-transform;
+	   -moz-transition-property:    -moz-transform;
+	     -o-transition-property:      -o-transform;
+	        transition-property:         transform;
+
+	-webkit-transition-duration: 800ms;
+	   -moz-transition-duration: 800ms;
+	     -o-transition-duration: 800ms;
+	        transition-duration: 800ms;
+
+	-webkit-transition-easing-function: ease-out;
+	   -moz-transition-easing-function: ease-out;
+	     -o-transition-easing-function: ease-out;
+	        transition-easing-function: ease-out;*/
+
+
+	/*-webkit-transform: scale(100) rotate(90deg);*/
+}
+
+.state_1 .logo_svg {
+	-webkit-transform: scale(1) rotate(0deg);
+
+}
+
+/*.logo_svg:hover {
+	width: 10em;
+	height: 12em;
+
+	-webkit-transform: rotate(15deg);
+	   -moz-transform: rotate(15deg);
+	     -o-transform: rotate(15deg);
+	        transform: rotate(15deg);
+}
+
+.logo_svg:hover polygon {
+	opacity: 0.4;
+}*/
+
+.logo-svg polygon {
+	/* Add a light stroke to try and mitigate anti-aliasing. */
+	stroke-width: 0.2;
+	stroke-linejoin: miter;
+}
+
+/*
+.logo_svg:hover polygon:hover {
+	opacity: 1;
+}
+*/
+
+/* ---- Ok, stop messing about. ---- */
+
+.p1  { color: #FE6800; fill: #FE6800; stroke: #FE6800; }
+.p2  { color: #FE988D; fill: #FE988D; stroke: #FE988D; }
+.p3  { color: #A423A9; fill: #A423A9; stroke: #A423A9; }
+.p4  { color: #C86201; fill: #C86201; stroke: #C86201; }
+.p5  { color: #924C00; fill: #924C00; stroke: #924C00; }
+.p6  { color: #FD3B8A; fill: #FE267E; stroke: #FE267E; } /* This 'color' is just slightly paler for text. */
+.p7  { color: #FE7701; fill: #FE7701; stroke: #FE7701; }
+.p8  { color: #FE98FF; fill: #FE98FF; stroke: #FE98FF; }
+.p9  { color: #836FCD; fill: #836FCD; stroke: #836FCD; }
+.p10 { color: #87C2E3; fill: rgb(135, 194, 227); stroke: #87C2E3; }
+.p11 { color: #66BDAA; fill: #72B8A9; stroke: #72B8A9; } /* This 'color' has just a tad extra saturation for text. */
+.p12 { color: #A4EB00; fill: #A4EB00; stroke: #A4EB00; }
+.p13 { color: #3DD2FF; fill: #3DD2FF; stroke: #3DD2FF; }
+.p14 { color: #FF44CD; fill: #FF44CD; stroke: #FF44CD; }
+.p15 { color: #A48988; fill: #A48988; stroke: #A48988; }
+.p16 { color: #14CD37; fill: #14CD37; stroke: #14CD37; }
+.p17 { color: #2DB3FF; fill: #2DB3FF; stroke: #2DB3FF; }
+.p18 { color: #B8C53F; fill: #B8C53F; stroke: #B8C53F; }
+.p19 { color: #03A756; fill: #03A756; stroke: #03A756; }
+.p20 { color: #E6AE20; fill: #FED701; stroke: #FED701; } /* This 'color' is different, because the logo color is too bright for text. */
+.p21 { color: #1C96D7; fill: #1C96D7; stroke: #1C96D7; }
+.p22 { color: #14CD97; fill: #14CD97; stroke: #14CD97; }
+
+/* svg */
+
+.text-path {
+	fill: #999695;
+	stroke: none;
+}

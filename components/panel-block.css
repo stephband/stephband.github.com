@@ -21,3 +21,10 @@
 .panel-block.xspan-3 {
     width: 50vw;
 }
+
+.panel-block.xspan-4 {
+    width: 66.66666667vw;
+    min-height: 37.5vw;
+    padding-top: 8.33333333vw;
+    padding-bottom: 4.16666667vw;
+}
