@@ -1,0 +1,973 @@
+@charset "UTF-8";
+/*
+THIS FILE IS GENERATED FROM SASS. DO NOT HAND-EDIT. THE NEXT BUILD WILL ERASE
+YOUR CHANGES. YOU HAVE BEEN WARNED.
+*/
+/*
+THIS FILE IS GENERATED FROM SASS. DO NOT HAND-EDIT. THE NEXT BUILD WILL ERASE
+YOUR CHANGES. YOU HAVE BEEN WARNED.
+*/
+/**
+Grid.
+**/
+/**
+.grid
+
+```html
+<div class="grid" style="--column-gap: 0.9375rem; --row-gap: 0.9375rem;">
+    <button>&nbsp;</button>
+    <button>&nbsp;</button>
+    <button>&nbsp;</button>
+</div>
+```
+
+Creates a grid with horizontal flow and equal width columns.
+**/
+.grid { display: grid !important; grid-column-gap: 1.875rem; grid-row-gap: 1.875rem; }
+
+/*
+.2-grid
+Applies a grid template of 2 equal columns.
+**/
+/*
+.3-grid
+Applies a grid template of 3 equal columns.
+**/
+/*
+.4-grid
+Applies a grid template of 4 equal columns.
+**/
+/*
+.5-grid
+Applies a grid template of 5 equal columns.
+**/
+/*
+.6-grid
+Applies a grid template of 6 equal columns.
+**/
+.\32 -grid { grid-template-columns: repeat(2, 1fr); }
+
+.\33 -grid { grid-template-columns: repeat(3, 1fr); }
+
+.\34 -grid { grid-template-columns: repeat(4, 1fr); }
+
+.\35 -grid { grid-template-columns: repeat(5, 1fr); }
+
+.\36 -grid { grid-template-columns: repeat(6, 1fr); }
+
+.\37 -grid { grid-template-columns: repeat(7, 1fr); }
+
+.\38 -grid { grid-template-columns: repeat(8, 1fr); }
+
+.\39 -grid { grid-template-columns: repeat(9, 1fr); }
+
+.\31 0-grid { grid-template-columns: repeat(10, 1fr); }
+
+.\31 1-grid { grid-template-columns: repeat(11, 1fr); }
+
+.\31 2-grid { grid-template-columns: repeat(12, 1fr); }
+
+/**
+.x-1 … 12, .xspan-2 … 12, .x-start, .x-center, .x-end, .x-stretch, .x-bleed
+
+```html
+<div class="grid" style="--column-gap: 0.9375rem; --row-gap: 0.9375rem;">
+    <button class="x-1">x-1</button>
+    <button class="x-2">x-2</button>
+    <button class="x-3">x-3</button>
+    <button class="x-1 xspan-2">xspan-2</button>
+    <button class="x-1 xspan-3">xspan-3</button>
+    <button class="x-1 x-start y-4">x-start</button>
+    <button class="x-2 x-center y-4">x-center</button>
+    <button class="x-3 x-end y-4">x-end</button>
+    <button class="x-1 x-stretch y-5">x-stretch</button>
+    <button class="x-2 x-bleed y-5">x-bleed</button>
+</div>
+```
+
+Note that `.x-bleed`, which stretches an element half the way over the grid gap,
+depends on `column-gap` having been set via the custom property `--column-gap`.
+**/
+.x-1 { grid-column-start: 1 !important; }
+
+.x-2 { grid-column-start: 2 !important; }
+
+.x-3 { grid-column-start: 3 !important; }
+
+.x-4 { grid-column-start: 4 !important; }
+
+.x-5 { grid-column-start: 5 !important; }
+
+.x-6 { grid-column-start: 6 !important; }
+
+.x-7 { grid-column-start: 7 !important; }
+
+.x-8 { grid-column-start: 8 !important; }
+
+.x-9 { grid-column-start: 9 !important; }
+
+.x-10 { grid-column-start: 10 !important; }
+
+.x-11 { grid-column-start: 11 !important; }
+
+.x-12 { grid-column-start: 12 !important; }
+
+.xspan-1 { grid-column-end: span 1 !important; }
+
+.xspan-2 { grid-column-end: span 2 !important; }
+
+.xspan-3 { grid-column-end: span 3 !important; }
+
+.xspan-4 { grid-column-end: span 4 !important; }
+
+.xspan-5 { grid-column-end: span 5 !important; }
+
+.xspan-6 { grid-column-end: span 6 !important; }
+
+.xspan-7 { grid-column-end: span 7 !important; }
+
+.xspan-8 { grid-column-end: span 8 !important; }
+
+.xspan-9 { grid-column-end: span 9 !important; }
+
+.xspan-10 { grid-column-end: span 10 !important; }
+
+.xspan-11 { grid-column-end: span 11 !important; }
+
+.xspan-12 { grid-column-end: span 12 !important; }
+
+.xspan--1 { grid-column-end: span -1 !important; }
+
+.x-start { justify-self: start !important; margin-left: 0; }
+
+.x-center { justify-self: center !important; }
+
+.x-end { justify-self: end !important; margin-right: 0; }
+
+.x-stretch { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
+
+.x-bleed { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: auto; /*calc(100% + var(--column-gap));*/ }
+
+/** .y-1 … 18, .yspan-2 … 12, .y-start, .y-center, .y-end, .y-stretch, y-baseline ```html <div class="grid" style="--column-gap: 0.9375rem; --row-gap: 0.9375rem;"> <button class="x-1 y-1">y-1</button> <button class="x-1 y-2">y-2</button> <button class="x-1 y-3">y-3</button> <button class="x-2 y-1 yspan-2">yspan-2</button> <button class="x-3 y-1 yspan-3">yspan-3</button> <button class="x-1 y-4 y-start">y-start</button> <button class="x-1 y-5 y-center">y-center</button> <button class="x-1 y-6 y-end">y-end</button> <button class="x-2 y-4 y-stretch">y-stretch</button> <button class="x-3 y-4 y-baseline">y-baseline</button> </div> ``` */
+.y-1 { grid-row-start: 1 !important; }
+
+.y-2 { grid-row-start: 2 !important; }
+
+.y-3 { grid-row-start: 3 !important; }
+
+.y-4 { grid-row-start: 4 !important; }
+
+.y-5 { grid-row-start: 5 !important; }
+
+.y-6 { grid-row-start: 6 !important; }
+
+.y-7 { grid-row-start: 7 !important; }
+
+.y-8 { grid-row-start: 8 !important; }
+
+.y-9 { grid-row-start: 9 !important; }
+
+.y-10 { grid-row-start: 10 !important; }
+
+.y-11 { grid-row-start: 11 !important; }
+
+.y-12 { grid-row-start: 12 !important; }
+
+.y-13 { grid-row-start: 13 !important; }
+
+.y-14 { grid-row-start: 14 !important; }
+
+.y-15 { grid-row-start: 15 !important; }
+
+.y-16 { grid-row-start: 16 !important; }
+
+.y-17 { grid-row-start: 17 !important; }
+
+.y-18 { grid-row-start: 18 !important; }
+
+.yspan-1 { grid-row-end: span 1 !important; }
+
+.yspan-2 { grid-row-end: span 2 !important; }
+
+.yspan-3 { grid-row-end: span 3 !important; }
+
+.yspan-4 { grid-row-end: span 4 !important; }
+
+.yspan-5 { grid-row-end: span 5 !important; }
+
+.yspan-6 { grid-row-end: span 6 !important; }
+
+.yspan-7 { grid-row-end: span 7 !important; }
+
+.yspan-8 { grid-row-end: span 8 !important; }
+
+.yspan-9 { grid-row-end: span 9 !important; }
+
+.yspan-10 { grid-row-end: span 10 !important; }
+
+.yspan-11 { grid-row-end: span 11 !important; }
+
+.yspan-12 { grid-row-end: span 12 !important; }
+
+.yspan--1 { grid-row-end: span -1 !important; }
+
+.y-start { align-self: start !important; }
+
+.y-center { align-self: center !important; }
+
+.y-end { align-self: end !important; }
+
+.y-stretch { align-self: stretch !important; }
+
+.y-baseline { align-self: baseline !important; }
+
+.columns-2 { columns: 2 !important; }
+
+.columns-3 { columns: 3 !important; }
+
+.columns-4 { columns: 4 !important; }
+
+.columns-5 { columns: 5 !important; }
+
+.columns-6 { columns: 6 !important; }
+
+.columns-7 { columns: 7 !important; }
+
+.columns-8 { columns: 8 !important; }
+
+.columns-9 { columns: 9 !important; }
+
+.columns-10 { columns: 10 !important; }
+
+.columns-11 { columns: 11 !important; }
+
+.columns-12 { columns: 12 !important; }
+
+:root { /** --column-gap Define the horizontal grid gap. */ --column-gap: 1.5em; /** --row-gap Define the vertical grid gap. */ --row-gap: 1.5em; }
+
+@media (min-width: 0em) { .grid { display: grid !important; /* Horizontal layout */ grid-auto-flow: column; /* Create equal columns by default. */ grid-auto-columns: minmax(0, 1fr); column-gap: var(--column-gap); row-gap: var(--row-gap); }
+    .start-y-grid { align-content: start; }
+    .\32 x-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .\33 x-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .\34 x-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .\35 x-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .\36 x-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .\37 x-grid { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .\38 x-grid { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+    .\39 x-grid { grid-template-columns: repeat(9, minmax(0, 1fr)); }
+    .\31 0x-grid { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+    .\31 1x-grid { grid-template-columns: repeat(11, minmax(0, 1fr)); }
+    .\31 2x-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+    .x-1 { grid-column-start: 1 !important; }
+    .x-2 { grid-column-start: 2 !important; }
+    .x-3 { grid-column-start: 3 !important; }
+    .x-4 { grid-column-start: 4 !important; }
+    .x-5 { grid-column-start: 5 !important; }
+    .x-6 { grid-column-start: 6 !important; }
+    .x-7 { grid-column-start: 7 !important; }
+    .x-8 { grid-column-start: 8 !important; }
+    .x-9 { grid-column-start: 9 !important; }
+    .x-10 { grid-column-start: 10 !important; }
+    .x-11 { grid-column-start: 11 !important; }
+    .x-12 { grid-column-start: 12 !important; }
+    .xspan-1 { grid-column-end: span 1 !important; }
+    .xspan-2 { grid-column-end: span 2 !important; }
+    .xspan-3 { grid-column-end: span 3 !important; }
+    .xspan-4 { grid-column-end: span 4 !important; }
+    .xspan-5 { grid-column-end: span 5 !important; }
+    .xspan-6 { grid-column-end: span 6 !important; }
+    .xspan-7 { grid-column-end: span 7 !important; }
+    .xspan-8 { grid-column-end: span 8 !important; }
+    .xspan-9 { grid-column-end: span 9 !important; }
+    .xspan-10 { grid-column-end: span 10 !important; }
+    .xspan-11 { grid-column-end: span 11 !important; }
+    .xspan-12 { grid-column-end: span 12 !important; }
+    .xspan--1 { grid-column-end: span -1 !important; }
+    .x-end { justify-self: end !important; margin-right: 0; }
+    .x-start { justify-self: start !important; margin-left: 0; }
+    .x-center { justify-self: center !important; }
+    .x-stretch { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
+    .x-bleed { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: calc(100% + var(--column-gap)); }
+    .y-1 { grid-row-start: 1 !important; }
+    .y-2 { grid-row-start: 2 !important; }
+    .y-3 { grid-row-start: 3 !important; }
+    .y-4 { grid-row-start: 4 !important; }
+    .y-5 { grid-row-start: 5 !important; }
+    .y-6 { grid-row-start: 6 !important; }
+    .y-7 { grid-row-start: 7 !important; }
+    .y-8 { grid-row-start: 8 !important; }
+    .y-9 { grid-row-start: 9 !important; }
+    .y-10 { grid-row-start: 10 !important; }
+    .y-11 { grid-row-start: 11 !important; }
+    .y-12 { grid-row-start: 12 !important; }
+    .y-13 { grid-row-start: 13 !important; }
+    .y-14 { grid-row-start: 14 !important; }
+    .y-15 { grid-row-start: 15 !important; }
+    .y-16 { grid-row-start: 16 !important; }
+    .y-17 { grid-row-start: 17 !important; }
+    .y-18 { grid-row-start: 18 !important; }
+    .yspan-1 { grid-row-end: span 1 !important; }
+    .yspan-2 { grid-row-end: span 2 !important; }
+    .yspan-3 { grid-row-end: span 3 !important; }
+    .yspan-4 { grid-row-end: span 4 !important; }
+    .yspan-5 { grid-row-end: span 5 !important; }
+    .yspan-6 { grid-row-end: span 6 !important; }
+    .yspan-7 { grid-row-end: span 7 !important; }
+    .yspan-8 { grid-row-end: span 8 !important; }
+    .yspan-9 { grid-row-end: span 9 !important; }
+    .yspan-10 { grid-row-end: span 10 !important; }
+    .yspan-11 { grid-row-end: span 11 !important; }
+    .yspan-12 { grid-row-end: span 12 !important; }
+    .yspan--1 { grid-row-end: span -1 !important; }
+    .y-end { align-self: end !important; }
+    .y-start { align-self: start !important; }
+    .y-center { align-self: center !important; }
+    .y-stretch { align-self: stretch !important; }
+    .y-baseline { align-self: baseline !important; }
+    .columns-2 { columns: 2 !important; }
+    .columns-3 { columns: 3 !important; }
+    .columns-4 { columns: 4 !important; }
+    .columns-5 { columns: 5 !important; }
+    .columns-6 { columns: 6 !important; }
+    .columns-7 { columns: 7 !important; }
+    .columns-8 { columns: 8 !important; }
+    .columns-9 { columns: 9 !important; }
+    .columns-10 { columns: 10 !important; }
+    .columns-11 { columns: 11 !important; }
+    .columns-12 { columns: 12 !important; } }
+
+:root { --column-gap: 0; --row-gap: 0; }
+
+@media (min-width: 30em) { .\@1-grid { display: grid !important; /* Horizontal layout */ grid-auto-flow: column; /* Create equal columns by default. */ grid-auto-columns: minmax(0, 1fr); column-gap: var(--column-gap); row-gap: var(--row-gap); }
+    .\@1-start-y-grid { align-content: start; }
+    .\@1-\32 x-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .\@1-\33 x-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .\@1-\34 x-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .\@1-\35 x-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .\@1-\36 x-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .\@1-\37 x-grid { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .\@1-\38 x-grid { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+    .\@1-\39 x-grid { grid-template-columns: repeat(9, minmax(0, 1fr)); }
+    .\@1-\31 0x-grid { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+    .\@1-\31 1x-grid { grid-template-columns: repeat(11, minmax(0, 1fr)); }
+    .\@1-\31 2x-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+    .\@1-x-1 { grid-column-start: 1 !important; }
+    .\@1-x-2 { grid-column-start: 2 !important; }
+    .\@1-x-3 { grid-column-start: 3 !important; }
+    .\@1-x-4 { grid-column-start: 4 !important; }
+    .\@1-x-5 { grid-column-start: 5 !important; }
+    .\@1-x-6 { grid-column-start: 6 !important; }
+    .\@1-x-7 { grid-column-start: 7 !important; }
+    .\@1-x-8 { grid-column-start: 8 !important; }
+    .\@1-x-9 { grid-column-start: 9 !important; }
+    .\@1-x-10 { grid-column-start: 10 !important; }
+    .\@1-x-11 { grid-column-start: 11 !important; }
+    .\@1-x-12 { grid-column-start: 12 !important; }
+    .\@1-xspan-1 { grid-column-end: span 1 !important; }
+    .\@1-xspan-2 { grid-column-end: span 2 !important; }
+    .\@1-xspan-3 { grid-column-end: span 3 !important; }
+    .\@1-xspan-4 { grid-column-end: span 4 !important; }
+    .\@1-xspan-5 { grid-column-end: span 5 !important; }
+    .\@1-xspan-6 { grid-column-end: span 6 !important; }
+    .\@1-xspan-7 { grid-column-end: span 7 !important; }
+    .\@1-xspan-8 { grid-column-end: span 8 !important; }
+    .\@1-xspan-9 { grid-column-end: span 9 !important; }
+    .\@1-xspan-10 { grid-column-end: span 10 !important; }
+    .\@1-xspan-11 { grid-column-end: span 11 !important; }
+    .\@1-xspan-12 { grid-column-end: span 12 !important; }
+    .\@1-xspan--1 { grid-column-end: span -1 !important; }
+    .\@1-x-end { justify-self: end !important; margin-right: 0; }
+    .\@1-x-start { justify-self: start !important; margin-left: 0; }
+    .\@1-x-center { justify-self: center !important; }
+    .\@1-x-stretch { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
+    .\@1-x-bleed { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: calc(100% + var(--column-gap)); }
+    .\@1-y-1 { grid-row-start: 1 !important; }
+    .\@1-y-2 { grid-row-start: 2 !important; }
+    .\@1-y-3 { grid-row-start: 3 !important; }
+    .\@1-y-4 { grid-row-start: 4 !important; }
+    .\@1-y-5 { grid-row-start: 5 !important; }
+    .\@1-y-6 { grid-row-start: 6 !important; }
+    .\@1-y-7 { grid-row-start: 7 !important; }
+    .\@1-y-8 { grid-row-start: 8 !important; }
+    .\@1-y-9 { grid-row-start: 9 !important; }
+    .\@1-y-10 { grid-row-start: 10 !important; }
+    .\@1-y-11 { grid-row-start: 11 !important; }
+    .\@1-y-12 { grid-row-start: 12 !important; }
+    .\@1-y-13 { grid-row-start: 13 !important; }
+    .\@1-y-14 { grid-row-start: 14 !important; }
+    .\@1-y-15 { grid-row-start: 15 !important; }
+    .\@1-y-16 { grid-row-start: 16 !important; }
+    .\@1-y-17 { grid-row-start: 17 !important; }
+    .\@1-y-18 { grid-row-start: 18 !important; }
+    .\@1-yspan-1 { grid-row-end: span 1 !important; }
+    .\@1-yspan-2 { grid-row-end: span 2 !important; }
+    .\@1-yspan-3 { grid-row-end: span 3 !important; }
+    .\@1-yspan-4 { grid-row-end: span 4 !important; }
+    .\@1-yspan-5 { grid-row-end: span 5 !important; }
+    .\@1-yspan-6 { grid-row-end: span 6 !important; }
+    .\@1-yspan-7 { grid-row-end: span 7 !important; }
+    .\@1-yspan-8 { grid-row-end: span 8 !important; }
+    .\@1-yspan-9 { grid-row-end: span 9 !important; }
+    .\@1-yspan-10 { grid-row-end: span 10 !important; }
+    .\@1-yspan-11 { grid-row-end: span 11 !important; }
+    .\@1-yspan-12 { grid-row-end: span 12 !important; }
+    .\@1-yspan--1 { grid-row-end: span -1 !important; }
+    .\@1-y-end { align-self: end !important; }
+    .\@1-y-start { align-self: start !important; }
+    .\@1-y-center { align-self: center !important; }
+    .\@1-y-stretch { align-self: stretch !important; }
+    .\@1-y-baseline { align-self: baseline !important; }
+    .\@1-columns-2 { columns: 2 !important; }
+    .\@1-columns-3 { columns: 3 !important; }
+    .\@1-columns-4 { columns: 4 !important; }
+    .\@1-columns-5 { columns: 5 !important; }
+    .\@1-columns-6 { columns: 6 !important; }
+    .\@1-columns-7 { columns: 7 !important; }
+    .\@1-columns-8 { columns: 8 !important; }
+    .\@1-columns-9 { columns: 9 !important; }
+    .\@1-columns-10 { columns: 10 !important; }
+    .\@1-columns-11 { columns: 11 !important; }
+    .\@1-columns-12 { columns: 12 !important; } }
+
+:root { --column-gap: 0; --row-gap: 0; }
+
+@media (min-width: 45em) { .\@2-grid { display: grid !important; /* Horizontal layout */ grid-auto-flow: column; /* Create equal columns by default. */ grid-auto-columns: minmax(0, 1fr); column-gap: var(--column-gap); row-gap: var(--row-gap); }
+    .\@2-start-y-grid { align-content: start; }
+    .\@2-\32 x-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .\@2-\33 x-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .\@2-\34 x-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .\@2-\35 x-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .\@2-\36 x-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .\@2-\37 x-grid { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .\@2-\38 x-grid { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+    .\@2-\39 x-grid { grid-template-columns: repeat(9, minmax(0, 1fr)); }
+    .\@2-\31 0x-grid { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+    .\@2-\31 1x-grid { grid-template-columns: repeat(11, minmax(0, 1fr)); }
+    .\@2-\31 2x-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+    .\@2-x-1 { grid-column-start: 1 !important; }
+    .\@2-x-2 { grid-column-start: 2 !important; }
+    .\@2-x-3 { grid-column-start: 3 !important; }
+    .\@2-x-4 { grid-column-start: 4 !important; }
+    .\@2-x-5 { grid-column-start: 5 !important; }
+    .\@2-x-6 { grid-column-start: 6 !important; }
+    .\@2-x-7 { grid-column-start: 7 !important; }
+    .\@2-x-8 { grid-column-start: 8 !important; }
+    .\@2-x-9 { grid-column-start: 9 !important; }
+    .\@2-x-10 { grid-column-start: 10 !important; }
+    .\@2-x-11 { grid-column-start: 11 !important; }
+    .\@2-x-12 { grid-column-start: 12 !important; }
+    .\@2-xspan-1 { grid-column-end: span 1 !important; }
+    .\@2-xspan-2 { grid-column-end: span 2 !important; }
+    .\@2-xspan-3 { grid-column-end: span 3 !important; }
+    .\@2-xspan-4 { grid-column-end: span 4 !important; }
+    .\@2-xspan-5 { grid-column-end: span 5 !important; }
+    .\@2-xspan-6 { grid-column-end: span 6 !important; }
+    .\@2-xspan-7 { grid-column-end: span 7 !important; }
+    .\@2-xspan-8 { grid-column-end: span 8 !important; }
+    .\@2-xspan-9 { grid-column-end: span 9 !important; }
+    .\@2-xspan-10 { grid-column-end: span 10 !important; }
+    .\@2-xspan-11 { grid-column-end: span 11 !important; }
+    .\@2-xspan-12 { grid-column-end: span 12 !important; }
+    .\@2-xspan--1 { grid-column-end: span -1 !important; }
+    .\@2-x-end { justify-self: end !important; margin-right: 0; }
+    .\@2-x-start { justify-self: start !important; margin-left: 0; }
+    .\@2-x-center { justify-self: center !important; }
+    .\@2-x-stretch { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
+    .\@2-x-bleed { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: calc(100% + var(--column-gap)); }
+    .\@2-y-1 { grid-row-start: 1 !important; }
+    .\@2-y-2 { grid-row-start: 2 !important; }
+    .\@2-y-3 { grid-row-start: 3 !important; }
+    .\@2-y-4 { grid-row-start: 4 !important; }
+    .\@2-y-5 { grid-row-start: 5 !important; }
+    .\@2-y-6 { grid-row-start: 6 !important; }
+    .\@2-y-7 { grid-row-start: 7 !important; }
+    .\@2-y-8 { grid-row-start: 8 !important; }
+    .\@2-y-9 { grid-row-start: 9 !important; }
+    .\@2-y-10 { grid-row-start: 10 !important; }
+    .\@2-y-11 { grid-row-start: 11 !important; }
+    .\@2-y-12 { grid-row-start: 12 !important; }
+    .\@2-y-13 { grid-row-start: 13 !important; }
+    .\@2-y-14 { grid-row-start: 14 !important; }
+    .\@2-y-15 { grid-row-start: 15 !important; }
+    .\@2-y-16 { grid-row-start: 16 !important; }
+    .\@2-y-17 { grid-row-start: 17 !important; }
+    .\@2-y-18 { grid-row-start: 18 !important; }
+    .\@2-yspan-1 { grid-row-end: span 1 !important; }
+    .\@2-yspan-2 { grid-row-end: span 2 !important; }
+    .\@2-yspan-3 { grid-row-end: span 3 !important; }
+    .\@2-yspan-4 { grid-row-end: span 4 !important; }
+    .\@2-yspan-5 { grid-row-end: span 5 !important; }
+    .\@2-yspan-6 { grid-row-end: span 6 !important; }
+    .\@2-yspan-7 { grid-row-end: span 7 !important; }
+    .\@2-yspan-8 { grid-row-end: span 8 !important; }
+    .\@2-yspan-9 { grid-row-end: span 9 !important; }
+    .\@2-yspan-10 { grid-row-end: span 10 !important; }
+    .\@2-yspan-11 { grid-row-end: span 11 !important; }
+    .\@2-yspan-12 { grid-row-end: span 12 !important; }
+    .\@2-yspan--1 { grid-row-end: span -1 !important; }
+    .\@2-y-end { align-self: end !important; }
+    .\@2-y-start { align-self: start !important; }
+    .\@2-y-center { align-self: center !important; }
+    .\@2-y-stretch { align-self: stretch !important; }
+    .\@2-y-baseline { align-self: baseline !important; }
+    .\@2-columns-2 { columns: 2 !important; }
+    .\@2-columns-3 { columns: 3 !important; }
+    .\@2-columns-4 { columns: 4 !important; }
+    .\@2-columns-5 { columns: 5 !important; }
+    .\@2-columns-6 { columns: 6 !important; }
+    .\@2-columns-7 { columns: 7 !important; }
+    .\@2-columns-8 { columns: 8 !important; }
+    .\@2-columns-9 { columns: 9 !important; }
+    .\@2-columns-10 { columns: 10 !important; }
+    .\@2-columns-11 { columns: 11 !important; }
+    .\@2-columns-12 { columns: 12 !important; } }
+
+:root { --column-gap: 0; --row-gap: 0; }
+
+@media (min-width: 60em) { .\@3-grid { display: grid !important; /* Horizontal layout */ grid-auto-flow: column; /* Create equal columns by default. */ grid-auto-columns: minmax(0, 1fr); column-gap: var(--column-gap); row-gap: var(--row-gap); }
+    .\@3-start-y-grid { align-content: start; }
+    .\@3-\32 x-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .\@3-\33 x-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .\@3-\34 x-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .\@3-\35 x-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .\@3-\36 x-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .\@3-\37 x-grid { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .\@3-\38 x-grid { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+    .\@3-\39 x-grid { grid-template-columns: repeat(9, minmax(0, 1fr)); }
+    .\@3-\31 0x-grid { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+    .\@3-\31 1x-grid { grid-template-columns: repeat(11, minmax(0, 1fr)); }
+    .\@3-\31 2x-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+    .\@3-x-1 { grid-column-start: 1 !important; }
+    .\@3-x-2 { grid-column-start: 2 !important; }
+    .\@3-x-3 { grid-column-start: 3 !important; }
+    .\@3-x-4 { grid-column-start: 4 !important; }
+    .\@3-x-5 { grid-column-start: 5 !important; }
+    .\@3-x-6 { grid-column-start: 6 !important; }
+    .\@3-x-7 { grid-column-start: 7 !important; }
+    .\@3-x-8 { grid-column-start: 8 !important; }
+    .\@3-x-9 { grid-column-start: 9 !important; }
+    .\@3-x-10 { grid-column-start: 10 !important; }
+    .\@3-x-11 { grid-column-start: 11 !important; }
+    .\@3-x-12 { grid-column-start: 12 !important; }
+    .\@3-xspan-1 { grid-column-end: span 1 !important; }
+    .\@3-xspan-2 { grid-column-end: span 2 !important; }
+    .\@3-xspan-3 { grid-column-end: span 3 !important; }
+    .\@3-xspan-4 { grid-column-end: span 4 !important; }
+    .\@3-xspan-5 { grid-column-end: span 5 !important; }
+    .\@3-xspan-6 { grid-column-end: span 6 !important; }
+    .\@3-xspan-7 { grid-column-end: span 7 !important; }
+    .\@3-xspan-8 { grid-column-end: span 8 !important; }
+    .\@3-xspan-9 { grid-column-end: span 9 !important; }
+    .\@3-xspan-10 { grid-column-end: span 10 !important; }
+    .\@3-xspan-11 { grid-column-end: span 11 !important; }
+    .\@3-xspan-12 { grid-column-end: span 12 !important; }
+    .\@3-xspan--1 { grid-column-end: span -1 !important; }
+    .\@3-x-end { justify-self: end !important; margin-right: 0; }
+    .\@3-x-start { justify-self: start !important; margin-left: 0; }
+    .\@3-x-center { justify-self: center !important; }
+    .\@3-x-stretch { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
+    .\@3-x-bleed { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: calc(100% + var(--column-gap)); }
+    .\@3-y-1 { grid-row-start: 1 !important; }
+    .\@3-y-2 { grid-row-start: 2 !important; }
+    .\@3-y-3 { grid-row-start: 3 !important; }
+    .\@3-y-4 { grid-row-start: 4 !important; }
+    .\@3-y-5 { grid-row-start: 5 !important; }
+    .\@3-y-6 { grid-row-start: 6 !important; }
+    .\@3-y-7 { grid-row-start: 7 !important; }
+    .\@3-y-8 { grid-row-start: 8 !important; }
+    .\@3-y-9 { grid-row-start: 9 !important; }
+    .\@3-y-10 { grid-row-start: 10 !important; }
+    .\@3-y-11 { grid-row-start: 11 !important; }
+    .\@3-y-12 { grid-row-start: 12 !important; }
+    .\@3-y-13 { grid-row-start: 13 !important; }
+    .\@3-y-14 { grid-row-start: 14 !important; }
+    .\@3-y-15 { grid-row-start: 15 !important; }
+    .\@3-y-16 { grid-row-start: 16 !important; }
+    .\@3-y-17 { grid-row-start: 17 !important; }
+    .\@3-y-18 { grid-row-start: 18 !important; }
+    .\@3-yspan-1 { grid-row-end: span 1 !important; }
+    .\@3-yspan-2 { grid-row-end: span 2 !important; }
+    .\@3-yspan-3 { grid-row-end: span 3 !important; }
+    .\@3-yspan-4 { grid-row-end: span 4 !important; }
+    .\@3-yspan-5 { grid-row-end: span 5 !important; }
+    .\@3-yspan-6 { grid-row-end: span 6 !important; }
+    .\@3-yspan-7 { grid-row-end: span 7 !important; }
+    .\@3-yspan-8 { grid-row-end: span 8 !important; }
+    .\@3-yspan-9 { grid-row-end: span 9 !important; }
+    .\@3-yspan-10 { grid-row-end: span 10 !important; }
+    .\@3-yspan-11 { grid-row-end: span 11 !important; }
+    .\@3-yspan-12 { grid-row-end: span 12 !important; }
+    .\@3-yspan--1 { grid-row-end: span -1 !important; }
+    .\@3-y-end { align-self: end !important; }
+    .\@3-y-start { align-self: start !important; }
+    .\@3-y-center { align-self: center !important; }
+    .\@3-y-stretch { align-self: stretch !important; }
+    .\@3-y-baseline { align-self: baseline !important; }
+    .\@3-columns-2 { columns: 2 !important; }
+    .\@3-columns-3 { columns: 3 !important; }
+    .\@3-columns-4 { columns: 4 !important; }
+    .\@3-columns-5 { columns: 5 !important; }
+    .\@3-columns-6 { columns: 6 !important; }
+    .\@3-columns-7 { columns: 7 !important; }
+    .\@3-columns-8 { columns: 8 !important; }
+    .\@3-columns-9 { columns: 9 !important; }
+    .\@3-columns-10 { columns: 10 !important; }
+    .\@3-columns-11 { columns: 11 !important; }
+    .\@3-columns-12 { columns: 12 !important; } }
+
+:root { --column-gap: 0; --row-gap: 0; }
+
+@media (min-width: 75em) { .\@4-grid { display: grid !important; /* Horizontal layout */ grid-auto-flow: column; /* Create equal columns by default. */ grid-auto-columns: minmax(0, 1fr); column-gap: var(--column-gap); row-gap: var(--row-gap); }
+    .\@4-start-y-grid { align-content: start; }
+    .\@4-\32 x-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .\@4-\33 x-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .\@4-\34 x-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .\@4-\35 x-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .\@4-\36 x-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .\@4-\37 x-grid { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .\@4-\38 x-grid { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+    .\@4-\39 x-grid { grid-template-columns: repeat(9, minmax(0, 1fr)); }
+    .\@4-\31 0x-grid { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+    .\@4-\31 1x-grid { grid-template-columns: repeat(11, minmax(0, 1fr)); }
+    .\@4-\31 2x-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+    .\@4-x-1 { grid-column-start: 1 !important; }
+    .\@4-x-2 { grid-column-start: 2 !important; }
+    .\@4-x-3 { grid-column-start: 3 !important; }
+    .\@4-x-4 { grid-column-start: 4 !important; }
+    .\@4-x-5 { grid-column-start: 5 !important; }
+    .\@4-x-6 { grid-column-start: 6 !important; }
+    .\@4-x-7 { grid-column-start: 7 !important; }
+    .\@4-x-8 { grid-column-start: 8 !important; }
+    .\@4-x-9 { grid-column-start: 9 !important; }
+    .\@4-x-10 { grid-column-start: 10 !important; }
+    .\@4-x-11 { grid-column-start: 11 !important; }
+    .\@4-x-12 { grid-column-start: 12 !important; }
+    .\@4-xspan-1 { grid-column-end: span 1 !important; }
+    .\@4-xspan-2 { grid-column-end: span 2 !important; }
+    .\@4-xspan-3 { grid-column-end: span 3 !important; }
+    .\@4-xspan-4 { grid-column-end: span 4 !important; }
+    .\@4-xspan-5 { grid-column-end: span 5 !important; }
+    .\@4-xspan-6 { grid-column-end: span 6 !important; }
+    .\@4-xspan-7 { grid-column-end: span 7 !important; }
+    .\@4-xspan-8 { grid-column-end: span 8 !important; }
+    .\@4-xspan-9 { grid-column-end: span 9 !important; }
+    .\@4-xspan-10 { grid-column-end: span 10 !important; }
+    .\@4-xspan-11 { grid-column-end: span 11 !important; }
+    .\@4-xspan-12 { grid-column-end: span 12 !important; }
+    .\@4-xspan--1 { grid-column-end: span -1 !important; }
+    .\@4-x-end { justify-self: end !important; margin-right: 0; }
+    .\@4-x-start { justify-self: start !important; margin-left: 0; }
+    .\@4-x-center { justify-self: center !important; }
+    .\@4-x-stretch { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
+    .\@4-x-bleed { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: calc(100% + var(--column-gap)); }
+    .\@4-y-1 { grid-row-start: 1 !important; }
+    .\@4-y-2 { grid-row-start: 2 !important; }
+    .\@4-y-3 { grid-row-start: 3 !important; }
+    .\@4-y-4 { grid-row-start: 4 !important; }
+    .\@4-y-5 { grid-row-start: 5 !important; }
+    .\@4-y-6 { grid-row-start: 6 !important; }
+    .\@4-y-7 { grid-row-start: 7 !important; }
+    .\@4-y-8 { grid-row-start: 8 !important; }
+    .\@4-y-9 { grid-row-start: 9 !important; }
+    .\@4-y-10 { grid-row-start: 10 !important; }
+    .\@4-y-11 { grid-row-start: 11 !important; }
+    .\@4-y-12 { grid-row-start: 12 !important; }
+    .\@4-y-13 { grid-row-start: 13 !important; }
+    .\@4-y-14 { grid-row-start: 14 !important; }
+    .\@4-y-15 { grid-row-start: 15 !important; }
+    .\@4-y-16 { grid-row-start: 16 !important; }
+    .\@4-y-17 { grid-row-start: 17 !important; }
+    .\@4-y-18 { grid-row-start: 18 !important; }
+    .\@4-yspan-1 { grid-row-end: span 1 !important; }
+    .\@4-yspan-2 { grid-row-end: span 2 !important; }
+    .\@4-yspan-3 { grid-row-end: span 3 !important; }
+    .\@4-yspan-4 { grid-row-end: span 4 !important; }
+    .\@4-yspan-5 { grid-row-end: span 5 !important; }
+    .\@4-yspan-6 { grid-row-end: span 6 !important; }
+    .\@4-yspan-7 { grid-row-end: span 7 !important; }
+    .\@4-yspan-8 { grid-row-end: span 8 !important; }
+    .\@4-yspan-9 { grid-row-end: span 9 !important; }
+    .\@4-yspan-10 { grid-row-end: span 10 !important; }
+    .\@4-yspan-11 { grid-row-end: span 11 !important; }
+    .\@4-yspan-12 { grid-row-end: span 12 !important; }
+    .\@4-yspan--1 { grid-row-end: span -1 !important; }
+    .\@4-y-end { align-self: end !important; }
+    .\@4-y-start { align-self: start !important; }
+    .\@4-y-center { align-self: center !important; }
+    .\@4-y-stretch { align-self: stretch !important; }
+    .\@4-y-baseline { align-self: baseline !important; }
+    .\@4-columns-2 { columns: 2 !important; }
+    .\@4-columns-3 { columns: 3 !important; }
+    .\@4-columns-4 { columns: 4 !important; }
+    .\@4-columns-5 { columns: 5 !important; }
+    .\@4-columns-6 { columns: 6 !important; }
+    .\@4-columns-7 { columns: 7 !important; }
+    .\@4-columns-8 { columns: 8 !important; }
+    .\@4-columns-9 { columns: 9 !important; }
+    .\@4-columns-10 { columns: 10 !important; }
+    .\@4-columns-11 { columns: 11 !important; }
+    .\@4-columns-12 { columns: 12 !important; } }
+
+:root { --column-gap: 0; --row-gap: 0; }
+
+@media (min-width: 90em) { .\@5-grid { display: grid !important; /* Horizontal layout */ grid-auto-flow: column; /* Create equal columns by default. */ grid-auto-columns: minmax(0, 1fr); column-gap: var(--column-gap); row-gap: var(--row-gap); }
+    .\@5-start-y-grid { align-content: start; }
+    .\@5-\32 x-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .\@5-\33 x-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .\@5-\34 x-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .\@5-\35 x-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .\@5-\36 x-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .\@5-\37 x-grid { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .\@5-\38 x-grid { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+    .\@5-\39 x-grid { grid-template-columns: repeat(9, minmax(0, 1fr)); }
+    .\@5-\31 0x-grid { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+    .\@5-\31 1x-grid { grid-template-columns: repeat(11, minmax(0, 1fr)); }
+    .\@5-\31 2x-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+    .\@5-x-1 { grid-column-start: 1 !important; }
+    .\@5-x-2 { grid-column-start: 2 !important; }
+    .\@5-x-3 { grid-column-start: 3 !important; }
+    .\@5-x-4 { grid-column-start: 4 !important; }
+    .\@5-x-5 { grid-column-start: 5 !important; }
+    .\@5-x-6 { grid-column-start: 6 !important; }
+    .\@5-x-7 { grid-column-start: 7 !important; }
+    .\@5-x-8 { grid-column-start: 8 !important; }
+    .\@5-x-9 { grid-column-start: 9 !important; }
+    .\@5-x-10 { grid-column-start: 10 !important; }
+    .\@5-x-11 { grid-column-start: 11 !important; }
+    .\@5-x-12 { grid-column-start: 12 !important; }
+    .\@5-xspan-1 { grid-column-end: span 1 !important; }
+    .\@5-xspan-2 { grid-column-end: span 2 !important; }
+    .\@5-xspan-3 { grid-column-end: span 3 !important; }
+    .\@5-xspan-4 { grid-column-end: span 4 !important; }
+    .\@5-xspan-5 { grid-column-end: span 5 !important; }
+    .\@5-xspan-6 { grid-column-end: span 6 !important; }
+    .\@5-xspan-7 { grid-column-end: span 7 !important; }
+    .\@5-xspan-8 { grid-column-end: span 8 !important; }
+    .\@5-xspan-9 { grid-column-end: span 9 !important; }
+    .\@5-xspan-10 { grid-column-end: span 10 !important; }
+    .\@5-xspan-11 { grid-column-end: span 11 !important; }
+    .\@5-xspan-12 { grid-column-end: span 12 !important; }
+    .\@5-xspan--1 { grid-column-end: span -1 !important; }
+    .\@5-x-end { justify-self: end !important; margin-right: 0; }
+    .\@5-x-start { justify-self: start !important; margin-left: 0; }
+    .\@5-x-center { justify-self: center !important; }
+    .\@5-x-stretch { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
+    .\@5-x-bleed { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: calc(100% + var(--column-gap)); }
+    .\@5-y-1 { grid-row-start: 1 !important; }
+    .\@5-y-2 { grid-row-start: 2 !important; }
+    .\@5-y-3 { grid-row-start: 3 !important; }
+    .\@5-y-4 { grid-row-start: 4 !important; }
+    .\@5-y-5 { grid-row-start: 5 !important; }
+    .\@5-y-6 { grid-row-start: 6 !important; }
+    .\@5-y-7 { grid-row-start: 7 !important; }
+    .\@5-y-8 { grid-row-start: 8 !important; }
+    .\@5-y-9 { grid-row-start: 9 !important; }
+    .\@5-y-10 { grid-row-start: 10 !important; }
+    .\@5-y-11 { grid-row-start: 11 !important; }
+    .\@5-y-12 { grid-row-start: 12 !important; }
+    .\@5-y-13 { grid-row-start: 13 !important; }
+    .\@5-y-14 { grid-row-start: 14 !important; }
+    .\@5-y-15 { grid-row-start: 15 !important; }
+    .\@5-y-16 { grid-row-start: 16 !important; }
+    .\@5-y-17 { grid-row-start: 17 !important; }
+    .\@5-y-18 { grid-row-start: 18 !important; }
+    .\@5-yspan-1 { grid-row-end: span 1 !important; }
+    .\@5-yspan-2 { grid-row-end: span 2 !important; }
+    .\@5-yspan-3 { grid-row-end: span 3 !important; }
+    .\@5-yspan-4 { grid-row-end: span 4 !important; }
+    .\@5-yspan-5 { grid-row-end: span 5 !important; }
+    .\@5-yspan-6 { grid-row-end: span 6 !important; }
+    .\@5-yspan-7 { grid-row-end: span 7 !important; }
+    .\@5-yspan-8 { grid-row-end: span 8 !important; }
+    .\@5-yspan-9 { grid-row-end: span 9 !important; }
+    .\@5-yspan-10 { grid-row-end: span 10 !important; }
+    .\@5-yspan-11 { grid-row-end: span 11 !important; }
+    .\@5-yspan-12 { grid-row-end: span 12 !important; }
+    .\@5-yspan--1 { grid-row-end: span -1 !important; }
+    .\@5-y-end { align-self: end !important; }
+    .\@5-y-start { align-self: start !important; }
+    .\@5-y-center { align-self: center !important; }
+    .\@5-y-stretch { align-self: stretch !important; }
+    .\@5-y-baseline { align-self: baseline !important; }
+    .\@5-columns-2 { columns: 2 !important; }
+    .\@5-columns-3 { columns: 3 !important; }
+    .\@5-columns-4 { columns: 4 !important; }
+    .\@5-columns-5 { columns: 5 !important; }
+    .\@5-columns-6 { columns: 6 !important; }
+    .\@5-columns-7 { columns: 7 !important; }
+    .\@5-columns-8 { columns: 8 !important; }
+    .\@5-columns-9 { columns: 9 !important; }
+    .\@5-columns-10 { columns: 10 !important; }
+    .\@5-columns-11 { columns: 11 !important; }
+    .\@5-columns-12 { columns: 12 !important; } }
+
+:root { --column-gap: 0; --row-gap: 0; }
+
+/*
+THIS FILE IS GENERATED FROM SASS. DO NOT HAND-EDIT. THE NEXT BUILD WILL ERASE
+YOUR CHANGES. YOU HAVE BEEN WARNED.
+*/
+/**
+.hidden
+
+Forces `display: none`. This class is also available with breakpoint prefixes
+(`@1-`, `@2-`, ...).
+
+```html
+<a class="hidden" href="...">Link</a>
+<a class="@2-hidden" href="...">Link</a>
+```
+**/
+.hidden { display: none !important; }
+
+/**
+.print-hidden
+Hide element on printed page.
+```html
+<nav class="print-hidden">...</nav>
+```
+**/
+@media print { .print-hidden { display: none !important; } }
+
+/**
+.shown
+
+Forces `display: none` below a given breakpoint. This class is only available
+with breakpoint prefixes (`@1-`, `@2-`, ...).
+
+```html
+<a class="@1-shown" href="...">Link</a>
+```
+**/
+/* Removed because we have projects that override .block - it sort of has two meanings, now, in Bolt – base class and modifier – which is a bad idea. */
+/*().block          { display: block !important; }*/
+.inline { display: inline-block !important; }
+
+.left { float: left !important; clear: left; }
+
+.right { float: right !important; clear: right; }
+
+.top-align { vertical-align: top !important; }
+
+.bottom-align { vertical-align: bottom !important; }
+
+.middle-align { vertical-align: middle !important; }
+
+.baseline-align { vertical-align: baseline !important; }
+
+.left-align { text-align: left !important; }
+
+.right-align { text-align: right !important; }
+
+.center-align { text-align: center !important; }
+
+.justify-align { text-align: justify !important; }
+
+/**
+.flex
+Applies `display: flex`. This class may also be used with a
+breakpoint prefix.
+**/
+.flex { display: flex !important; }
+
+@media screen and (max-width: -0.001em) { .shown { display: none !important; } }
+
+@media screen and (min-width: 0em) { .hidden { display: none !important; }
+    /*.block          { display: block !important; }*/
+    .flex { display: flex !important; }
+    .inline { display: inline-block !important; }
+    .left { float: left !important; clear: left; }
+    .right { float: right !important; clear: right; }
+    .top-align { vertical-align: top !important; }
+    .bottom-align { vertical-align: bottom !important; }
+    .middle-align { vertical-align: middle !important; }
+    .baseline-align { vertical-align: baseline !important; }
+    .left-align { text-align: left !important; }
+    .right-align { text-align: right !important; }
+    .center-align { text-align: center !important; }
+    .justify-align { text-align: justify !important; } }
+
+@media screen and (max-width: 29.999em) { .\@1-shown { display: none !important; } }
+
+@media screen and (min-width: 30em) { .\@1-hidden { display: none !important; }
+    /*.\@1-block          { display: block !important; }*/
+    .\@1-flex { display: flex !important; }
+    .\@1-inline { display: inline-block !important; }
+    .\@1-left { float: left !important; clear: left; }
+    .\@1-right { float: right !important; clear: right; }
+    .\@1-top-align { vertical-align: top !important; }
+    .\@1-bottom-align { vertical-align: bottom !important; }
+    .\@1-middle-align { vertical-align: middle !important; }
+    .\@1-baseline-align { vertical-align: baseline !important; }
+    .\@1-left-align { text-align: left !important; }
+    .\@1-right-align { text-align: right !important; }
+    .\@1-center-align { text-align: center !important; }
+    .\@1-justify-align { text-align: justify !important; } }
+
+@media screen and (max-width: 44.999em) { .\@2-shown { display: none !important; } }
+
+@media screen and (min-width: 45em) { .\@2-hidden { display: none !important; }
+    /*.\@2-block          { display: block !important; }*/
+    .\@2-flex { display: flex !important; }
+    .\@2-inline { display: inline-block !important; }
+    .\@2-left { float: left !important; clear: left; }
+    .\@2-right { float: right !important; clear: right; }
+    .\@2-top-align { vertical-align: top !important; }
+    .\@2-bottom-align { vertical-align: bottom !important; }
+    .\@2-middle-align { vertical-align: middle !important; }
+    .\@2-baseline-align { vertical-align: baseline !important; }
+    .\@2-left-align { text-align: left !important; }
+    .\@2-right-align { text-align: right !important; }
+    .\@2-center-align { text-align: center !important; }
+    .\@2-justify-align { text-align: justify !important; } }
+
+@media screen and (max-width: 59.999em) { .\@3-shown { display: none !important; } }
+
+@media screen and (min-width: 60em) { .\@3-hidden { display: none !important; }
+    /*.\@3-block          { display: block !important; }*/
+    .\@3-flex { display: flex !important; }
+    .\@3-inline { display: inline-block !important; }
+    .\@3-left { float: left !important; clear: left; }
+    .\@3-right { float: right !important; clear: right; }
+    .\@3-top-align { vertical-align: top !important; }
+    .\@3-bottom-align { vertical-align: bottom !important; }
+    .\@3-middle-align { vertical-align: middle !important; }
+    .\@3-baseline-align { vertical-align: baseline !important; }
+    .\@3-left-align { text-align: left !important; }
+    .\@3-right-align { text-align: right !important; }
+    .\@3-center-align { text-align: center !important; }
+    .\@3-justify-align { text-align: justify !important; } }
+
+@media screen and (max-width: 74.999em) { .\@4-shown { display: none !important; } }
+
+@media screen and (min-width: 75em) { .\@4-hidden { display: none !important; }
+    /*.\@4-block          { display: block !important; }*/
+    .\@4-flex { display: flex !important; }
+    .\@4-inline { display: inline-block !important; }
+    .\@4-left { float: left !important; clear: left; }
+    .\@4-right { float: right !important; clear: right; }
+    .\@4-top-align { vertical-align: top !important; }
+    .\@4-bottom-align { vertical-align: bottom !important; }
+    .\@4-middle-align { vertical-align: middle !important; }
+    .\@4-baseline-align { vertical-align: baseline !important; }
+    .\@4-left-align { text-align: left !important; }
+    .\@4-right-align { text-align: right !important; }
+    .\@4-center-align { text-align: center !important; }
+    .\@4-justify-align { text-align: justify !important; } }
+
+@media screen and (max-width: 89.999em) { .\@5-shown { display: none !important; } }
+
+@media screen and (min-width: 90em) { .\@5-hidden { display: none !important; }
+    /*.\@5-block          { display: block !important; }*/
+    .\@5-flex { display: flex !important; }
+    .\@5-inline { display: inline-block !important; }
+    .\@5-left { float: left !important; clear: left; }
+    .\@5-right { float: right !important; clear: right; }
+    .\@5-top-align { vertical-align: top !important; }
+    .\@5-bottom-align { vertical-align: bottom !important; }
+    .\@5-middle-align { vertical-align: middle !important; }
+    .\@5-baseline-align { vertical-align: baseline !important; }
+    .\@5-left-align { text-align: left !important; }
+    .\@5-right-align { text-align: right !important; }
+    .\@5-center-align { text-align: center !important; }
+    .\@5-justify-align { text-align: justify !important; } }
