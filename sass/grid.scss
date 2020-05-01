@@ -1,0 +1,17 @@
+
+/*
+THIS FILE IS GENERATED FROM SASS. DO NOT HAND-EDIT. THE NEXT BUILD WILL ERASE
+YOUR CHANGES. YOU HAVE BEEN WARNED.
+*/
+
+// $breakpoints: prefix, min-width, grid count, gutter, space
+$breakpoints:
+    ''      0em  6 0 0,
+    '\\@1-' 30em 6 0 0,
+    '\\@2-' 45em 6 0 0,
+    '\\@3-' 60em 9 0 0,
+    '\\@4-' 75em 9 0 0,
+    '\\@5-' 90em 9 0 0;
+
+@import '../bolt/sass/grid.scss';
+@import '../bolt/sass/respond.scss';

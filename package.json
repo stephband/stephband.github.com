@@ -1,0 +1,26 @@
+{
+  "name": "",
+  "description": "My website",
+  "version": "0.0.1",
+  "author": "@stephband",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stephband/stephen-band.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stephband/bolt/issues/"
+  },
+  "license": "Private",
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "node-sass": "^4.13.1",
+    "rollup": "^1.32.1"
+  },
+  "scripts": {
+    "lint": "eslint ./*.js",
+    "build-sass": "node-sass --output-style compact --indent-width 4 ./sass/grid.scss ./components/grid.css",
+    "build-css": "npm run build-sass && node build-css.js dist/bolt.min.css",
+    "build-module": "rollup ./module.js --o dist/bolt.js --f esm"
+  },
+  "style": []
+}

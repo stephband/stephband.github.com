@@ -1,6 +1,7 @@
 /* */
 
 .panels-grid {
+    grid-auto-flow: row dense;
     column-gap: 0;
     row-gap: 0;
 }
