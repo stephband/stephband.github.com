@@ -42,8 +42,35 @@
         </a>
     </header>
 
-    <section class="panels-grid 6x-grid grid">
-        <div class="panel-block block 9x-grid grid x-1 xspan-3" style="color: #202223; background-color: #ffb700; background-image: linear-gradient(173deg, #ff006a82, #0000);">
+    <div class="panels-grid 6x-grid grid">
+        <section class="panel-block block 9x-grid grid x-1 xspan-3 no-scroll" style="color: #d1d1d1; background-color: #4f4f4f; background-image: linear-gradient(85deg, #2e2520, #4f4b48); padding-top: 3.125vw;">
+            <h2 class="x-2 xspan-4 x-stretch" style="color: #ffad1e; text-shadow: 0 0 17px #ff5d0ebf;">Brass Volcanoes.</h2>
+
+            <p class="x-2 xspan-4">
+                I engineered the latest Brass Volcanoes recording <em>Funky Pineapple</em> on location in London.
+                Buy it on <a href="https://brassvolcanoes.bandcamp.com/album/funky-pineapple">Bandcamp</a>.
+            </p>
+
+            <img class="x-2 xspan-2" src="brass-volcanoes/images/funky-pineapple.jpg" style="margin-top: 1em;" />
+
+            <iframe class="" style="position: absolute; right: -1px; top: -1px; bottom: -1px; border: 0; width: calc(33.33333333% + 1px); height: calc(100% + 2px); margin: 0;" src="https://bandcamp.com/EmbeddedPlayer/album=4255534285/size=large/bgcol=333333/linkcol=e99708/artwork=none/track=185517818/transparent=true/" seamless>
+                <a href="http://brassvolcanoes.bandcamp.com/album/funky-pineapple">Funky Pineapple by Brass Volcanoes</a>
+            </iframe>
+
+            <small class="x-2 xspan-4 text-11" style="margin-top: 1em;">
+                Sousaphone <span style="color: rgba(255,255,255,0.5);">Graham Hughes</span>
+                Trumpet, Vocals <span style="color: rgba(255,255,255,0.5);">Ben Cummings</span>
+                Trumpet <span style="color: rgba(255,255,255,0.5);">Paul Jordanous</span>
+                Tenor <span style="color: rgba(255,255,255,0.5);">Jac Jones</span>
+                Trombone <span style="color: rgba(255,255,255,0.5);">Malcolm Earle Smith</span>
+                Trombone <span style="color: rgba(255,255,255,0.5);">Tom White</span>
+                Drums, Vocals <span style="color: rgba(255,255,255,0.5);">Bubu</span>
+                Snare <span style="color: rgba(255,255,255,0.5);">Wesley Gibbens</span>
+                Rap <span style="color: rgba(255,255,255,0.5);">Zeb Tonkin</span>
+            </small>
+        </section>
+
+        <section class="panel-block block 9x-grid grid x-1 xspan-3" style="color: #202223; background-color: #ffb700; background-image: linear-gradient(173deg, #ff006a82, #0000);">
             <h2 class="x-2 xspan-6 x-stretch midi-before before">MIDI
                 <template is="sparky-template" fn="fetch:'/midi/package.json'">
                     <span class="text-09">{[version]}</span>
@@ -51,16 +78,16 @@
             </h2>
             <p class="x-2 xspan-6 x-stretch">Receive, monitor, manipulate and transmit MIDI messages in the browser.</p>
             <a class="x-2 xspan-3 button white-fg" style="background-color: #202223;" href="/midi/monitor/">MIDI Monitor</a>
-        </div>
+        </section>
 
-        <div class="panel-block block 9x-grid grid x-4 xspan-3" style="background: linear-gradient(9deg, #e67f9f, #7f007f);">
+        <section class="panel-block block 9x-grid grid x-4 xspan-3" style="background: linear-gradient(9deg, #e67f9f, #7f007f);">
             <h2 class="x-2 xspan-6 x-stretch" style="color: #e1c3d1;">Happy Birthday<br/>Dear Laura.</h2>
             <audio class="x-2 xspan-6 x-stretch" controls src="//sound.stephen.band/stephen/happy-birthday-dear-laura.m4a">
                 Your browser does not support the <code>audio</code> element.
             </audio>
-        </div>
+        </section>
 
-        <div class="panel-block block 9x-grid grid x-1 white-fg xspan-3" style="background: linear-gradient(9deg, #005477, #016881);">
+        <section class="panel-block block 9x-grid grid x-1 white-fg xspan-3" style="background: linear-gradient(9deg, #005477, #016881);">
             <h2 class="x-2 xspan-6 x-stretch">
                 Bolt
                 <template is="sparky-template" fn="fetch:'/bolt/package.json'">
@@ -68,9 +95,9 @@
                 </template>
             </h2>
             <p class="x-2 xspan-6 x-stretch">A library of base classes, components and custom&nbsp;elements</p>
-        </div>
+        </section>
 
-        <div class="panel-block block 9x-grid grid x-4 xspan-3 rotate-bg" style="color: #062d3d; background: url(manuscript/A3-16-stave.svg) 50% 50%, linear-gradient(3deg, grey, white);">
+        <section class="panel-block block 9x-grid grid x-4 xspan-3 rotate-bg" style="color: #062d3d; background: url(manuscript/A3-16-stave.svg) 50% 50%, linear-gradient(3deg, grey, white);">
             <h2 class="x-2 xspan-6 x-stretch">Manuscript.</h2>
             <p class="x-2 xspan-6 x-stretch">Elusive, innit? I can never find any when I really need it.</p>
             <ul class="x-2 xspan-3 index">
@@ -86,15 +113,15 @@
                 <li><a href="manuscript/A3-16-stave.svg">A3-16-stave.svg</a></li>
                 <li><a href="manuscript/A3-16-stave.svg">A3-16-stave.pdf</a></li>
             </ul>
-        </div>
+        </section>
 
-        <div class="panel-block block 9x-grid grid x-1 xspan-2" style="color: #3c1407; background-color: #c4c995; background-image: linear-gradient(173deg, #f0f1e6, #a99e69);">
+        <section class="panel-block block 9x-grid grid x-1 xspan-2" style="color: #3c1407; background-color: #c4c995; background-image: linear-gradient(173deg, #f0f1e6, #a99e69);">
             <h2 class="x-2 xspan-6 x-stretch text-03">Font size calculator</h2>
             <p class="x-2 xspan-6 x-stretch">Generate a CSS stylesheet with a hierarchy of font-sizes that adapt to the width of the viewport.</p>
             <a class="x-2 xspan-3 button white-fg" style="background-color: #45190b;" href="/font-size/">Font size calculator</a>
-        </div>
+        </section>
 
-        <div class="panel-block block 9x-grid grid x-3 xspan-4 yspan-2" style="color: #bbb9b8; background: linear-gradient(90deg,#3A4B53 0%,#23292D 100%);">
+        <section class="panel-block block 9x-grid grid x-3 xspan-4 yspan-2" style="color: #bbb9b8; background: linear-gradient(90deg,#3A4B53 0%,#23292D 100%);">
             <svg class="x-2 xspan-2 x-center y-1 y-start yspan-6 logo-svg" style="margin-left: 10%; margin-right: 10%;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 170" preserveAspectRatio="xMidYMid">
                 <a xlink:href="https://cruncher.ch">
                     <g>
@@ -138,12 +165,12 @@
             </svg>
 
             <div class="x-5 xspan-3 y-2">
-                <p>I run Cruncher, a web development agency in Lausanne. We tackle hard challenges like building big content management systems and real-time marketplaces for our clients.</p>
+                <p>I work at Cruncher, a web development agency in Lausanne. We tackle hard challenges like building big content management systems and real-time marketplaces for our clients.</p>
                 <p>You should hire us.</p>
                 <a class="button" style="background-color: #1f2427; margin-top: 3em;" href="https://cruncher.ch">Cruncher website</a>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Document interactivity -->
     <script type="module">
