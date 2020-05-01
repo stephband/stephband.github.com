@@ -1,11 +1,17 @@
 /* */
 
 .panels-grid {
+    grid-auto-columns: minmax(0, 16.66666667%);
+    grid-auto-rows: minmax(9.375vw, max-content);
     grid-auto-flow: row dense;
     column-gap: 0;
     row-gap: 0;
+    align-items: stretch;
+    justify-items: stretch;
 }
 
 .panels-grid > * {
     margin: 0;
+    grid-column-end: span 6;
+    grid-row-end: span 6;
 }
