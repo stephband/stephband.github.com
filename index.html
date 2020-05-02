@@ -2,10 +2,10 @@
     <meta charset="utf-8">
 
     <meta name="author" content="@">
-    <meta name="description" content="Documentation for . A front-end toolkit of classes and evented behaviours.">
+    <meta name="description" content="Web and music projects.">
     <meta name="viewport" content="width=device-width">
 
-    <title></title>
+    <title>Stephen Band</title>
 
     <script>
     document.documentElement.className += ' js content-loading loading';
@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="components/root.css">
     <link rel="stylesheet" href="components/text.css">
     <link rel="stylesheet" href="components/content.css">
+    <link rel="stylesheet" href="components/button.css">
     <link rel="stylesheet" href="components/grid.css">
     <link rel="stylesheet" href="components/header.css">
     <link rel="stylesheet" href="components/panels-grid.css">
@@ -71,14 +72,21 @@
             </small>
         </section>
 
-        <section class="panel-block block 9x-grid grid @4-xspan-3 @4-yspan-3" style="color: #202223; background-color: #ffb700; background-image: linear-gradient(173deg, #ff006a82, #0000);">
+        <section class="panel-block block 9x-grid grid @4-xspan-3 @4-yspan-3" style="align-content: end; color: #202223; background-color: #ffb700; background-image: linear-gradient(173deg, #ff006a82, #0000); padding-top: 6.25%; padding-bottom: 12.5%;">
             <h2 class="x-2 xspan-6 x-stretch midi-before before">MIDI
                 <template is="sparky-template" fn="fetch:'/midi/package.json'">
                     <span class="text-09">{[version]}</span>
                 </template>
             </h2>
-            <p class="x-2 xspan-6 x-stretch">Receive, monitor, manipulate and transmit MIDI messages in the browser.</p>
-            <a class="x-2 xspan-3 button white-fg" style="background-color: #202223;" href="/midi/monitor/">MIDI Monitor</a>
+
+            <p class="x-2 xspan-3 y-2 y-end x-stretch">Receive, monitor, manipulate and transmit MIDI messages in the&nbsp;browser.</p>
+            <a class="x-2 xspan-3 y-3 y-start button white-fg" style="background-color: #202223;" href="/midi/">MIDI JS library</a>
+
+            <p class="x-5 xspan-3 y-2 y-end x-stretch">
+                With a MIDI instrument connected, inspect the data it sends with the online MIDI Monitor.
+                This tool is available with the library as the custom element <code>&lt;midi-monitor&gt;</code>.
+            </p>
+            <a class="x-5 xspan-3 y-3 y-start button white-fg" style="background-color: #202223;" href="/midi/monitor/">MIDI Monitor</a>
         </section>
 
         <section class="panel-block block 9x-grid grid @4-xspan-3 @4-yspan-3" style="background: linear-gradient(9deg, #e67f9f, #7f007f);">
@@ -107,16 +115,16 @@
             </p>
             <ul class="x-2 xspan-3 index">
                 <li><a href="manuscript/A4-8-stave.svg">A4-8-stave.svg</a></li>
-                <li><a href="manuscript/A4-8-stave.svg">A4-8-stave.pdf</a></li>
+                <li><a href="manuscript/A4-8-stave.pdf">A4-8-stave.pdf</a></li>
                 <li><a href="manuscript/A4-10-stave.svg">A4-10-stave.svg</a></li>
-                <li><a href="manuscript/A4-10-stave.svg">A4-10-stave.pdf</a></li>
+                <li><a href="manuscript/A4-10-stave.pdf">A4-10-stave.pdf</a></li>
             </ul>
 
             <ul class="x-5 xspan-3 index">
                 <li><a href="manuscript/A4-11-stave.svg">A4-11-stave.svg</a></li>
-                <li><a href="manuscript/A4-11-stave.svg">A4-11-stave.pdf</a></li>
+                <li><a href="manuscript/A4-11-stave.pdf">A4-11-stave.pdf</a></li>
                 <li><a href="manuscript/A3-16-stave.svg">A3-16-stave.svg</a></li>
-                <li><a href="manuscript/A3-16-stave.svg">A3-16-stave.pdf</a></li>
+                <li><a href="manuscript/A3-16-stave.pdf">A3-16-stave.pdf</a></li>
             </ul>
         </section>
 

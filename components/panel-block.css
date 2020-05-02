@@ -5,9 +5,9 @@
     /* Vertical padding adapts with width. */
     padding-top: 12.5%;
     padding-bottom: 6.25%;
-    column-gap: 0;
     row-gap: 0;
     grid-auto-rows: minmax(min-content, 16.66666667%);
+    --column-gap: 1em;
 }
 
 /*
