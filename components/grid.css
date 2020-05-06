@@ -23,229 +23,57 @@ Grid.
 
 Creates a grid with horizontal flow and equal width columns.
 **/
-.grid { display: grid !important; grid-column-gap: 1.875rem; grid-row-gap: 1.875rem; }
-
 /*
-.2-grid
+.2x-grid
 Applies a grid template of 2 equal columns.
 **/
 /*
-.3-grid
+.3x-grid
 Applies a grid template of 3 equal columns.
 **/
 /*
-.4-grid
+.4x-grid
 Applies a grid template of 4 equal columns.
 **/
 /*
-.5-grid
+.5x-grid
 Applies a grid template of 5 equal columns.
 **/
 /*
-.6-grid
+.6x-grid
 Applies a grid template of 6 equal columns.
 **/
-.\32 -grid { grid-template-columns: repeat(2, 1fr); }
-
-.\33 -grid { grid-template-columns: repeat(3, 1fr); }
-
-.\34 -grid { grid-template-columns: repeat(4, 1fr); }
-
-.\35 -grid { grid-template-columns: repeat(5, 1fr); }
-
-.\36 -grid { grid-template-columns: repeat(6, 1fr); }
-
-.\37 -grid { grid-template-columns: repeat(7, 1fr); }
-
-.\38 -grid { grid-template-columns: repeat(8, 1fr); }
-
-.\39 -grid { grid-template-columns: repeat(9, 1fr); }
-
-.\31 0-grid { grid-template-columns: repeat(10, 1fr); }
-
-.\31 1-grid { grid-template-columns: repeat(11, 1fr); }
-
-.\31 2-grid { grid-template-columns: repeat(12, 1fr); }
-
 /**
-.x-1 … 12, .xspan-2 … 12, .x-start, .x-center, .x-end, .x-stretch, .x-bleed
+.x-1 … x-12, .2x … .12x, .start-x, .center-x, .end-x, .stretch-x, .bleed-x
 
 ```html
 <div class="grid" style="--column-gap: 0.9375rem; --row-gap: 0.9375rem;">
     <button class="x-1">x-1</button>
     <button class="x-2">x-2</button>
     <button class="x-3">x-3</button>
-    <button class="x-1 xspan-2">xspan-2</button>
-    <button class="x-1 xspan-3">xspan-3</button>
-    <button class="x-1 x-start y-4">x-start</button>
-    <button class="x-2 x-center y-4">x-center</button>
-    <button class="x-3 x-end y-4">x-end</button>
-    <button class="x-1 x-stretch y-5">x-stretch</button>
-    <button class="x-2 x-bleed y-5">x-bleed</button>
+    <button class="x-1 2x">2x</button>
+    <button class="x-1 3x">3x</button>
+    <button class="x-1 start-x y-4">start-x</button>
+    <button class="x-2 center-x y-4">center-x</button>
+    <button class="x-3 end-x y-4">end-x</button>
+    <button class="x-1 stretch-x y-5">stretch-x</button>
+    <button class="x-2 bleed-x y-5">bleed-x</button>
 </div>
 ```
 
-Note that `.x-bleed`, which stretches an element half the way over the grid gap,
+Note that `.bleed-x`, which stretches an element half the way over the grid gap,
 depends on `column-gap` having been set via the custom property `--column-gap`.
 **/
-.x-1 { grid-column-start: 1 !important; }
-
-.x-2 { grid-column-start: 2 !important; }
-
-.x-3 { grid-column-start: 3 !important; }
-
-.x-4 { grid-column-start: 4 !important; }
-
-.x-5 { grid-column-start: 5 !important; }
-
-.x-6 { grid-column-start: 6 !important; }
-
-.x-7 { grid-column-start: 7 !important; }
-
-.x-8 { grid-column-start: 8 !important; }
-
-.x-9 { grid-column-start: 9 !important; }
-
-.x-10 { grid-column-start: 10 !important; }
-
-.x-11 { grid-column-start: 11 !important; }
-
-.x-12 { grid-column-start: 12 !important; }
-
-.xspan-1 { grid-column-end: span 1 !important; }
-
-.xspan-2 { grid-column-end: span 2 !important; }
-
-.xspan-3 { grid-column-end: span 3 !important; }
-
-.xspan-4 { grid-column-end: span 4 !important; }
-
-.xspan-5 { grid-column-end: span 5 !important; }
-
-.xspan-6 { grid-column-end: span 6 !important; }
-
-.xspan-7 { grid-column-end: span 7 !important; }
-
-.xspan-8 { grid-column-end: span 8 !important; }
-
-.xspan-9 { grid-column-end: span 9 !important; }
-
-.xspan-10 { grid-column-end: span 10 !important; }
-
-.xspan-11 { grid-column-end: span 11 !important; }
-
-.xspan-12 { grid-column-end: span 12 !important; }
-
-.xspan--1 { grid-column-end: span -1 !important; }
-
-.x-start { justify-self: start !important; margin-left: 0; }
-
-.x-center { justify-self: center !important; }
-
-.x-end { justify-self: end !important; margin-right: 0; }
-
-.x-stretch { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
-
-.x-bleed { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: auto; /*calc(100% + var(--column-gap));*/ }
-
-/** .y-1 … 18, .yspan-2 … 12, .y-start, .y-center, .y-end, .y-stretch, y-baseline ```html <div class="grid" style="--column-gap: 0.9375rem; --row-gap: 0.9375rem;"> <button class="x-1 y-1">y-1</button> <button class="x-1 y-2">y-2</button> <button class="x-1 y-3">y-3</button> <button class="x-2 y-1 yspan-2">yspan-2</button> <button class="x-3 y-1 yspan-3">yspan-3</button> <button class="x-1 y-4 y-start">y-start</button> <button class="x-1 y-5 y-center">y-center</button> <button class="x-1 y-6 y-end">y-end</button> <button class="x-2 y-4 y-stretch">y-stretch</button> <button class="x-3 y-4 y-baseline">y-baseline</button> </div> ``` */
-.y-1 { grid-row-start: 1 !important; }
-
-.y-2 { grid-row-start: 2 !important; }
-
-.y-3 { grid-row-start: 3 !important; }
-
-.y-4 { grid-row-start: 4 !important; }
-
-.y-5 { grid-row-start: 5 !important; }
-
-.y-6 { grid-row-start: 6 !important; }
-
-.y-7 { grid-row-start: 7 !important; }
-
-.y-8 { grid-row-start: 8 !important; }
-
-.y-9 { grid-row-start: 9 !important; }
-
-.y-10 { grid-row-start: 10 !important; }
-
-.y-11 { grid-row-start: 11 !important; }
-
-.y-12 { grid-row-start: 12 !important; }
-
-.y-13 { grid-row-start: 13 !important; }
-
-.y-14 { grid-row-start: 14 !important; }
-
-.y-15 { grid-row-start: 15 !important; }
-
-.y-16 { grid-row-start: 16 !important; }
-
-.y-17 { grid-row-start: 17 !important; }
-
-.y-18 { grid-row-start: 18 !important; }
-
-.yspan-1 { grid-row-end: span 1 !important; }
-
-.yspan-2 { grid-row-end: span 2 !important; }
-
-.yspan-3 { grid-row-end: span 3 !important; }
-
-.yspan-4 { grid-row-end: span 4 !important; }
-
-.yspan-5 { grid-row-end: span 5 !important; }
-
-.yspan-6 { grid-row-end: span 6 !important; }
-
-.yspan-7 { grid-row-end: span 7 !important; }
-
-.yspan-8 { grid-row-end: span 8 !important; }
-
-.yspan-9 { grid-row-end: span 9 !important; }
-
-.yspan-10 { grid-row-end: span 10 !important; }
-
-.yspan-11 { grid-row-end: span 11 !important; }
-
-.yspan-12 { grid-row-end: span 12 !important; }
-
-.yspan--1 { grid-row-end: span -1 !important; }
-
-.y-start { align-self: start !important; }
-
-.y-center { align-self: center !important; }
-
-.y-end { align-self: end !important; }
-
-.y-stretch { align-self: stretch !important; }
-
-.y-baseline { align-self: baseline !important; }
-
-.columns-2 { columns: 2 !important; }
-
-.columns-3 { columns: 3 !important; }
-
-.columns-4 { columns: 4 !important; }
-
-.columns-5 { columns: 5 !important; }
-
-.columns-6 { columns: 6 !important; }
-
-.columns-7 { columns: 7 !important; }
-
-.columns-8 { columns: 8 !important; }
-
-.columns-9 { columns: 9 !important; }
-
-.columns-10 { columns: 10 !important; }
-
-.columns-11 { columns: 11 !important; }
-
-.columns-12 { columns: 12 !important; }
-
-:root { /** --column-gap Define the horizontal grid gap. */ --column-gap: 1.5em; /** --row-gap Define the vertical grid gap. */ --row-gap: 1.5em; }
-
-@media (min-width: 0em) { .grid { display: grid !important; /* Horizontal layout */ grid-auto-flow: column; /* Create equal columns by default. */ grid-auto-columns: minmax(0, 1fr); column-gap: var(--column-gap); row-gap: var(--row-gap); }
+/** .y-1 … .y-18, .2y … .12y, .start-y, .center-y, .end-y, .stretch-y, baseline-y ```html <div class="grid" style="--column-gap: 0.9375rem; --row-gap: 0.9375rem;"> <button class="x-1 y-1">y-1</button> <button class="x-1 y-2">y-2</button> <button class="x-1 y-3">y-3</button> <button class="x-2 y-1 2y">2y</button> <button class="x-3 y-1 3y">3y</button> <button class="x-1 y-4 start-y">start-y</button> <button class="x-1 y-5 center-y">center-y</button> <button class="x-1 y-6 end-y">end-y</button> <button class="x-2 y-4 stretch-y">stretch-y</button> <button class="x-3 y-4 baseline-y">baseline-y</button> </div> ``` */
+/**
+--column-gap
+Define the horizontal grid gap.
+**/
+/**
+--row-gap
+Define the vertical grid gap.
+**/
+@media (min-width: 0em) { .grid { display: grid !important; /* Horizontal layout */ grid-auto-flow: row; /* Create equal columns by default. */ grid-auto-columns: minmax(0, 1fr); column-gap: var(--column-gap); row-gap: var(--row-gap); }
     .start-y-grid { align-content: start; }
     .\32 x-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .\33 x-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -270,24 +98,34 @@ depends on `column-gap` having been set via the custom property `--column-gap`.
     .x-10 { grid-column-start: 10 !important; }
     .x-11 { grid-column-start: 11 !important; }
     .x-12 { grid-column-start: 12 !important; }
-    .xspan-1 { grid-column-end: span 1 !important; }
-    .xspan-2 { grid-column-end: span 2 !important; }
-    .xspan-3 { grid-column-end: span 3 !important; }
-    .xspan-4 { grid-column-end: span 4 !important; }
-    .xspan-5 { grid-column-end: span 5 !important; }
-    .xspan-6 { grid-column-end: span 6 !important; }
-    .xspan-7 { grid-column-end: span 7 !important; }
-    .xspan-8 { grid-column-end: span 8 !important; }
-    .xspan-9 { grid-column-end: span 9 !important; }
-    .xspan-10 { grid-column-end: span 10 !important; }
-    .xspan-11 { grid-column-end: span 11 !important; }
-    .xspan-12 { grid-column-end: span 12 !important; }
-    .xspan--1 { grid-column-end: span -1 !important; }
-    .x-end { justify-self: end !important; margin-right: 0; }
-    .x-start { justify-self: start !important; margin-left: 0; }
-    .x-center { justify-self: center !important; }
-    .x-stretch { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
-    .x-bleed { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: calc(100% + var(--column-gap)); }
+    .\31 x { grid-column-end: span 1 !important; }
+    .\32 x { grid-column-end: span 2 !important; }
+    .\33 x { grid-column-end: span 3 !important; }
+    .\34 x { grid-column-end: span 4 !important; }
+    .\35 x { grid-column-end: span 5 !important; }
+    .\36 x { grid-column-end: span 6 !important; }
+    .\37 x { grid-column-end: span 7 !important; }
+    .\38 x { grid-column-end: span 8 !important; }
+    .\39 x { grid-column-end: span 9 !important; }
+    .\31 0x { grid-column-end: span 10 !important; }
+    .\31 1x { grid-column-end: span 11 !important; }
+    .\31 2x { grid-column-end: span 12 !important; }
+    .end-x { justify-self: end !important; margin-right: 0; }
+    .start-x { justify-self: start !important; margin-left: 0; }
+    .center-x { justify-self: center !important; }
+    .stretch-x { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
+    .bleed-x { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: calc(100% + var(--column-gap)); }
+    .\32 y-grid { grid-template-rows: repeat(2, minmax(0, 1fr)); }
+    .\33 y-grid { grid-template-rows: repeat(3, minmax(0, 1fr)); }
+    .\34 y-grid { grid-template-rows: repeat(4, minmax(0, 1fr)); }
+    .\35 y-grid { grid-template-rows: repeat(5, minmax(0, 1fr)); }
+    .\36 y-grid { grid-template-rows: repeat(6, minmax(0, 1fr)); }
+    .\37 y-grid { grid-template-rows: repeat(7, minmax(0, 1fr)); }
+    .\38 y-grid { grid-template-rows: repeat(8, minmax(0, 1fr)); }
+    .\39 y-grid { grid-template-rows: repeat(9, minmax(0, 1fr)); }
+    .\31 0y-grid { grid-template-rows: repeat(10, minmax(0, 1fr)); }
+    .\31 1y-grid { grid-template-rows: repeat(11, minmax(0, 1fr)); }
+    .\31 2y-grid { grid-template-rows: repeat(12, minmax(0, 1fr)); }
     .y-1 { grid-row-start: 1 !important; }
     .y-2 { grid-row-start: 2 !important; }
     .y-3 { grid-row-start: 3 !important; }
@@ -306,24 +144,23 @@ depends on `column-gap` having been set via the custom property `--column-gap`.
     .y-16 { grid-row-start: 16 !important; }
     .y-17 { grid-row-start: 17 !important; }
     .y-18 { grid-row-start: 18 !important; }
-    .yspan-1 { grid-row-end: span 1 !important; }
-    .yspan-2 { grid-row-end: span 2 !important; }
-    .yspan-3 { grid-row-end: span 3 !important; }
-    .yspan-4 { grid-row-end: span 4 !important; }
-    .yspan-5 { grid-row-end: span 5 !important; }
-    .yspan-6 { grid-row-end: span 6 !important; }
-    .yspan-7 { grid-row-end: span 7 !important; }
-    .yspan-8 { grid-row-end: span 8 !important; }
-    .yspan-9 { grid-row-end: span 9 !important; }
-    .yspan-10 { grid-row-end: span 10 !important; }
-    .yspan-11 { grid-row-end: span 11 !important; }
-    .yspan-12 { grid-row-end: span 12 !important; }
-    .yspan--1 { grid-row-end: span -1 !important; }
-    .y-end { align-self: end !important; }
-    .y-start { align-self: start !important; }
-    .y-center { align-self: center !important; }
-    .y-stretch { align-self: stretch !important; }
-    .y-baseline { align-self: baseline !important; }
+    .\31 y { grid-row-end: span 1 !important; }
+    .\32 y { grid-row-end: span 2 !important; }
+    .\33 y { grid-row-end: span 3 !important; }
+    .\34 y { grid-row-end: span 4 !important; }
+    .\35 y { grid-row-end: span 5 !important; }
+    .\36 y { grid-row-end: span 6 !important; }
+    .\37 y { grid-row-end: span 7 !important; }
+    .\38 y { grid-row-end: span 8 !important; }
+    .\39 y { grid-row-end: span 9 !important; }
+    .\31 0y { grid-row-end: span 10 !important; }
+    .\31 1y { grid-row-end: span 11 !important; }
+    .\31 2y { grid-row-end: span 12 !important; }
+    .end-y { align-self: end !important; }
+    .start-y { align-self: start !important; }
+    .center-y { align-self: center !important; }
+    .stretch-y { align-self: stretch !important; }
+    .baseline-y { align-self: baseline !important; }
     .columns-2 { columns: 2 !important; }
     .columns-3 { columns: 3 !important; }
     .columns-4 { columns: 4 !important; }
@@ -334,11 +171,10 @@ depends on `column-gap` having been set via the custom property `--column-gap`.
     .columns-9 { columns: 9 !important; }
     .columns-10 { columns: 10 !important; }
     .columns-11 { columns: 11 !important; }
-    .columns-12 { columns: 12 !important; } }
+    .columns-12 { columns: 12 !important; }
+    :root { --column-gap: 0; --row-gap: 0; } }
 
-:root { --column-gap: 0; --row-gap: 0; }
-
-@media (min-width: 30em) { .\@1-grid { display: grid !important; /* Horizontal layout */ grid-auto-flow: column; /* Create equal columns by default. */ grid-auto-columns: minmax(0, 1fr); column-gap: var(--column-gap); row-gap: var(--row-gap); }
+@media (min-width: 30em) { .\@1-grid { display: grid !important; /* Horizontal layout */ grid-auto-flow: row; /* Create equal columns by default. */ grid-auto-columns: minmax(0, 1fr); column-gap: var(--column-gap); row-gap: var(--row-gap); }
     .\@1-start-y-grid { align-content: start; }
     .\@1-\32 x-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .\@1-\33 x-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -363,24 +199,34 @@ depends on `column-gap` having been set via the custom property `--column-gap`.
     .\@1-x-10 { grid-column-start: 10 !important; }
     .\@1-x-11 { grid-column-start: 11 !important; }
     .\@1-x-12 { grid-column-start: 12 !important; }
-    .\@1-xspan-1 { grid-column-end: span 1 !important; }
-    .\@1-xspan-2 { grid-column-end: span 2 !important; }
-    .\@1-xspan-3 { grid-column-end: span 3 !important; }
-    .\@1-xspan-4 { grid-column-end: span 4 !important; }
-    .\@1-xspan-5 { grid-column-end: span 5 !important; }
-    .\@1-xspan-6 { grid-column-end: span 6 !important; }
-    .\@1-xspan-7 { grid-column-end: span 7 !important; }
-    .\@1-xspan-8 { grid-column-end: span 8 !important; }
-    .\@1-xspan-9 { grid-column-end: span 9 !important; }
-    .\@1-xspan-10 { grid-column-end: span 10 !important; }
-    .\@1-xspan-11 { grid-column-end: span 11 !important; }
-    .\@1-xspan-12 { grid-column-end: span 12 !important; }
-    .\@1-xspan--1 { grid-column-end: span -1 !important; }
-    .\@1-x-end { justify-self: end !important; margin-right: 0; }
-    .\@1-x-start { justify-self: start !important; margin-left: 0; }
-    .\@1-x-center { justify-self: center !important; }
-    .\@1-x-stretch { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
-    .\@1-x-bleed { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: calc(100% + var(--column-gap)); }
+    .\@1-\31 x { grid-column-end: span 1 !important; }
+    .\@1-\32 x { grid-column-end: span 2 !important; }
+    .\@1-\33 x { grid-column-end: span 3 !important; }
+    .\@1-\34 x { grid-column-end: span 4 !important; }
+    .\@1-\35 x { grid-column-end: span 5 !important; }
+    .\@1-\36 x { grid-column-end: span 6 !important; }
+    .\@1-\37 x { grid-column-end: span 7 !important; }
+    .\@1-\38 x { grid-column-end: span 8 !important; }
+    .\@1-\39 x { grid-column-end: span 9 !important; }
+    .\@1-\31 0x { grid-column-end: span 10 !important; }
+    .\@1-\31 1x { grid-column-end: span 11 !important; }
+    .\@1-\31 2x { grid-column-end: span 12 !important; }
+    .\@1-end-x { justify-self: end !important; margin-right: 0; }
+    .\@1-start-x { justify-self: start !important; margin-left: 0; }
+    .\@1-center-x { justify-self: center !important; }
+    .\@1-stretch-x { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
+    .\@1-bleed-x { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: calc(100% + var(--column-gap)); }
+    .\@1-\32 y-grid { grid-template-rows: repeat(2, minmax(0, 1fr)); }
+    .\@1-\33 y-grid { grid-template-rows: repeat(3, minmax(0, 1fr)); }
+    .\@1-\34 y-grid { grid-template-rows: repeat(4, minmax(0, 1fr)); }
+    .\@1-\35 y-grid { grid-template-rows: repeat(5, minmax(0, 1fr)); }
+    .\@1-\36 y-grid { grid-template-rows: repeat(6, minmax(0, 1fr)); }
+    .\@1-\37 y-grid { grid-template-rows: repeat(7, minmax(0, 1fr)); }
+    .\@1-\38 y-grid { grid-template-rows: repeat(8, minmax(0, 1fr)); }
+    .\@1-\39 y-grid { grid-template-rows: repeat(9, minmax(0, 1fr)); }
+    .\@1-\31 0y-grid { grid-template-rows: repeat(10, minmax(0, 1fr)); }
+    .\@1-\31 1y-grid { grid-template-rows: repeat(11, minmax(0, 1fr)); }
+    .\@1-\31 2y-grid { grid-template-rows: repeat(12, minmax(0, 1fr)); }
     .\@1-y-1 { grid-row-start: 1 !important; }
     .\@1-y-2 { grid-row-start: 2 !important; }
     .\@1-y-3 { grid-row-start: 3 !important; }
@@ -399,24 +245,23 @@ depends on `column-gap` having been set via the custom property `--column-gap`.
     .\@1-y-16 { grid-row-start: 16 !important; }
     .\@1-y-17 { grid-row-start: 17 !important; }
     .\@1-y-18 { grid-row-start: 18 !important; }
-    .\@1-yspan-1 { grid-row-end: span 1 !important; }
-    .\@1-yspan-2 { grid-row-end: span 2 !important; }
-    .\@1-yspan-3 { grid-row-end: span 3 !important; }
-    .\@1-yspan-4 { grid-row-end: span 4 !important; }
-    .\@1-yspan-5 { grid-row-end: span 5 !important; }
-    .\@1-yspan-6 { grid-row-end: span 6 !important; }
-    .\@1-yspan-7 { grid-row-end: span 7 !important; }
-    .\@1-yspan-8 { grid-row-end: span 8 !important; }
-    .\@1-yspan-9 { grid-row-end: span 9 !important; }
-    .\@1-yspan-10 { grid-row-end: span 10 !important; }
-    .\@1-yspan-11 { grid-row-end: span 11 !important; }
-    .\@1-yspan-12 { grid-row-end: span 12 !important; }
-    .\@1-yspan--1 { grid-row-end: span -1 !important; }
-    .\@1-y-end { align-self: end !important; }
-    .\@1-y-start { align-self: start !important; }
-    .\@1-y-center { align-self: center !important; }
-    .\@1-y-stretch { align-self: stretch !important; }
-    .\@1-y-baseline { align-self: baseline !important; }
+    .\@1-\31 y { grid-row-end: span 1 !important; }
+    .\@1-\32 y { grid-row-end: span 2 !important; }
+    .\@1-\33 y { grid-row-end: span 3 !important; }
+    .\@1-\34 y { grid-row-end: span 4 !important; }
+    .\@1-\35 y { grid-row-end: span 5 !important; }
+    .\@1-\36 y { grid-row-end: span 6 !important; }
+    .\@1-\37 y { grid-row-end: span 7 !important; }
+    .\@1-\38 y { grid-row-end: span 8 !important; }
+    .\@1-\39 y { grid-row-end: span 9 !important; }
+    .\@1-\31 0y { grid-row-end: span 10 !important; }
+    .\@1-\31 1y { grid-row-end: span 11 !important; }
+    .\@1-\31 2y { grid-row-end: span 12 !important; }
+    .\@1-end-y { align-self: end !important; }
+    .\@1-start-y { align-self: start !important; }
+    .\@1-center-y { align-self: center !important; }
+    .\@1-stretch-y { align-self: stretch !important; }
+    .\@1-baseline-y { align-self: baseline !important; }
     .\@1-columns-2 { columns: 2 !important; }
     .\@1-columns-3 { columns: 3 !important; }
     .\@1-columns-4 { columns: 4 !important; }
@@ -427,11 +272,10 @@ depends on `column-gap` having been set via the custom property `--column-gap`.
     .\@1-columns-9 { columns: 9 !important; }
     .\@1-columns-10 { columns: 10 !important; }
     .\@1-columns-11 { columns: 11 !important; }
-    .\@1-columns-12 { columns: 12 !important; } }
+    .\@1-columns-12 { columns: 12 !important; }
+    :root { --column-gap: 0; --row-gap: 0; } }
 
-:root { --column-gap: 0; --row-gap: 0; }
-
-@media (min-width: 45em) { .\@2-grid { display: grid !important; /* Horizontal layout */ grid-auto-flow: column; /* Create equal columns by default. */ grid-auto-columns: minmax(0, 1fr); column-gap: var(--column-gap); row-gap: var(--row-gap); }
+@media (min-width: 45em) { .\@2-grid { display: grid !important; /* Horizontal layout */ grid-auto-flow: row; /* Create equal columns by default. */ grid-auto-columns: minmax(0, 1fr); column-gap: var(--column-gap); row-gap: var(--row-gap); }
     .\@2-start-y-grid { align-content: start; }
     .\@2-\32 x-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .\@2-\33 x-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -456,24 +300,34 @@ depends on `column-gap` having been set via the custom property `--column-gap`.
     .\@2-x-10 { grid-column-start: 10 !important; }
     .\@2-x-11 { grid-column-start: 11 !important; }
     .\@2-x-12 { grid-column-start: 12 !important; }
-    .\@2-xspan-1 { grid-column-end: span 1 !important; }
-    .\@2-xspan-2 { grid-column-end: span 2 !important; }
-    .\@2-xspan-3 { grid-column-end: span 3 !important; }
-    .\@2-xspan-4 { grid-column-end: span 4 !important; }
-    .\@2-xspan-5 { grid-column-end: span 5 !important; }
-    .\@2-xspan-6 { grid-column-end: span 6 !important; }
-    .\@2-xspan-7 { grid-column-end: span 7 !important; }
-    .\@2-xspan-8 { grid-column-end: span 8 !important; }
-    .\@2-xspan-9 { grid-column-end: span 9 !important; }
-    .\@2-xspan-10 { grid-column-end: span 10 !important; }
-    .\@2-xspan-11 { grid-column-end: span 11 !important; }
-    .\@2-xspan-12 { grid-column-end: span 12 !important; }
-    .\@2-xspan--1 { grid-column-end: span -1 !important; }
-    .\@2-x-end { justify-self: end !important; margin-right: 0; }
-    .\@2-x-start { justify-self: start !important; margin-left: 0; }
-    .\@2-x-center { justify-self: center !important; }
-    .\@2-x-stretch { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
-    .\@2-x-bleed { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: calc(100% + var(--column-gap)); }
+    .\@2-\31 x { grid-column-end: span 1 !important; }
+    .\@2-\32 x { grid-column-end: span 2 !important; }
+    .\@2-\33 x { grid-column-end: span 3 !important; }
+    .\@2-\34 x { grid-column-end: span 4 !important; }
+    .\@2-\35 x { grid-column-end: span 5 !important; }
+    .\@2-\36 x { grid-column-end: span 6 !important; }
+    .\@2-\37 x { grid-column-end: span 7 !important; }
+    .\@2-\38 x { grid-column-end: span 8 !important; }
+    .\@2-\39 x { grid-column-end: span 9 !important; }
+    .\@2-\31 0x { grid-column-end: span 10 !important; }
+    .\@2-\31 1x { grid-column-end: span 11 !important; }
+    .\@2-\31 2x { grid-column-end: span 12 !important; }
+    .\@2-end-x { justify-self: end !important; margin-right: 0; }
+    .\@2-start-x { justify-self: start !important; margin-left: 0; }
+    .\@2-center-x { justify-self: center !important; }
+    .\@2-stretch-x { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
+    .\@2-bleed-x { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: calc(100% + var(--column-gap)); }
+    .\@2-\32 y-grid { grid-template-rows: repeat(2, minmax(0, 1fr)); }
+    .\@2-\33 y-grid { grid-template-rows: repeat(3, minmax(0, 1fr)); }
+    .\@2-\34 y-grid { grid-template-rows: repeat(4, minmax(0, 1fr)); }
+    .\@2-\35 y-grid { grid-template-rows: repeat(5, minmax(0, 1fr)); }
+    .\@2-\36 y-grid { grid-template-rows: repeat(6, minmax(0, 1fr)); }
+    .\@2-\37 y-grid { grid-template-rows: repeat(7, minmax(0, 1fr)); }
+    .\@2-\38 y-grid { grid-template-rows: repeat(8, minmax(0, 1fr)); }
+    .\@2-\39 y-grid { grid-template-rows: repeat(9, minmax(0, 1fr)); }
+    .\@2-\31 0y-grid { grid-template-rows: repeat(10, minmax(0, 1fr)); }
+    .\@2-\31 1y-grid { grid-template-rows: repeat(11, minmax(0, 1fr)); }
+    .\@2-\31 2y-grid { grid-template-rows: repeat(12, minmax(0, 1fr)); }
     .\@2-y-1 { grid-row-start: 1 !important; }
     .\@2-y-2 { grid-row-start: 2 !important; }
     .\@2-y-3 { grid-row-start: 3 !important; }
@@ -492,24 +346,23 @@ depends on `column-gap` having been set via the custom property `--column-gap`.
     .\@2-y-16 { grid-row-start: 16 !important; }
     .\@2-y-17 { grid-row-start: 17 !important; }
     .\@2-y-18 { grid-row-start: 18 !important; }
-    .\@2-yspan-1 { grid-row-end: span 1 !important; }
-    .\@2-yspan-2 { grid-row-end: span 2 !important; }
-    .\@2-yspan-3 { grid-row-end: span 3 !important; }
-    .\@2-yspan-4 { grid-row-end: span 4 !important; }
-    .\@2-yspan-5 { grid-row-end: span 5 !important; }
-    .\@2-yspan-6 { grid-row-end: span 6 !important; }
-    .\@2-yspan-7 { grid-row-end: span 7 !important; }
-    .\@2-yspan-8 { grid-row-end: span 8 !important; }
-    .\@2-yspan-9 { grid-row-end: span 9 !important; }
-    .\@2-yspan-10 { grid-row-end: span 10 !important; }
-    .\@2-yspan-11 { grid-row-end: span 11 !important; }
-    .\@2-yspan-12 { grid-row-end: span 12 !important; }
-    .\@2-yspan--1 { grid-row-end: span -1 !important; }
-    .\@2-y-end { align-self: end !important; }
-    .\@2-y-start { align-self: start !important; }
-    .\@2-y-center { align-self: center !important; }
-    .\@2-y-stretch { align-self: stretch !important; }
-    .\@2-y-baseline { align-self: baseline !important; }
+    .\@2-\31 y { grid-row-end: span 1 !important; }
+    .\@2-\32 y { grid-row-end: span 2 !important; }
+    .\@2-\33 y { grid-row-end: span 3 !important; }
+    .\@2-\34 y { grid-row-end: span 4 !important; }
+    .\@2-\35 y { grid-row-end: span 5 !important; }
+    .\@2-\36 y { grid-row-end: span 6 !important; }
+    .\@2-\37 y { grid-row-end: span 7 !important; }
+    .\@2-\38 y { grid-row-end: span 8 !important; }
+    .\@2-\39 y { grid-row-end: span 9 !important; }
+    .\@2-\31 0y { grid-row-end: span 10 !important; }
+    .\@2-\31 1y { grid-row-end: span 11 !important; }
+    .\@2-\31 2y { grid-row-end: span 12 !important; }
+    .\@2-end-y { align-self: end !important; }
+    .\@2-start-y { align-self: start !important; }
+    .\@2-center-y { align-self: center !important; }
+    .\@2-stretch-y { align-self: stretch !important; }
+    .\@2-baseline-y { align-self: baseline !important; }
     .\@2-columns-2 { columns: 2 !important; }
     .\@2-columns-3 { columns: 3 !important; }
     .\@2-columns-4 { columns: 4 !important; }
@@ -520,11 +373,10 @@ depends on `column-gap` having been set via the custom property `--column-gap`.
     .\@2-columns-9 { columns: 9 !important; }
     .\@2-columns-10 { columns: 10 !important; }
     .\@2-columns-11 { columns: 11 !important; }
-    .\@2-columns-12 { columns: 12 !important; } }
+    .\@2-columns-12 { columns: 12 !important; }
+    :root { --column-gap: 0; --row-gap: 0; } }
 
-:root { --column-gap: 0; --row-gap: 0; }
-
-@media (min-width: 60em) { .\@3-grid { display: grid !important; /* Horizontal layout */ grid-auto-flow: column; /* Create equal columns by default. */ grid-auto-columns: minmax(0, 1fr); column-gap: var(--column-gap); row-gap: var(--row-gap); }
+@media (min-width: 60em) { .\@3-grid { display: grid !important; /* Horizontal layout */ grid-auto-flow: row; /* Create equal columns by default. */ grid-auto-columns: minmax(0, 1fr); column-gap: var(--column-gap); row-gap: var(--row-gap); }
     .\@3-start-y-grid { align-content: start; }
     .\@3-\32 x-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .\@3-\33 x-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -549,24 +401,34 @@ depends on `column-gap` having been set via the custom property `--column-gap`.
     .\@3-x-10 { grid-column-start: 10 !important; }
     .\@3-x-11 { grid-column-start: 11 !important; }
     .\@3-x-12 { grid-column-start: 12 !important; }
-    .\@3-xspan-1 { grid-column-end: span 1 !important; }
-    .\@3-xspan-2 { grid-column-end: span 2 !important; }
-    .\@3-xspan-3 { grid-column-end: span 3 !important; }
-    .\@3-xspan-4 { grid-column-end: span 4 !important; }
-    .\@3-xspan-5 { grid-column-end: span 5 !important; }
-    .\@3-xspan-6 { grid-column-end: span 6 !important; }
-    .\@3-xspan-7 { grid-column-end: span 7 !important; }
-    .\@3-xspan-8 { grid-column-end: span 8 !important; }
-    .\@3-xspan-9 { grid-column-end: span 9 !important; }
-    .\@3-xspan-10 { grid-column-end: span 10 !important; }
-    .\@3-xspan-11 { grid-column-end: span 11 !important; }
-    .\@3-xspan-12 { grid-column-end: span 12 !important; }
-    .\@3-xspan--1 { grid-column-end: span -1 !important; }
-    .\@3-x-end { justify-self: end !important; margin-right: 0; }
-    .\@3-x-start { justify-self: start !important; margin-left: 0; }
-    .\@3-x-center { justify-self: center !important; }
-    .\@3-x-stretch { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
-    .\@3-x-bleed { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: calc(100% + var(--column-gap)); }
+    .\@3-\31 x { grid-column-end: span 1 !important; }
+    .\@3-\32 x { grid-column-end: span 2 !important; }
+    .\@3-\33 x { grid-column-end: span 3 !important; }
+    .\@3-\34 x { grid-column-end: span 4 !important; }
+    .\@3-\35 x { grid-column-end: span 5 !important; }
+    .\@3-\36 x { grid-column-end: span 6 !important; }
+    .\@3-\37 x { grid-column-end: span 7 !important; }
+    .\@3-\38 x { grid-column-end: span 8 !important; }
+    .\@3-\39 x { grid-column-end: span 9 !important; }
+    .\@3-\31 0x { grid-column-end: span 10 !important; }
+    .\@3-\31 1x { grid-column-end: span 11 !important; }
+    .\@3-\31 2x { grid-column-end: span 12 !important; }
+    .\@3-end-x { justify-self: end !important; margin-right: 0; }
+    .\@3-start-x { justify-self: start !important; margin-left: 0; }
+    .\@3-center-x { justify-self: center !important; }
+    .\@3-stretch-x { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
+    .\@3-bleed-x { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: calc(100% + var(--column-gap)); }
+    .\@3-\32 y-grid { grid-template-rows: repeat(2, minmax(0, 1fr)); }
+    .\@3-\33 y-grid { grid-template-rows: repeat(3, minmax(0, 1fr)); }
+    .\@3-\34 y-grid { grid-template-rows: repeat(4, minmax(0, 1fr)); }
+    .\@3-\35 y-grid { grid-template-rows: repeat(5, minmax(0, 1fr)); }
+    .\@3-\36 y-grid { grid-template-rows: repeat(6, minmax(0, 1fr)); }
+    .\@3-\37 y-grid { grid-template-rows: repeat(7, minmax(0, 1fr)); }
+    .\@3-\38 y-grid { grid-template-rows: repeat(8, minmax(0, 1fr)); }
+    .\@3-\39 y-grid { grid-template-rows: repeat(9, minmax(0, 1fr)); }
+    .\@3-\31 0y-grid { grid-template-rows: repeat(10, minmax(0, 1fr)); }
+    .\@3-\31 1y-grid { grid-template-rows: repeat(11, minmax(0, 1fr)); }
+    .\@3-\31 2y-grid { grid-template-rows: repeat(12, minmax(0, 1fr)); }
     .\@3-y-1 { grid-row-start: 1 !important; }
     .\@3-y-2 { grid-row-start: 2 !important; }
     .\@3-y-3 { grid-row-start: 3 !important; }
@@ -585,24 +447,23 @@ depends on `column-gap` having been set via the custom property `--column-gap`.
     .\@3-y-16 { grid-row-start: 16 !important; }
     .\@3-y-17 { grid-row-start: 17 !important; }
     .\@3-y-18 { grid-row-start: 18 !important; }
-    .\@3-yspan-1 { grid-row-end: span 1 !important; }
-    .\@3-yspan-2 { grid-row-end: span 2 !important; }
-    .\@3-yspan-3 { grid-row-end: span 3 !important; }
-    .\@3-yspan-4 { grid-row-end: span 4 !important; }
-    .\@3-yspan-5 { grid-row-end: span 5 !important; }
-    .\@3-yspan-6 { grid-row-end: span 6 !important; }
-    .\@3-yspan-7 { grid-row-end: span 7 !important; }
-    .\@3-yspan-8 { grid-row-end: span 8 !important; }
-    .\@3-yspan-9 { grid-row-end: span 9 !important; }
-    .\@3-yspan-10 { grid-row-end: span 10 !important; }
-    .\@3-yspan-11 { grid-row-end: span 11 !important; }
-    .\@3-yspan-12 { grid-row-end: span 12 !important; }
-    .\@3-yspan--1 { grid-row-end: span -1 !important; }
-    .\@3-y-end { align-self: end !important; }
-    .\@3-y-start { align-self: start !important; }
-    .\@3-y-center { align-self: center !important; }
-    .\@3-y-stretch { align-self: stretch !important; }
-    .\@3-y-baseline { align-self: baseline !important; }
+    .\@3-\31 y { grid-row-end: span 1 !important; }
+    .\@3-\32 y { grid-row-end: span 2 !important; }
+    .\@3-\33 y { grid-row-end: span 3 !important; }
+    .\@3-\34 y { grid-row-end: span 4 !important; }
+    .\@3-\35 y { grid-row-end: span 5 !important; }
+    .\@3-\36 y { grid-row-end: span 6 !important; }
+    .\@3-\37 y { grid-row-end: span 7 !important; }
+    .\@3-\38 y { grid-row-end: span 8 !important; }
+    .\@3-\39 y { grid-row-end: span 9 !important; }
+    .\@3-\31 0y { grid-row-end: span 10 !important; }
+    .\@3-\31 1y { grid-row-end: span 11 !important; }
+    .\@3-\31 2y { grid-row-end: span 12 !important; }
+    .\@3-end-y { align-self: end !important; }
+    .\@3-start-y { align-self: start !important; }
+    .\@3-center-y { align-self: center !important; }
+    .\@3-stretch-y { align-self: stretch !important; }
+    .\@3-baseline-y { align-self: baseline !important; }
     .\@3-columns-2 { columns: 2 !important; }
     .\@3-columns-3 { columns: 3 !important; }
     .\@3-columns-4 { columns: 4 !important; }
@@ -613,11 +474,10 @@ depends on `column-gap` having been set via the custom property `--column-gap`.
     .\@3-columns-9 { columns: 9 !important; }
     .\@3-columns-10 { columns: 10 !important; }
     .\@3-columns-11 { columns: 11 !important; }
-    .\@3-columns-12 { columns: 12 !important; } }
+    .\@3-columns-12 { columns: 12 !important; }
+    :root { --column-gap: 0; --row-gap: 0; } }
 
-:root { --column-gap: 0; --row-gap: 0; }
-
-@media (min-width: 75em) { .\@4-grid { display: grid !important; /* Horizontal layout */ grid-auto-flow: column; /* Create equal columns by default. */ grid-auto-columns: minmax(0, 1fr); column-gap: var(--column-gap); row-gap: var(--row-gap); }
+@media (min-width: 75em) { .\@4-grid { display: grid !important; /* Horizontal layout */ grid-auto-flow: row; /* Create equal columns by default. */ grid-auto-columns: minmax(0, 1fr); column-gap: var(--column-gap); row-gap: var(--row-gap); }
     .\@4-start-y-grid { align-content: start; }
     .\@4-\32 x-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .\@4-\33 x-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -642,24 +502,34 @@ depends on `column-gap` having been set via the custom property `--column-gap`.
     .\@4-x-10 { grid-column-start: 10 !important; }
     .\@4-x-11 { grid-column-start: 11 !important; }
     .\@4-x-12 { grid-column-start: 12 !important; }
-    .\@4-xspan-1 { grid-column-end: span 1 !important; }
-    .\@4-xspan-2 { grid-column-end: span 2 !important; }
-    .\@4-xspan-3 { grid-column-end: span 3 !important; }
-    .\@4-xspan-4 { grid-column-end: span 4 !important; }
-    .\@4-xspan-5 { grid-column-end: span 5 !important; }
-    .\@4-xspan-6 { grid-column-end: span 6 !important; }
-    .\@4-xspan-7 { grid-column-end: span 7 !important; }
-    .\@4-xspan-8 { grid-column-end: span 8 !important; }
-    .\@4-xspan-9 { grid-column-end: span 9 !important; }
-    .\@4-xspan-10 { grid-column-end: span 10 !important; }
-    .\@4-xspan-11 { grid-column-end: span 11 !important; }
-    .\@4-xspan-12 { grid-column-end: span 12 !important; }
-    .\@4-xspan--1 { grid-column-end: span -1 !important; }
-    .\@4-x-end { justify-self: end !important; margin-right: 0; }
-    .\@4-x-start { justify-self: start !important; margin-left: 0; }
-    .\@4-x-center { justify-self: center !important; }
-    .\@4-x-stretch { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
-    .\@4-x-bleed { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: calc(100% + var(--column-gap)); }
+    .\@4-\31 x { grid-column-end: span 1 !important; }
+    .\@4-\32 x { grid-column-end: span 2 !important; }
+    .\@4-\33 x { grid-column-end: span 3 !important; }
+    .\@4-\34 x { grid-column-end: span 4 !important; }
+    .\@4-\35 x { grid-column-end: span 5 !important; }
+    .\@4-\36 x { grid-column-end: span 6 !important; }
+    .\@4-\37 x { grid-column-end: span 7 !important; }
+    .\@4-\38 x { grid-column-end: span 8 !important; }
+    .\@4-\39 x { grid-column-end: span 9 !important; }
+    .\@4-\31 0x { grid-column-end: span 10 !important; }
+    .\@4-\31 1x { grid-column-end: span 11 !important; }
+    .\@4-\31 2x { grid-column-end: span 12 !important; }
+    .\@4-end-x { justify-self: end !important; margin-right: 0; }
+    .\@4-start-x { justify-self: start !important; margin-left: 0; }
+    .\@4-center-x { justify-self: center !important; }
+    .\@4-stretch-x { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
+    .\@4-bleed-x { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: calc(100% + var(--column-gap)); }
+    .\@4-\32 y-grid { grid-template-rows: repeat(2, minmax(0, 1fr)); }
+    .\@4-\33 y-grid { grid-template-rows: repeat(3, minmax(0, 1fr)); }
+    .\@4-\34 y-grid { grid-template-rows: repeat(4, minmax(0, 1fr)); }
+    .\@4-\35 y-grid { grid-template-rows: repeat(5, minmax(0, 1fr)); }
+    .\@4-\36 y-grid { grid-template-rows: repeat(6, minmax(0, 1fr)); }
+    .\@4-\37 y-grid { grid-template-rows: repeat(7, minmax(0, 1fr)); }
+    .\@4-\38 y-grid { grid-template-rows: repeat(8, minmax(0, 1fr)); }
+    .\@4-\39 y-grid { grid-template-rows: repeat(9, minmax(0, 1fr)); }
+    .\@4-\31 0y-grid { grid-template-rows: repeat(10, minmax(0, 1fr)); }
+    .\@4-\31 1y-grid { grid-template-rows: repeat(11, minmax(0, 1fr)); }
+    .\@4-\31 2y-grid { grid-template-rows: repeat(12, minmax(0, 1fr)); }
     .\@4-y-1 { grid-row-start: 1 !important; }
     .\@4-y-2 { grid-row-start: 2 !important; }
     .\@4-y-3 { grid-row-start: 3 !important; }
@@ -678,24 +548,23 @@ depends on `column-gap` having been set via the custom property `--column-gap`.
     .\@4-y-16 { grid-row-start: 16 !important; }
     .\@4-y-17 { grid-row-start: 17 !important; }
     .\@4-y-18 { grid-row-start: 18 !important; }
-    .\@4-yspan-1 { grid-row-end: span 1 !important; }
-    .\@4-yspan-2 { grid-row-end: span 2 !important; }
-    .\@4-yspan-3 { grid-row-end: span 3 !important; }
-    .\@4-yspan-4 { grid-row-end: span 4 !important; }
-    .\@4-yspan-5 { grid-row-end: span 5 !important; }
-    .\@4-yspan-6 { grid-row-end: span 6 !important; }
-    .\@4-yspan-7 { grid-row-end: span 7 !important; }
-    .\@4-yspan-8 { grid-row-end: span 8 !important; }
-    .\@4-yspan-9 { grid-row-end: span 9 !important; }
-    .\@4-yspan-10 { grid-row-end: span 10 !important; }
-    .\@4-yspan-11 { grid-row-end: span 11 !important; }
-    .\@4-yspan-12 { grid-row-end: span 12 !important; }
-    .\@4-yspan--1 { grid-row-end: span -1 !important; }
-    .\@4-y-end { align-self: end !important; }
-    .\@4-y-start { align-self: start !important; }
-    .\@4-y-center { align-self: center !important; }
-    .\@4-y-stretch { align-self: stretch !important; }
-    .\@4-y-baseline { align-self: baseline !important; }
+    .\@4-\31 y { grid-row-end: span 1 !important; }
+    .\@4-\32 y { grid-row-end: span 2 !important; }
+    .\@4-\33 y { grid-row-end: span 3 !important; }
+    .\@4-\34 y { grid-row-end: span 4 !important; }
+    .\@4-\35 y { grid-row-end: span 5 !important; }
+    .\@4-\36 y { grid-row-end: span 6 !important; }
+    .\@4-\37 y { grid-row-end: span 7 !important; }
+    .\@4-\38 y { grid-row-end: span 8 !important; }
+    .\@4-\39 y { grid-row-end: span 9 !important; }
+    .\@4-\31 0y { grid-row-end: span 10 !important; }
+    .\@4-\31 1y { grid-row-end: span 11 !important; }
+    .\@4-\31 2y { grid-row-end: span 12 !important; }
+    .\@4-end-y { align-self: end !important; }
+    .\@4-start-y { align-self: start !important; }
+    .\@4-center-y { align-self: center !important; }
+    .\@4-stretch-y { align-self: stretch !important; }
+    .\@4-baseline-y { align-self: baseline !important; }
     .\@4-columns-2 { columns: 2 !important; }
     .\@4-columns-3 { columns: 3 !important; }
     .\@4-columns-4 { columns: 4 !important; }
@@ -706,11 +575,10 @@ depends on `column-gap` having been set via the custom property `--column-gap`.
     .\@4-columns-9 { columns: 9 !important; }
     .\@4-columns-10 { columns: 10 !important; }
     .\@4-columns-11 { columns: 11 !important; }
-    .\@4-columns-12 { columns: 12 !important; } }
+    .\@4-columns-12 { columns: 12 !important; }
+    :root { --column-gap: 0; --row-gap: 0; } }
 
-:root { --column-gap: 0; --row-gap: 0; }
-
-@media (min-width: 90em) { .\@5-grid { display: grid !important; /* Horizontal layout */ grid-auto-flow: column; /* Create equal columns by default. */ grid-auto-columns: minmax(0, 1fr); column-gap: var(--column-gap); row-gap: var(--row-gap); }
+@media (min-width: 90em) { .\@5-grid { display: grid !important; /* Horizontal layout */ grid-auto-flow: row; /* Create equal columns by default. */ grid-auto-columns: minmax(0, 1fr); column-gap: var(--column-gap); row-gap: var(--row-gap); }
     .\@5-start-y-grid { align-content: start; }
     .\@5-\32 x-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .\@5-\33 x-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -735,24 +603,34 @@ depends on `column-gap` having been set via the custom property `--column-gap`.
     .\@5-x-10 { grid-column-start: 10 !important; }
     .\@5-x-11 { grid-column-start: 11 !important; }
     .\@5-x-12 { grid-column-start: 12 !important; }
-    .\@5-xspan-1 { grid-column-end: span 1 !important; }
-    .\@5-xspan-2 { grid-column-end: span 2 !important; }
-    .\@5-xspan-3 { grid-column-end: span 3 !important; }
-    .\@5-xspan-4 { grid-column-end: span 4 !important; }
-    .\@5-xspan-5 { grid-column-end: span 5 !important; }
-    .\@5-xspan-6 { grid-column-end: span 6 !important; }
-    .\@5-xspan-7 { grid-column-end: span 7 !important; }
-    .\@5-xspan-8 { grid-column-end: span 8 !important; }
-    .\@5-xspan-9 { grid-column-end: span 9 !important; }
-    .\@5-xspan-10 { grid-column-end: span 10 !important; }
-    .\@5-xspan-11 { grid-column-end: span 11 !important; }
-    .\@5-xspan-12 { grid-column-end: span 12 !important; }
-    .\@5-xspan--1 { grid-column-end: span -1 !important; }
-    .\@5-x-end { justify-self: end !important; margin-right: 0; }
-    .\@5-x-start { justify-self: start !important; margin-left: 0; }
-    .\@5-x-center { justify-self: center !important; }
-    .\@5-x-stretch { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
-    .\@5-x-bleed { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: calc(100% + var(--column-gap)); }
+    .\@5-\31 x { grid-column-end: span 1 !important; }
+    .\@5-\32 x { grid-column-end: span 2 !important; }
+    .\@5-\33 x { grid-column-end: span 3 !important; }
+    .\@5-\34 x { grid-column-end: span 4 !important; }
+    .\@5-\35 x { grid-column-end: span 5 !important; }
+    .\@5-\36 x { grid-column-end: span 6 !important; }
+    .\@5-\37 x { grid-column-end: span 7 !important; }
+    .\@5-\38 x { grid-column-end: span 8 !important; }
+    .\@5-\39 x { grid-column-end: span 9 !important; }
+    .\@5-\31 0x { grid-column-end: span 10 !important; }
+    .\@5-\31 1x { grid-column-end: span 11 !important; }
+    .\@5-\31 2x { grid-column-end: span 12 !important; }
+    .\@5-end-x { justify-self: end !important; margin-right: 0; }
+    .\@5-start-x { justify-self: start !important; margin-left: 0; }
+    .\@5-center-x { justify-self: center !important; }
+    .\@5-stretch-x { justify-self: stretch !important; margin-left: 0; margin-right: 0; }
+    .\@5-bleed-x { justify-self: stretch !important; margin-left: calc(var(--column-gap) / -2); margin-right: calc(var(--column-gap) / -2); width: calc(100% + var(--column-gap)); }
+    .\@5-\32 y-grid { grid-template-rows: repeat(2, minmax(0, 1fr)); }
+    .\@5-\33 y-grid { grid-template-rows: repeat(3, minmax(0, 1fr)); }
+    .\@5-\34 y-grid { grid-template-rows: repeat(4, minmax(0, 1fr)); }
+    .\@5-\35 y-grid { grid-template-rows: repeat(5, minmax(0, 1fr)); }
+    .\@5-\36 y-grid { grid-template-rows: repeat(6, minmax(0, 1fr)); }
+    .\@5-\37 y-grid { grid-template-rows: repeat(7, minmax(0, 1fr)); }
+    .\@5-\38 y-grid { grid-template-rows: repeat(8, minmax(0, 1fr)); }
+    .\@5-\39 y-grid { grid-template-rows: repeat(9, minmax(0, 1fr)); }
+    .\@5-\31 0y-grid { grid-template-rows: repeat(10, minmax(0, 1fr)); }
+    .\@5-\31 1y-grid { grid-template-rows: repeat(11, minmax(0, 1fr)); }
+    .\@5-\31 2y-grid { grid-template-rows: repeat(12, minmax(0, 1fr)); }
     .\@5-y-1 { grid-row-start: 1 !important; }
     .\@5-y-2 { grid-row-start: 2 !important; }
     .\@5-y-3 { grid-row-start: 3 !important; }
@@ -771,24 +649,23 @@ depends on `column-gap` having been set via the custom property `--column-gap`.
     .\@5-y-16 { grid-row-start: 16 !important; }
     .\@5-y-17 { grid-row-start: 17 !important; }
     .\@5-y-18 { grid-row-start: 18 !important; }
-    .\@5-yspan-1 { grid-row-end: span 1 !important; }
-    .\@5-yspan-2 { grid-row-end: span 2 !important; }
-    .\@5-yspan-3 { grid-row-end: span 3 !important; }
-    .\@5-yspan-4 { grid-row-end: span 4 !important; }
-    .\@5-yspan-5 { grid-row-end: span 5 !important; }
-    .\@5-yspan-6 { grid-row-end: span 6 !important; }
-    .\@5-yspan-7 { grid-row-end: span 7 !important; }
-    .\@5-yspan-8 { grid-row-end: span 8 !important; }
-    .\@5-yspan-9 { grid-row-end: span 9 !important; }
-    .\@5-yspan-10 { grid-row-end: span 10 !important; }
-    .\@5-yspan-11 { grid-row-end: span 11 !important; }
-    .\@5-yspan-12 { grid-row-end: span 12 !important; }
-    .\@5-yspan--1 { grid-row-end: span -1 !important; }
-    .\@5-y-end { align-self: end !important; }
-    .\@5-y-start { align-self: start !important; }
-    .\@5-y-center { align-self: center !important; }
-    .\@5-y-stretch { align-self: stretch !important; }
-    .\@5-y-baseline { align-self: baseline !important; }
+    .\@5-\31 y { grid-row-end: span 1 !important; }
+    .\@5-\32 y { grid-row-end: span 2 !important; }
+    .\@5-\33 y { grid-row-end: span 3 !important; }
+    .\@5-\34 y { grid-row-end: span 4 !important; }
+    .\@5-\35 y { grid-row-end: span 5 !important; }
+    .\@5-\36 y { grid-row-end: span 6 !important; }
+    .\@5-\37 y { grid-row-end: span 7 !important; }
+    .\@5-\38 y { grid-row-end: span 8 !important; }
+    .\@5-\39 y { grid-row-end: span 9 !important; }
+    .\@5-\31 0y { grid-row-end: span 10 !important; }
+    .\@5-\31 1y { grid-row-end: span 11 !important; }
+    .\@5-\31 2y { grid-row-end: span 12 !important; }
+    .\@5-end-y { align-self: end !important; }
+    .\@5-start-y { align-self: start !important; }
+    .\@5-center-y { align-self: center !important; }
+    .\@5-stretch-y { align-self: stretch !important; }
+    .\@5-baseline-y { align-self: baseline !important; }
     .\@5-columns-2 { columns: 2 !important; }
     .\@5-columns-3 { columns: 3 !important; }
     .\@5-columns-4 { columns: 4 !important; }
@@ -799,9 +676,8 @@ depends on `column-gap` having been set via the custom property `--column-gap`.
     .\@5-columns-9 { columns: 9 !important; }
     .\@5-columns-10 { columns: 10 !important; }
     .\@5-columns-11 { columns: 11 !important; }
-    .\@5-columns-12 { columns: 12 !important; } }
-
-:root { --column-gap: 0; --row-gap: 0; }
+    .\@5-columns-12 { columns: 12 !important; }
+    :root { --column-gap: 0; --row-gap: 0; } }
 
 /*
 THIS FILE IS GENERATED FROM SASS. DO NOT HAND-EDIT. THE NEXT BUILD WILL ERASE
