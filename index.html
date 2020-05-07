@@ -73,7 +73,7 @@
         </section>
 
         <section class="panel-block block 9x-grid grid @4-3x @4-3y" style="align-content: end; color: #202223; background-color: #ffb700; background-image: linear-gradient(173deg, #ff006a82, #0000); padding-top: 6.25%; padding-bottom: 12.5%;">
-            <h2 class="x-2 6x stretch-x text-02  midi-before before">MIDI
+            <h2 class="x-2 6x stretch-x text-02  midi-before before">MIDI.
                 <template is="sparky-template" fn="fetch:'/midi/package.json'">
                     <span class="text-09">{[version]}</span>
                 </template>
@@ -103,7 +103,7 @@
         <section class="panel-block block 9x-grid grid @2-3x @2-3y" style="color: #3c1407; background-color: #c4c995; background-image: linear-gradient(173deg, #f0f1e6, #a99e69);">
             <h2 class="x-2 6x stretch-x text-02">Font size calculator</h2>
             <p class="x-2 6x stretch-x">Generate a CSS stylesheet with a hierarchy of font-sizes that adapt to the width of the viewport.</p>
-            <a class="x-2 3x button white-fg" style="background-color: #45190b;" href="/font-size/">Font size calculator</a>
+            <a class="x-2 3x end-y button white-fg" style="background-color: #45190b;" href="/font-size/">Font size calculator</a>
         </section>
 
         <section class="panel-block block 9x-grid grid rotate-bg @4-3x @4-3y" style="color: #062d3d; background: url(manuscript/A3-16-stave.svg) 50% 50%, linear-gradient(3deg, grey, white);">
@@ -128,6 +128,20 @@
             </ul>
         </section>
 
+        <section class="panel-block block 9x-grid grid @4-3x @4-3y" style="color: rgb(39, 42, 43); background-color: rgb(210, 224, 24); background-image: linear-gradient(150deg, rgb(210, 224, 24), rgb(202, 193, 31));">
+            <h2 class="x-2 y-1 4x stretch-x text-02">
+                Sparky.
+                <template is="sparky-template" fn="fetch:'/sparky/package.json'">
+                    <span class="text-09" style="opacity: 0.6;">{[version]}</span>
+                </template>
+            </h2>
+            <p class="x-2 4x stretch-x">
+                A live data-binding custom &lt;template&gt; element with render tags, composeable includes, functional views and a DOM renderer that batches to the browser frame rate.
+            </p>
+            <img class="x-7 y-1 2x 3y stretch-x" src="/sparky/images/sparky-logo-dark.svg" />
+            <a class="x-2 3x end-y button white-fg" style="background-color: #a22514;" href="/sparky/">Documentation</a>
+        </section>
+
         <section class="panel-block block 9x-grid grid white-fg @2-3x @2-6y @4-2x @4-2y @4-x-1" style="background: linear-gradient(9deg, #005177, #026f63);">
             <h2 class="x-2 6x stretch-x text-02">
                 Bolt.
@@ -136,7 +150,7 @@
                 </template>
             </h2>
             <p class="x-2 6x stretch-x">A library of base classes, components and custom&nbsp;elements with deliberately minimal theming for constructing websites.</p>
-            <a class="x-2 3x button white-fg" style="background-color: #008e7d;" href="/bolt/">Documentation</a>
+            <a class="x-2 3x end-y button white-fg" style="background-color: #008e7d;" href="/bolt/">Documentation</a>
         </section>
 
         <section class="panel-block block 9x-grid grid @2-3x @2-3y @4-2x @4-2y @4-x-3" style="color: #ffd1ea; background-color: #301960; background-image: linear-gradient(10deg, #461c65, #b32269);">
@@ -149,7 +163,7 @@
             <p class="x-2 6x stretch-x">
                 JavaScript functions, proxy observers, streams and so on, published as individual ES6 modules.
             </p>
-            <a class="x-2 3x button white-fg" style="background-color: #c70f6a;" href="/fn/">Documentation</a>
+            <a class="x-2 3x end-y button white-fg" style="background-color: #c70f6a;" href="/fn/">Documentation</a>
         </section>
 
         <section class="panel-block block 9x-grid grid @2-3x @2-3y @4-2x @4-2y @4-x-5" style="color: #e2d0ce; background-color: #c92009; background-image: linear-gradient(20deg, #848226, #c92009);">
@@ -162,7 +176,7 @@
             <p class="x-2 6x stretch-x">
                 DOM functions, event streams, request helpers and so on, published as individual ES6 modules.
             </p>
-            <a class="x-2 3x button white-fg" style="background-color: #a22514;" href="/dom/">Documentation</a>
+            <a class="x-2 3x end-y button white-fg" style="background-color: #a22514;" href="/dom/">Documentation</a>
         </section>
 
         <section class="panel-block block 9x-grid grid" style="color: #bbb9b8; background: linear-gradient(90deg,#3A4B53 0%,#23292D 100%);">
