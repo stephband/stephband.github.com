@@ -23,7 +23,7 @@
 
     <link rel="stylesheet" href="/bolt/fonts/source-sans-pro/source-sans-pro.css">
     <link rel="stylesheet" href="/bolt/fonts/inconsolata/stylesheet.css">
-    <link rel="stylesheet" href="/bolt/dist/bolt.min.css">
+    <link rel="stylesheet" href="/bolt/style.min.css">
     <link rel="stylesheet" href="/dom/css/dom.css">
 
     <link rel="stylesheet" href="components/root.css">
@@ -44,9 +44,9 @@
         </a>
     </header>
 
-    <div class="panels-grid 6x-grid grid">
+    <div class="panels-grid 6x-grid grid" style="grid-auto-flow: row;">
         <section class="panel-block block 9x-grid grid no-scroll @5-3x @5-3y" style="color: #d1d1d1; background-color: #4f4f4f; background-image: linear-gradient(85deg, #2e2520, #4f4b48); padding-top: 3.125vw;">
-            <h2 class="x-2 4x stretch-x" style="color: #ffad1e; text-shadow: 0 0 17px #ff5d0ebf;">Brass Volcanoes.</h2>
+            <h2 class="x-2 4x stretch-x text-02" style="color: #ffad1e; text-shadow: 0 0 17px #ff5d0ebf;">Brass Volcanoes.</h2>
 
             <p class="x-2 4x">
                 I engineered the latest Brass Volcanoes recording <em>Funky Pineapple</em> on location in London.
@@ -73,7 +73,7 @@
         </section>
 
         <section class="panel-block block 9x-grid grid @4-3x @4-3y" style="align-content: end; color: #202223; background-color: #ffb700; background-image: linear-gradient(173deg, #ff006a82, #0000); padding-top: 6.25%; padding-bottom: 12.5%;">
-            <h2 class="x-2 6x stretch-x midi-before before">MIDI
+            <h2 class="x-2 6x stretch-x text-02  midi-before before">MIDI
                 <template is="sparky-template" fn="fetch:'/midi/package.json'">
                     <span class="text-09">{[version]}</span>
                 </template>
@@ -93,21 +93,17 @@
             <a class="x-5 3x y-3 start-y button white-fg" style="background-color: #202223;" href="/midi/monitor/">MIDI Monitor</a>
         </section>
 
-        <section class="panel-block block 9x-grid grid @4-3x @4-3y" style="background: linear-gradient(9deg, #e67f9f, #7f007f);">
+        <section class="panel-block block 9x-grid grid @2-3x @2-3y" style="background: linear-gradient(9deg, #e67f9f, #7f007f);">
             <h2 class="x-2 6x stretch-x" style="color: #e1c3d1;">Happy Birthday<br/>Dear Laura.</h2>
             <audio class="x-2 6x stretch-x" controls src="//sound.stephen.band/stephen/happy-birthday-dear-laura.m4a">
                 Your browser does not support the <code>audio</code> element.
             </audio>
         </section>
 
-        <section class="panel-block block 9x-grid grid white-fg @4-3x @4-3y" style="background: linear-gradient(9deg, #005477, #016881);">
-            <h2 class="x-2 6x stretch-x">
-                Bolt
-                <template is="sparky-template" fn="fetch:'/bolt/package.json'">
-                    <span class="text-09">{[version]}</span>
-                </template>
-            </h2>
-            <p class="x-2 6x stretch-x">A library of base classes, components and custom&nbsp;elements</p>
+        <section class="panel-block block 9x-grid grid @2-3x @2-3y" style="color: #3c1407; background-color: #c4c995; background-image: linear-gradient(173deg, #f0f1e6, #a99e69);">
+            <h2 class="x-2 6x stretch-x text-02">Font size calculator</h2>
+            <p class="x-2 6x stretch-x">Generate a CSS stylesheet with a hierarchy of font-sizes that adapt to the width of the viewport.</p>
+            <a class="x-2 3x button white-fg" style="background-color: #45190b;" href="/font-size/">Font size calculator</a>
         </section>
 
         <section class="panel-block block 9x-grid grid rotate-bg @4-3x @4-3y" style="color: #062d3d; background: url(manuscript/A3-16-stave.svg) 50% 50%, linear-gradient(3deg, grey, white);">
@@ -132,21 +128,44 @@
             </ul>
         </section>
 
-        <section class="panel-block block 9x-grid grid @2-x-1 @2-3x @2-3y @5-x-1 @5-2x @5-2y" style="color: #3c1407; background-color: #c4c995; background-image: linear-gradient(173deg, #f0f1e6, #a99e69);">
-            <h2 class="x-2 6x stretch-x text-03">Font size calculator</h2>
-            <p class="x-2 6x stretch-x">Generate a CSS stylesheet with a hierarchy of font-sizes that adapt to the width of the viewport.</p>
-            <a class="x-2 3x button white-fg" style="background-color: #45190b;" href="/font-size/">Font size calculator</a>
+        <section class="panel-block block 9x-grid grid white-fg @2-3x @2-6y @4-2x @4-2y @4-x-1" style="background: linear-gradient(9deg, #005177, #026f63);">
+            <h2 class="x-2 6x stretch-x text-02">
+                Bolt.
+                <template is="sparky-template" fn="fetch:'/bolt/package.json'">
+                    <span class="text-09" style="opacity: 0.6;">{[version]}</span>
+                </template>
+            </h2>
+            <p class="x-2 6x stretch-x">A library of base classes, components and custom&nbsp;elements with deliberately minimal theming for constructing websites.</p>
+            <a class="x-2 3x button white-fg" style="background-color: #008e7d;" href="/bolt/">Documentation</a>
         </section>
 
-        <section class="panel-block block 9x-grid grid @2-x-4 @2-3x @2-3y @5-x-1 @5-2x @5-2y" style="color: #ffd1ea; background-color: #301960; background-image: linear-gradient(10deg, #301960, #d83083);">
-            <h2 class="x-2 6x stretch-x text-03">Fn</h2>
+        <section class="panel-block block 9x-grid grid @2-3x @2-3y @4-2x @4-2y @4-x-3" style="color: #ffd1ea; background-color: #301960; background-image: linear-gradient(10deg, #461c65, #b32269);">
+            <h2 class="x-2 6x stretch-x text-02">
+                Fn.
+                <template is="sparky-template" fn="fetch:'/fn/package.json'">
+                    <span class="text-09" style="opacity: 0.6;">{[version]}</span>
+                </template>
+            </h2>
             <p class="x-2 6x stretch-x">
-                JavaScript functions and streams.
+                JavaScript functions, proxy observers, streams and so on, published as individual ES6 modules.
             </p>
-            <a class="x-2 3x button white-fg" style="background-color: #e2006f;" href="/fn/">Documentation</a>
+            <a class="x-2 3x button white-fg" style="background-color: #c70f6a;" href="/fn/">Documentation</a>
         </section>
 
-        <section class="panel-block block 9x-grid grid @5-x-3 @5-4x @5-4y" style="color: #bbb9b8; background: linear-gradient(90deg,#3A4B53 0%,#23292D 100%);">
+        <section class="panel-block block 9x-grid grid @2-3x @2-3y @4-2x @4-2y @4-x-5" style="color: #e2d0ce; background-color: #c92009; background-image: linear-gradient(20deg, #848226, #c92009);">
+            <h2 class="x-2 6x stretch-x text-02">
+                dom.
+                <template is="sparky-template" fn="fetch:'/dom/package.json'">
+                    <span class="text-09" style="opacity: 0.6;">{[version]}</span>
+                </template>
+            </h2>
+            <p class="x-2 6x stretch-x">
+                DOM functions, event streams, request helpers and so on, published as individual ES6 modules.
+            </p>
+            <a class="x-2 3x button white-fg" style="background-color: #a22514;" href="/dom/">Documentation</a>
+        </section>
+
+        <section class="panel-block block 9x-grid grid" style="color: #bbb9b8; background: linear-gradient(90deg,#3A4B53 0%,#23292D 100%);">
             <svg class="x-2 2x center-x y-1 start-y 6y logo-svg" style="margin-left: 10%; margin-right: 10%;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 170" preserveAspectRatio="xMidYMid">
                 <a xlink:href="https://cruncher.ch">
                     <g>
