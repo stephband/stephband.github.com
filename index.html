@@ -37,198 +37,199 @@
     <link rel="stylesheet" href="components/cruncher.css">
 </head>
 
-<body>
-    <header class="site-header">
+<body class="panels-grid 6x-grid grid" style="grid-auto-flow: row;">
+    <header class="site-header 6x 1y">
         <a class="logo-thumb thumb" href="http://stephen.band" rel="index">
             <h1>stephen.band</h1>
         </a>
     </header>
 
-    <div class="panels-grid 6x-grid grid" style="grid-auto-flow: row;">
-        <section class="panel-block block 9x-grid grid no-scroll @5-3x @5-3y" style="color: #d1d1d1; background-color: #4f4f4f; background-image: linear-gradient(85deg, #2e2520, #4f4b48); padding-top: 3.125vw;">
-            <h2 class="x-2 4x stretch-x text-02" style="color: #ffad1e; text-shadow: 0 0 17px #ff5d0ebf;">Brass Volcanoes.</h2>
+    <section class="panel-block block 3x-grid @2-6x-grid grid no-scroll @5-3x @5-3y" style="color: #d1d1d1; background-color: #4f4f4f; background-image: linear-gradient(85deg, #2e2520, #4f4b48); padding-top: 3.125vw;">
+        <h2 class="x-1 3x @2-4x stretch-x text-02" style="color: #ffad1e; text-shadow: 0 0 17px #ff5d0ebf;">Brass Volcanoes.</h2>
 
-            <p class="x-2 4x">
-                I engineered the latest Brass Volcanoes recording <em>Funky Pineapple</em> on location in London.
-                Buy it on <a href="https://brassvolcanoes.bandcamp.com/album/funky-pineapple">Bandcamp</a>.
+        <p class="x-1 3x @2-4x">
+            I engineered the latest Brass Volcanoes recording <em>Funky Pineapple</em> on location in London.
+            Buy it on <a href="https://brassvolcanoes.bandcamp.com/album/funky-pineapple">Bandcamp</a>.
+        </p>
+
+        <img class="x-1 2x" src="brass-volcanoes/images/funky-pineapple.jpg" style="margin-top: 1em;" />
+
+        <small class="x-1 3x @2-4x text-11" style="margin-top: 1em;">
+            Sousaphone <span style="color: rgba(255,255,255,0.5);">Graham&nbsp;Hughes</span>
+            Trumpet, Vocals <span style="color: rgba(255,255,255,0.5);">Ben&nbsp;Cummings</span>
+            Trumpet <span style="color: rgba(255,255,255,0.5);">Paul&nbsp;Jordanous</span>
+            Tenor <span style="color: rgba(255,255,255,0.5);">Jac&nbsp;Jones</span>
+            Trombone <span style="color: rgba(255,255,255,0.5);">Malcolm&nbsp;Earle&nbsp;Smith</span>
+            Trombone <span style="color: rgba(255,255,255,0.5);">Tom&nbsp;White</span>
+            Drums, Vocals <span style="color: rgba(255,255,255,0.5);">Bubu</span>
+            Snare <span style="color: rgba(255,255,255,0.5);">Wesley&nbsp;Gibbens</span>
+            Rap <span style="color: rgba(255,255,255,0.5);">Zeb&nbsp;Tonkin</span>
+        </small>
+
+        <iframe class="bandcamp-iframe" src="https://bandcamp.com/EmbeddedPlayer/album=4255534285/size=large/bgcol=333333/linkcol=e99708/artwork=none/track=185517818/transparent=true/" seamless>
+            <a href="http://brassvolcanoes.bandcamp.com/album/funky-pineapple">Funky Pineapple by Brass Volcanoes</a>
+        </iframe>
+    </section>
+
+    <section class="end-panel-block panel-block block 3x-grid @2-6x-grid grid @4-3x @4-3y" style="color: #202223; background-color: #ffb700; background-image: linear-gradient(173deg, #ff006a82, #0000);">
+        <h2 class="x-1 3x @2-6x stretch-x text-02  midi-before before">MIDI.
+            <template is="sparky-template" fn="fetch:'/midi/package.json'">
+                <span class="text-09">{[version]}</span>
+            </template>
+        </h2>
+
+        <p class="x-1 3x @2-y-2 end-y stretch-x">
+            Receive, monitor, manipulate and transmit MIDI messages in the&nbsp;browser.
+            A JS library of tools for working with the WebMIDI&nbsp;API.
+        </p>
+
+        <a class="x-1 3x start-x @2-stretch-x @2-y-3 start-y button white-fg" style="background-color: #202223;" href="/midi/">MIDI JS Documentation</a>
+
+        <p class="x-1 3x @2-x-4 @2-y-2 end-y stretch-x">
+            Inspect the data coming from a connected MIDI&nbsp;device.
+        </p>
+
+        <a class="x-1 3x start-x @2-x-4 @2-stretch-x @2-y-3 start-y button white-fg" style="background-color: #202223;" href="/midi/monitor/">MIDI Monitor</a>
+    </section>
+
+    <section class="panel-block block 3x-grid @1-6x-grid grid @2-3x @2-3y" style="background: linear-gradient(9deg, #e67f9f, #7f007f);">
+        <h2 class="x-1 6x stretch-x" style="color: #e1c3d1;">Happy Birthday<br/>Dear Laura.</h2>
+        <audio class="x-1 6x stretch-x" controls src="//sound.stephen.band/stephen/happy-birthday-dear-laura.m4a">
+            Your browser does not support the <code>audio</code> element.
+        </audio>
+    </section>
+
+    <section class="panel-block block 3x-grid @1-6x-grid grid @2-3x @2-3y" style="color: #3c1407; background-color: #c4c995; background-image: linear-gradient(173deg, #f0f1e6, #a99e69);">
+        <h2 class="x-1 6x stretch-x text-02">Font size calculator</h2>
+        <p class="x-1 6x stretch-x">Generate a CSS stylesheet with a hierarchy of font-sizes that adapt to the width of the viewport.</p>
+        <a class="x-1 3x start-x end-y button white-fg" style="background-color: #45190b;" href="/font-size/">Font size calculator</a>
+    </section>
+
+    <section class="panel-block block 3x-grid @1-6x-grid grid rotate-bg @4-3x @4-3y" style="color: #062d3d; background: url(manuscript/A3-16-stave.svg) 50% 50%, linear-gradient(3deg, grey, white);">
+        <h2 class="x-1 6x stretch-x">Manuscript.</h2>
+        <p class="x-1 6x stretch-x">
+            Elusive stuff, innit?
+            I can never find any when I really need it.
+            Never again. Print at&nbsp;will.
+        </p>
+        <ul class="x-1 3x index">
+            <li><a href="manuscript/A4-8-stave.svg">A4-8-stave.svg</a></li>
+            <li><a href="manuscript/A4-8-stave.pdf">A4-8-stave.pdf</a></li>
+            <li><a href="manuscript/A4-10-stave.svg">A4-10-stave.svg</a></li>
+            <li><a href="manuscript/A4-10-stave.pdf">A4-10-stave.pdf</a></li>
+        </ul>
+
+        <ul class="x-4 3x index">
+            <li><a href="manuscript/A4-11-stave.svg">A4-11-stave.svg</a></li>
+            <li><a href="manuscript/A4-11-stave.pdf">A4-11-stave.pdf</a></li>
+            <li><a href="manuscript/A3-16-stave.svg">A3-16-stave.svg</a></li>
+            <li><a href="manuscript/A3-16-stave.pdf">A3-16-stave.pdf</a></li>
+        </ul>
+    </section>
+
+    <section class="end-panel-block panel-block block 2x-grid @1-7x-grid grid @4-3x @4-3y" style="color: rgb(39, 42, 43); background-color: rgb(210, 224, 24); background-image: linear-gradient(150deg, rgb(210, 224, 24), rgb(224, 178, 19));">
+        <img class="x-1 y-1 end-y @1-x-5 @1-3x @2-x-6 @2-2x @1-4y stretch-x" src="/sparky/images/sparky-logo-dark.svg" style="margin-bottom: -4%;" />
+        <h2 class="x-1 2x y-2 @1-y-1 @1-4x stretch-x text-02">
+            Sparky.
+            <template is="sparky-template" fn="fetch:'/sparky/package.json'">
+                <span class="text-09" style="opacity: 0.6;">{[version]}</span>
+            </template>
+        </h2>
+        <p class="x-1 2x @1-4x stretch-x">
+            A live data-binding custom &lt;template&gt; element with render tags, composeable includes, functional views and a DOM renderer that batches to the browser frame rate.
+        </p>
+        <a class="x-1 y-4 start-x end-y button white-fg" style="background-color: #4a6a7b;" href="/sparky/">Documentation</a>
+    </section>
+
+    <section class="panel-block block 3x-grid @1-6x-grid grid @2-3x @2-6y @4-2x @4-2y @4-x-1" style="color: #eef9ff; background: linear-gradient(9deg, #005177, #026f63);">
+        <h2 class="x-1 6x stretch-x text-02">
+            Bolt.
+            <template is="sparky-template" fn="fetch:'/bolt/package.json'">
+                <span class="text-09" style="opacity: 0.6;">{[version]}</span>
+            </template>
+        </h2>
+        <p class="x-1 6x stretch-x">Base classes, components and custom&nbsp;elements with deliberately minimal theming.</p>
+        <a class="x-1 start-x end-y button white-fg" style="background-color: #008e7d;" href="/bolt/">Documentation</a>
+    </section>
+
+    <section class="panel-block block 3x-grid @1-6x-grid grid @2-3x @2-3y @4-2x @4-2y @4-x-3" style="color: #ffd1ea; background-color: #301960; background-image: linear-gradient(10deg, #461c65, #b32269);">
+        <h2 class="x-1 6x stretch-x text-02">
+            Fn.
+            <template is="sparky-template" fn="fetch:'/fn/package.json'">
+                <span class="text-09" style="opacity: 0.6;">{[version]}</span>
+            </template>
+        </h2>
+        <p class="x-1 6x stretch-x">
+            JavaScript functions, proxy observers, streams and so on, published as individual ES6 modules.
+        </p>
+        <a class="x-1 start-x end-y button white-fg" style="background-color: #c70f6a;" href="/fn/">Documentation</a>
+    </section>
+
+    <section class="panel-block block 3x-grid @1-6x-grid grid @2-3x @2-3y @4-2x @4-2y @4-x-5" style="color: #e2d0ce; background-color: #c92009; background-image: linear-gradient(20deg, #848226, #c92009);">
+        <h2 class="x-1 6x stretch-x text-02">
+            dom.
+            <template is="sparky-template" fn="fetch:'/dom/package.json'">
+                <span class="text-09" style="opacity: 0.6;">{[version]}</span>
+            </template>
+        </h2>
+        <p class="x-1 6x stretch-x">
+            DOM functions, event streams, request helpers and so on, published as individual ES6 modules.
+        </p>
+        <a class="x-1 start-x end-y button white-fg" style="background-color: #a22514;" href="/dom/">Documentation</a>
+    </section>
+
+    <section class="center-panel-block panel-block block 4x-grid @1-7x-grid grid" style="color: #bbb9b8; background: linear-gradient(90deg,#3A4B53 0%,#23292D 100%);">
+        <svg class="x-2 2x center-x y-1 start-y @1-x-1 @1-end-y logo-svg" style="margin-left: 10%; margin-right: 10%;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 170" preserveAspectRatio="xMidYMid">
+            <a xlink:href="https://cruncher.ch">
+                <g>
+                    <polygon class="p1" points="75,101.03 75,101.04 75,101.04 100,71.13 86.6,63.4"></polygon>
+                    <polygon class="p2" points="86.6,21.13 100,44.34 100,28.87"></polygon>
+                    <polygon class="p3" points="75,56.7 75,14.43 56.7,46.13"></polygon>
+                    <polygon class="p4" points="78.87,107.74 86.6,94.34 75,101.04"></polygon>
+                    <polygon class="p5" points="63.4,107.74 78.87,107.74 75,101.04"></polygon>
+                    <polygon class="p6" points="75,14.43 75,56.7 86.6,63.4 86.6,63.4 86.6,63.4 100,71.13 100,44.34 86.6,21.13"></polygon>
+                    <polygon class="p7" points="86.6,94.34 100,86.6 100,71.13 75,101.04"></polygon>
+                    <polygon class="p8" points="63.4,21.13 75,14.43 75,14.43 75,14.43 86.6,21.13 78.87,7.74 78.87,7.74 50,7.74 50,21.13"></polygon>
+                    <polygon class="p9" points="75,14.43 63.4,21.13 50,21.13 50,42.27 56.7,46.13 75,14.43 75,14.43"></polygon>
+                    <polygon class="p10" points="0,28.87 0,44.34 13.4,21.13"></polygon>
+                    <polygon class="p11" points="21.13,25.6 21.13,7.74 13.4,21.13 13.4,21.13 15.98,25.6"></polygon>
+                    <polygon class="p12" points="50,42.27 21.13,25.6 15.98,25.6 21.13,34.53 41.28,69.43"></polygon>
+                    <polygon class="p13" points="21.13,34.53 15.98,25.6 13.4,21.13 0,44.34 0,57.74 15.7,57.74"></polygon>
+                    <polygon class="p14" points="50,42.27 50,21.13 21.13,7.74 21.13,25.6"></polygon>
+                    <polygon class="p15" points="50,7.74 50,0 21.13,7.74 50,21.13"></polygon>
+                    <polygon class="p16" points="50,115.47 63.4,107.74 63.4,107.74 13.4,94.34"></polygon>
+                    <polygon class="p17" points="8.94,86.57 8.94,86.56 8.92,86.57 15.69,57.74 15.69,57.74 15.7,57.74 0,57.74 0,71.13 8.93,86.6 8.94,86.57 8.94,86.57"></polygon>
+                    <polygon class="p18" points="21.13,34.53 15.7,57.74 15.69,57.74 15.69,57.74 33.95,71.1 40.74,71.1 41.28,69.43"></polygon>
+                    <polygon class="p19" points="38.84,77.15 38.81,77.12 38.8,77.13 38.78,77.12 38.75,77.16 13.4,94.34 63.4,107.74 63.4,107.73 63.4,107.74 75,101.04"></polygon>
+                    <polygon class="p20" points="50,42.27 38.81,77.12 38.84,77.15 75,101.04 75,101.04 75,101.03 86.6,63.4 86.6,63.4 86.6,63.4 75,56.7 56.7,46.13"></polygon>
+                    <polygon class="p21" points="8.92,86.57 8.94,86.56 8.94,86.57 33.95,71.1 15.69,57.74"></polygon>
+                    <polygon class="p22" points="33.95,71.1 8.94,86.57 8.92,86.57 13.4,94.34 38.75,77.16 38.78,77.12 38.8,77.13 38.81,77.12 40.74,71.1"></polygon>
+                </g>
+            </a>
+
+            <a xlink:href="https://cruncher.ch">
+                <g transform="translate(3, 148)">
+                    <path class="text-path" d="M0.71,11.83c0-5.14,2.83-8.47,7.78-8.47c1.57,0,2.55,0.19,3.98,0.69l-0.67,2.67c-1.17-0.5-2.59-0.62-3.43-0.62c-2.67,0-4.21,2.21-4.21,5.47c0,3.67,1.4,6.07,4,6.07c1.67,0,3.19-0.62,4.07-0.93l0.71,2.43c-0.83,0.48-2.43,1.24-4.71,1.24C3.29,20.37,0.71,16.99,0.71,11.83z"></path>
+                    <path class="text-path" d="M18.18,20.23h-3.12V8.33h2.48l0.29,1.17c1.17-0.95,1.9-1.4,3.02-1.4c0.64,0,1.02,0.14,1.05,0.14l-0.29,2.83c-0.21-0.07-0.67-0.14-1.17-0.14c-0.83,0-1.64,0.71-2.26,1.4V20.23z"></path>
+                    <path class="text-path" d="M26.89,8.33v7.28c0,1.21,0.45,2.19,1.55,2.19c0.64,0,1.4-0.36,2.29-1.09V8.33h3.12v11.9h-2.62l-0.5-1.14c-1.4,1.05-2.24,1.29-3.52,1.29c-2.05,0-3.45-1.31-3.45-4.17V8.33H26.89z"></path>
+                    <path class="text-path" d="M44.01,20.23v-7.12c0-1.21-0.45-2.19-1.55-2.19c-0.64,0-1.4,0.36-2.29,1.1v8.21h-3.12V8.33h2.62l0.5,1.07c1.4-1.05,2.24-1.31,3.52-1.31c2.05,0,3.45,1.33,3.45,4.19v7.95H44.01z"></path>
+                    <path class="text-path" d="M58.38,19.78c-1.33,0.38-2.12,0.59-3.29,0.59c-4.09,0-5.57-2.26-5.57-6.09c0-3.83,1.81-6.19,5.31-6.19c1.5,0,2.67,0.33,3.48,0.57l-1.12,2.17c-0.69-0.21-1.12-0.41-2.29-0.41c-2.09,0-2.29,2.1-2.29,3.76c0,2.9,1.07,3.76,3,3.76c0.81,0,1.62-0.09,2.38-0.31L58.38,19.78z"></path>
+                    <path class="text-path" d="M67.33,20.23v-7.12c0-1.21-0.45-2.19-1.55-2.19c-0.64,0-1.45,0.36-2.33,1.1v8.21h-3.09V3.57h3.09V9.4c1.4-1.05,2.24-1.31,3.52-1.31c2.05,0,3.45,1.33,3.45,4.19v7.95H67.33z"></path>
+                    <path class="text-path" d="M78.4,20.37c-3.67,0-5.59-1.88-5.59-6.05c0-4.12,1.88-6.24,5.31-6.24c2.74,0,4.71,1.67,4.71,5.28c0,0.52-0.02,1.24-0.1,1.83h-6.88c0,1.95,1.19,2.74,2.81,2.74c0.98,0,2-0.19,3.4-0.57l0.52,2.12C80.87,20.16,79.75,20.37,78.4,20.37z M79.85,12.85c0-1.36-0.55-2.43-1.98-2.43c-1.45,0-2.02,1.26-2.05,2.59h4.02V12.85z"></path>
+                    <path class="text-path" d="M88.46,20.23h-3.12V8.33h2.48l0.29,1.17c1.17-0.95,1.9-1.4,3.02-1.4c0.64,0,1.02,0.14,1.05,0.14l-0.29,2.83c-0.21-0.07-0.67-0.14-1.17-0.14c-0.83,0-1.64,0.71-2.26,1.4V20.23z"></path>
+                </g>
+            </a>
+        </svg>
+
+        <div class="x-1 4x @1-x-4 @1-4x @1-end-y center-align @1-left-align">
+            <p>
+                Cruncher is a web development agency in Lausanne.
+                We tackle hard challenges like building big content management systems and real-time marketplaces for our&nbsp;clients.
             </p>
-
-            <img class="x-2 2x" src="brass-volcanoes/images/funky-pineapple.jpg" style="margin-top: 1em;" />
-
-            <iframe class="" style="position: absolute; right: -1px; top: -1px; bottom: -1px; border: 0; width: calc(33.33333333% + 1px); height: calc(100% + 2px); margin: 0;" src="https://bandcamp.com/EmbeddedPlayer/album=4255534285/size=large/bgcol=333333/linkcol=e99708/artwork=none/track=185517818/transparent=true/" seamless>
-                <a href="http://brassvolcanoes.bandcamp.com/album/funky-pineapple">Funky Pineapple by Brass Volcanoes</a>
-            </iframe>
-
-            <small class="x-2 4x text-11" style="margin-top: 1em;">
-                Sousaphone <span style="color: rgba(255,255,255,0.5);">Graham&nbsp;Hughes</span>
-                Trumpet, Vocals <span style="color: rgba(255,255,255,0.5);">Ben&nbsp;Cummings</span>
-                Trumpet <span style="color: rgba(255,255,255,0.5);">Paul&nbsp;Jordanous</span>
-                Tenor <span style="color: rgba(255,255,255,0.5);">Jac&nbsp;Jones</span>
-                Trombone <span style="color: rgba(255,255,255,0.5);">Malcolm&nbsp;Earle&nbsp;Smith</span>
-                Trombone <span style="color: rgba(255,255,255,0.5);">Tom&nbsp;White</span>
-                Drums, Vocals <span style="color: rgba(255,255,255,0.5);">Bubu</span>
-                Snare <span style="color: rgba(255,255,255,0.5);">Wesley&nbsp;Gibbens</span>
-                Rap <span style="color: rgba(255,255,255,0.5);">Zeb&nbsp;Tonkin</span>
-            </small>
-        </section>
-
-        <section class="panel-block block 9x-grid grid @4-3x @4-3y" style="align-content: end; color: #202223; background-color: #ffb700; background-image: linear-gradient(173deg, #ff006a82, #0000); padding-top: 6.25%; padding-bottom: 12.5%;">
-            <h2 class="x-2 6x stretch-x text-02  midi-before before">MIDI.
-                <template is="sparky-template" fn="fetch:'/midi/package.json'">
-                    <span class="text-09">{[version]}</span>
-                </template>
-            </h2>
-
-            <p class="x-2 3x y-2 end-y stretch-x">
-                Receive, monitor, manipulate and transmit MIDI messages in the&nbsp;browser.
-                A JS library of tools for working with the WebMIDI&nbsp;API.
-            </p>
-
-            <a class="x-2 3x y-3 start-y button white-fg" style="background-color: #202223;" href="/midi/">MIDI JS Documentation</a>
-
-            <p class="x-5 3x y-2 end-y stretch-x">
-                Inspect the data coming from a connected MIDI&nbsp;device.
-            </p>
-
-            <a class="x-5 3x y-3 start-y button white-fg" style="background-color: #202223;" href="/midi/monitor/">MIDI Monitor</a>
-        </section>
-
-        <section class="panel-block block 9x-grid grid @2-3x @2-3y" style="background: linear-gradient(9deg, #e67f9f, #7f007f);">
-            <h2 class="x-2 6x stretch-x" style="color: #e1c3d1;">Happy Birthday<br/>Dear Laura.</h2>
-            <audio class="x-2 6x stretch-x" controls src="//sound.stephen.band/stephen/happy-birthday-dear-laura.m4a">
-                Your browser does not support the <code>audio</code> element.
-            </audio>
-        </section>
-
-        <section class="panel-block block 9x-grid grid @2-3x @2-3y" style="color: #3c1407; background-color: #c4c995; background-image: linear-gradient(173deg, #f0f1e6, #a99e69);">
-            <h2 class="x-2 6x stretch-x text-02">Font size calculator</h2>
-            <p class="x-2 6x stretch-x">Generate a CSS stylesheet with a hierarchy of font-sizes that adapt to the width of the viewport.</p>
-            <a class="x-2 3x end-y button white-fg" style="background-color: #45190b;" href="/font-size/">Font size calculator</a>
-        </section>
-
-        <section class="panel-block block 9x-grid grid rotate-bg @4-3x @4-3y" style="color: #062d3d; background: url(manuscript/A3-16-stave.svg) 50% 50%, linear-gradient(3deg, grey, white);">
-            <h2 class="x-2 6x stretch-x">Manuscript.</h2>
-            <p class="x-2 6x stretch-x">
-                Elusive stuff, innit?
-                I can never find any when I really need it.
-                Never again. Print at&nbsp;will.
-            </p>
-            <ul class="x-2 3x index">
-                <li><a href="manuscript/A4-8-stave.svg">A4-8-stave.svg</a></li>
-                <li><a href="manuscript/A4-8-stave.pdf">A4-8-stave.pdf</a></li>
-                <li><a href="manuscript/A4-10-stave.svg">A4-10-stave.svg</a></li>
-                <li><a href="manuscript/A4-10-stave.pdf">A4-10-stave.pdf</a></li>
-            </ul>
-
-            <ul class="x-5 3x index">
-                <li><a href="manuscript/A4-11-stave.svg">A4-11-stave.svg</a></li>
-                <li><a href="manuscript/A4-11-stave.pdf">A4-11-stave.pdf</a></li>
-                <li><a href="manuscript/A3-16-stave.svg">A3-16-stave.svg</a></li>
-                <li><a href="manuscript/A3-16-stave.pdf">A3-16-stave.pdf</a></li>
-            </ul>
-        </section>
-
-        <section class="panel-block block 9x-grid grid @4-3x @4-3y" style="color: rgb(39, 42, 43); background-color: rgb(210, 224, 24); background-image: linear-gradient(150deg, rgb(210, 224, 24), rgb(202, 193, 31));">
-            <h2 class="x-2 y-1 4x stretch-x text-02">
-                Sparky.
-                <template is="sparky-template" fn="fetch:'/sparky/package.json'">
-                    <span class="text-09" style="opacity: 0.6;">{[version]}</span>
-                </template>
-            </h2>
-            <p class="x-2 4x stretch-x">
-                A live data-binding custom &lt;template&gt; element with render tags, composeable includes, functional views and a DOM renderer that batches to the browser frame rate.
-            </p>
-            <img class="x-7 y-1 2x 3y stretch-x" src="/sparky/images/sparky-logo-dark.svg" />
-            <a class="x-2 3x end-y button white-fg" style="background-color: #4a6a7b;" href="/sparky/">Documentation</a>
-        </section>
-
-        <section class="panel-block block 9x-grid grid white-fg @2-3x @2-6y @4-2x @4-2y @4-x-1" style="background: linear-gradient(9deg, #005177, #026f63);">
-            <h2 class="x-2 6x stretch-x text-02">
-                Bolt.
-                <template is="sparky-template" fn="fetch:'/bolt/package.json'">
-                    <span class="text-09" style="opacity: 0.6;">{[version]}</span>
-                </template>
-            </h2>
-            <p class="x-2 6x stretch-x">A library of base classes, components and custom&nbsp;elements with deliberately minimal theming for constructing websites.</p>
-            <a class="x-2 3x end-y button white-fg" style="background-color: #008e7d;" href="/bolt/">Documentation</a>
-        </section>
-
-        <section class="panel-block block 9x-grid grid @2-3x @2-3y @4-2x @4-2y @4-x-3" style="color: #ffd1ea; background-color: #301960; background-image: linear-gradient(10deg, #461c65, #b32269);">
-            <h2 class="x-2 6x stretch-x text-02">
-                Fn.
-                <template is="sparky-template" fn="fetch:'/fn/package.json'">
-                    <span class="text-09" style="opacity: 0.6;">{[version]}</span>
-                </template>
-            </h2>
-            <p class="x-2 6x stretch-x">
-                JavaScript functions, proxy observers, streams and so on, published as individual ES6 modules.
-            </p>
-            <a class="x-2 3x end-y button white-fg" style="background-color: #c70f6a;" href="/fn/">Documentation</a>
-        </section>
-
-        <section class="panel-block block 9x-grid grid @2-3x @2-3y @4-2x @4-2y @4-x-5" style="color: #e2d0ce; background-color: #c92009; background-image: linear-gradient(20deg, #848226, #c92009);">
-            <h2 class="x-2 6x stretch-x text-02">
-                dom.
-                <template is="sparky-template" fn="fetch:'/dom/package.json'">
-                    <span class="text-09" style="opacity: 0.6;">{[version]}</span>
-                </template>
-            </h2>
-            <p class="x-2 6x stretch-x">
-                DOM functions, event streams, request helpers and so on, published as individual ES6 modules.
-            </p>
-            <a class="x-2 3x end-y button white-fg" style="background-color: #a22514;" href="/dom/">Documentation</a>
-        </section>
-
-        <section class="panel-block block 9x-grid grid" style="color: #bbb9b8; background: linear-gradient(90deg,#3A4B53 0%,#23292D 100%);">
-            <svg class="x-2 2x center-x y-1 start-y 6y logo-svg" style="margin-left: 10%; margin-right: 10%;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 170" preserveAspectRatio="xMidYMid">
-                <a xlink:href="https://cruncher.ch">
-                    <g>
-                        <polygon class="p1" points="75,101.03 75,101.04 75,101.04 100,71.13 86.6,63.4"></polygon>
-                        <polygon class="p2" points="86.6,21.13 100,44.34 100,28.87"></polygon>
-                        <polygon class="p3" points="75,56.7 75,14.43 56.7,46.13"></polygon>
-                        <polygon class="p4" points="78.87,107.74 86.6,94.34 75,101.04"></polygon>
-                        <polygon class="p5" points="63.4,107.74 78.87,107.74 75,101.04"></polygon>
-                        <polygon class="p6" points="75,14.43 75,56.7 86.6,63.4 86.6,63.4 86.6,63.4 100,71.13 100,44.34 86.6,21.13"></polygon>
-                        <polygon class="p7" points="86.6,94.34 100,86.6 100,71.13 75,101.04"></polygon>
-                        <polygon class="p8" points="63.4,21.13 75,14.43 75,14.43 75,14.43 86.6,21.13 78.87,7.74 78.87,7.74 50,7.74 50,21.13"></polygon>
-                        <polygon class="p9" points="75,14.43 63.4,21.13 50,21.13 50,42.27 56.7,46.13 75,14.43 75,14.43"></polygon>
-                        <polygon class="p10" points="0,28.87 0,44.34 13.4,21.13"></polygon>
-                        <polygon class="p11" points="21.13,25.6 21.13,7.74 13.4,21.13 13.4,21.13 15.98,25.6"></polygon>
-                        <polygon class="p12" points="50,42.27 21.13,25.6 15.98,25.6 21.13,34.53 41.28,69.43"></polygon>
-                        <polygon class="p13" points="21.13,34.53 15.98,25.6 13.4,21.13 0,44.34 0,57.74 15.7,57.74"></polygon>
-                        <polygon class="p14" points="50,42.27 50,21.13 21.13,7.74 21.13,25.6"></polygon>
-                        <polygon class="p15" points="50,7.74 50,0 21.13,7.74 50,21.13"></polygon>
-                        <polygon class="p16" points="50,115.47 63.4,107.74 63.4,107.74 13.4,94.34"></polygon>
-                        <polygon class="p17" points="8.94,86.57 8.94,86.56 8.92,86.57 15.69,57.74 15.69,57.74 15.7,57.74 0,57.74 0,71.13 8.93,86.6 8.94,86.57 8.94,86.57"></polygon>
-                        <polygon class="p18" points="21.13,34.53 15.7,57.74 15.69,57.74 15.69,57.74 33.95,71.1 40.74,71.1 41.28,69.43"></polygon>
-                        <polygon class="p19" points="38.84,77.15 38.81,77.12 38.8,77.13 38.78,77.12 38.75,77.16 13.4,94.34 63.4,107.74 63.4,107.73 63.4,107.74 75,101.04"></polygon>
-                        <polygon class="p20" points="50,42.27 38.81,77.12 38.84,77.15 75,101.04 75,101.04 75,101.03 86.6,63.4 86.6,63.4 86.6,63.4 75,56.7 56.7,46.13"></polygon>
-                        <polygon class="p21" points="8.92,86.57 8.94,86.56 8.94,86.57 33.95,71.1 15.69,57.74"></polygon>
-                        <polygon class="p22" points="33.95,71.1 8.94,86.57 8.92,86.57 13.4,94.34 38.75,77.16 38.78,77.12 38.8,77.13 38.81,77.12 40.74,71.1"></polygon>
-                    </g>
-                </a>
-
-                <a xlink:href="https://cruncher.ch">
-                    <g transform="translate(3, 148)">
-                        <path class="text-path" d="M0.71,11.83c0-5.14,2.83-8.47,7.78-8.47c1.57,0,2.55,0.19,3.98,0.69l-0.67,2.67c-1.17-0.5-2.59-0.62-3.43-0.62c-2.67,0-4.21,2.21-4.21,5.47c0,3.67,1.4,6.07,4,6.07c1.67,0,3.19-0.62,4.07-0.93l0.71,2.43c-0.83,0.48-2.43,1.24-4.71,1.24C3.29,20.37,0.71,16.99,0.71,11.83z"></path>
-                        <path class="text-path" d="M18.18,20.23h-3.12V8.33h2.48l0.29,1.17c1.17-0.95,1.9-1.4,3.02-1.4c0.64,0,1.02,0.14,1.05,0.14l-0.29,2.83c-0.21-0.07-0.67-0.14-1.17-0.14c-0.83,0-1.64,0.71-2.26,1.4V20.23z"></path>
-                        <path class="text-path" d="M26.89,8.33v7.28c0,1.21,0.45,2.19,1.55,2.19c0.64,0,1.4-0.36,2.29-1.09V8.33h3.12v11.9h-2.62l-0.5-1.14c-1.4,1.05-2.24,1.29-3.52,1.29c-2.05,0-3.45-1.31-3.45-4.17V8.33H26.89z"></path>
-                        <path class="text-path" d="M44.01,20.23v-7.12c0-1.21-0.45-2.19-1.55-2.19c-0.64,0-1.4,0.36-2.29,1.1v8.21h-3.12V8.33h2.62l0.5,1.07c1.4-1.05,2.24-1.31,3.52-1.31c2.05,0,3.45,1.33,3.45,4.19v7.95H44.01z"></path>
-                        <path class="text-path" d="M58.38,19.78c-1.33,0.38-2.12,0.59-3.29,0.59c-4.09,0-5.57-2.26-5.57-6.09c0-3.83,1.81-6.19,5.31-6.19c1.5,0,2.67,0.33,3.48,0.57l-1.12,2.17c-0.69-0.21-1.12-0.41-2.29-0.41c-2.09,0-2.29,2.1-2.29,3.76c0,2.9,1.07,3.76,3,3.76c0.81,0,1.62-0.09,2.38-0.31L58.38,19.78z"></path>
-                        <path class="text-path" d="M67.33,20.23v-7.12c0-1.21-0.45-2.19-1.55-2.19c-0.64,0-1.45,0.36-2.33,1.1v8.21h-3.09V3.57h3.09V9.4c1.4-1.05,2.24-1.31,3.52-1.31c2.05,0,3.45,1.33,3.45,4.19v7.95H67.33z"></path>
-                        <path class="text-path" d="M78.4,20.37c-3.67,0-5.59-1.88-5.59-6.05c0-4.12,1.88-6.24,5.31-6.24c2.74,0,4.71,1.67,4.71,5.28c0,0.52-0.02,1.24-0.1,1.83h-6.88c0,1.95,1.19,2.74,2.81,2.74c0.98,0,2-0.19,3.4-0.57l0.52,2.12C80.87,20.16,79.75,20.37,78.4,20.37z M79.85,12.85c0-1.36-0.55-2.43-1.98-2.43c-1.45,0-2.02,1.26-2.05,2.59h4.02V12.85z"></path>
-                        <path class="text-path" d="M88.46,20.23h-3.12V8.33h2.48l0.29,1.17c1.17-0.95,1.9-1.4,3.02-1.4c0.64,0,1.02,0.14,1.05,0.14l-0.29,2.83c-0.21-0.07-0.67-0.14-1.17-0.14c-0.83,0-1.64,0.71-2.26,1.4V20.23z"></path>
-                    </g>
-                </a>
-            </svg>
-
-            <div class="x-5 3x y-2">
-                <p>I work at Cruncher, a web development agency in Lausanne. We tackle hard challenges like building big content management systems and real-time marketplaces for our clients.</p>
-                <p>You should hire us.</p>
-                <a class="button" style="background-color: #1f2427; margin-top: 3em;" href="https://cruncher.ch">Cruncher website</a>
-            </div>
-        </section>
-    </div>
+            <p>You should hire us.</p>
+            <a class="button" style="background-color: #1f2427; margin-top: 3em;" href="https://cruncher.ch">Cruncher website</a>
+        </div>
+    </section>
 
     <!-- Document interactivity -->
     <script type="module">

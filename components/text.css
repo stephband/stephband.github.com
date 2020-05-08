@@ -11,8 +11,8 @@
     font-weight: 400;
 }
 
-.text-01, h1   { font-size: calc(1.92788571rem + 2.02457143vw); line-height: 1em; font-weight: 700; }
-.text-02, h2   { font-size: calc(1.64693909rem + 1.48530454vw); line-height: 1em; font-weight: 700; }
+.text-01, h1   { font-size: calc(1.92788571rem + 2.02457143vw); line-height: 1.1em; font-weight: 700; }
+.text-02, h2   { font-size: calc(1.64693909rem + 1.48530454vw); line-height: 1.1em; font-weight: 700; }
 .text-03, h3   { font-size: calc(1.41281691rem + 1.03591547vw); line-height: 1.2em; font-weight: 700; }
 .text-04, h4   { font-size: calc(1.21771508rem + 0.66142458vw); line-height: 1.2em; font-weight: 700; }
 .text-05, h5   { font-size: calc(1.05513023rem + 0.34934883vw); line-height: 1.4em; }

@@ -2,6 +2,9 @@
 
 .panels-grid {
     grid-auto-columns: minmax(0, 16.66666667%);
+    /* First row is for the header */
+    grid-template-rows: min-content;
+    /* Other rows are equal */
     grid-auto-rows: minmax(9.375vw, max-content);
     grid-auto-flow: row dense;
     column-gap: 0;
