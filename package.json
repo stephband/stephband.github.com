@@ -19,8 +19,7 @@
   "scripts": {
     "lint": "eslint ./*.js",
     "build-sass": "node-sass --output-style compact --indent-width 4 ./sass/grid.scss ./components/grid.css",
-    "build-css": "npm run build-sass && node build-css.js dist/bolt.min.css",
-    "build-module": "rollup ./module.js --o dist/bolt.js --f esm"
+    "build-css": "npm run build-sass && node build-css.js dist/bolt.min.css"
   },
   "style": []
 }

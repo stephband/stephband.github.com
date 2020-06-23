@@ -1,5 +1,5 @@
 // Make the background video seek with scroll position
-import { limit, prepad } from '../../fn/module.js';
+import { clamp as limit, prepad } from '../../fn/module.js';
 import { get, replace, create } from '../../dom/module.js';
 
 const assign = Object.assign;
