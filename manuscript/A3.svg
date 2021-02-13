@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1191px" height="842px" viewBox="0 0 1191 842" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>A3</title>
+    <g id="A3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="A3-4-stave" transform="translate(55.000000, 177.000000)" fill="#000000" fill-rule="nonzero" stroke="#000000">
+            <g id="Group">
+                <line x1="0" y1="1.40185547" x2="1080" y2="1.40185547" id="Line"></line>
+                <line x1="0" y1="12.6217969" x2="1080" y2="12.6217969" id="Line"></line>
+                <line x1="0" y1="23.8366406" x2="1080" y2="23.8366406" id="Line"></line>
+                <line x1="0" y1="35.0514844" x2="1080" y2="35.0514844" id="Line"></line>
+                <line x1="0" y1="46.2663281" x2="1080" y2="46.2663281" id="Line"></line>
+            </g>
+            <g id="Group" transform="translate(0.000000, 177.398438)">
+                <line x1="0" y1="1.40185547" x2="1080" y2="1.40185547" id="Line"></line>
+                <line x1="0" y1="12.6217969" x2="1080" y2="12.6217969" id="Line"></line>
+                <line x1="0" y1="23.8366406" x2="1080" y2="23.8366406" id="Line"></line>
+                <line x1="0" y1="35.0514844" x2="1080" y2="35.0514844" id="Line"></line>
+                <line x1="0" y1="46.2663281" x2="1080" y2="46.2663281" id="Line"></line>
+            </g>
+            <g id="Group" transform="translate(0.000000, 354.796875)">
+                <line x1="0" y1="1.40185547" x2="1080" y2="1.40185547" id="Line"></line>
+                <line x1="0" y1="12.6217969" x2="1080" y2="12.6217969" id="Line"></line>
+                <line x1="0" y1="23.8366406" x2="1080" y2="23.8366406" id="Line"></line>
+                <line x1="0" y1="35.0514844" x2="1080" y2="35.0514844" id="Line"></line>
+                <line x1="0" y1="46.2663281" x2="1080" y2="46.2663281" id="Line"></line>
+            </g>
+            <g id="Group" transform="translate(0.000000, 532.195312)">
+                <line x1="0" y1="1.40185547" x2="1080" y2="1.40185547" id="Line"></line>
+                <line x1="0" y1="12.6217969" x2="1080" y2="12.6217969" id="Line"></line>
+                <line x1="0" y1="23.8366406" x2="1080" y2="23.8366406" id="Line"></line>
+                <line x1="0" y1="35.0514844" x2="1080" y2="35.0514844" id="Line"></line>
+                <line x1="0" y1="46.2663281" x2="1080" y2="46.2663281" id="Line"></line>
+            </g>
+        </g>
+    </g>
+</svg>
