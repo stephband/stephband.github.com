@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+<meta name="author" content="cruncher" />
+<meta name="description" content="Documentation for Nendaz styleguide. Nendaz/Veysonnaz front-end component library and styleguide. A toolkit of styles, evented behaviours and custom elements." />
+<meta name="viewport" content="width=device-width" />
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@cruncher">
+<meta property="og:url" content="https://nendaz.cruncher.ch" />
+<meta property="og:title" content="Nendaz styleguide" />
+<meta property="og:description" content="Nendaz/Veysonnaz front-end component library and styleguide. A toolkit of styles, evented behaviours and custom elements." />
+<meta property="og:image" content="$ { image }" />
+
+
+    <title>SVG defs</title>
+    
+    <link rel="icon" type="image/png" href="bolt/images/logo-32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="bolt/images/logo-64.png" sizes="64x64">
+    <link rel="icon" type="image/png" href="bolt/images/logo-128.png" sizes="128x128">
+    
+    <script title="load">
+        document.documentElement.className += ' js content-loading loading';
+        window.addEventListener('DOMContentLoaded', () => document.documentElement.classList.remove('content-loading'));
+        // Wait for other load handlers to run first - Bolt does a few things on
+        // load (eg. locateable scrolls) and we want them to run before the loading
+        // class is removed
+        window.addEventListener('load', () => window.requestAnimationFrame(() => document.documentElement.classList.remove('loading')));
+    </script>
+
+
+    <script title="debug">
+        window.DEBUG = true;
+    </script>
+
+    <link rel="stylesheet" href="../../bolt/css/root.css">
+    <link rel="stylesheet" href="../../bolt/css/text.css">
+
+    <style>
+        defs circle {
+            fill: red;
+        }
+
+        .blue {
+            fill: blue;
+        }
+    </style>
+</head>
+
+<body class="grid">
+    <header>
+        <!-- Literal template "bolt/templates/header.literal" -->
+        <h1 class="doctext-01">SVG <span class="doctext-06">defs</span></h1>
+    </header>
+
+    <svg class="svg-defs" viewbox="0 0 82 40">
+        <defs>
+            <circle cx="0" cy="0" r="20" id="circle"></circle>
+        </defs>
+        <use href="#circle" x="20" y="20"></use>
+        <use href="#circle" class="blue" x="62" y="20"></use>
+    </svg>
+</body>
