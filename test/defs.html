@@ -32,13 +32,12 @@
     </style>
 </head>
 
-<body class="grid">
+<body>
     <header>
-        <!-- Literal template "bolt/templates/header.literal" -->
         <h1>SVG defs</h1>
     </header>
 
-    <svg class="defs-svg" style="height: 0;">
+    <svg style="height: 0;">
         <defs>
             <circle cx="0" cy="0" r="20" id="circle"></circle>
         </defs>
@@ -46,6 +45,6 @@
 
     <svg viewbox="0 0 82 40">
         <use href="#circle" x="20" y="20"></use>
-        <use href="#circle" class="blue" x="62" y="20"></use>
+        <use href="#circle" x="62" y="20" class="blue"></use>
     </svg>
 </body>
