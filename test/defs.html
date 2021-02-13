@@ -20,24 +20,24 @@
 
     <link rel="stylesheet" href="../../bolt/css/root.css">
     <link rel="stylesheet" href="../../bolt/css/text.css">
-
+    
     <style>
-        circle {
+        .defs-svg circle {
             fill: red;
         }
-
+    
         .blue {
             fill: blue;
         }
     </style>
 </head>
-
+    
 <body>
     <header>
         <h1>SVG defs</h1>
     </header>
 
-    <svg style="height: 0;">
+    <svg class="defs-svg" style="height: 0;">
         <defs>
             <circle cx="0" cy="0" r="20" id="circle"></circle>
         </defs>
@@ -45,6 +45,6 @@
 
     <svg viewbox="0 0 82 40">
         <use href="#circle" x="20" y="20"></use>
-        <use href="#circle" x="62" y="20" class="blue"></use>
+        <use href="#circle" class="blue" x="62" y="20"></use>
     </svg>
 </body>
