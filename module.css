@@ -1,8 +1,5 @@
 
-@import '/bolt/fonts/source-sans-pro.css';
-@import '/bolt/fonts/inconsolata/stylesheet.css';
-@import '/bolt/module.css';
-@import '/dom/css/dom.css';
+@import '../bolt/module.css';
 
 @import 'components/root.css';
 @import 'components/text.css';
