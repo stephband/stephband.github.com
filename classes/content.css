@@ -1,0 +1,16 @@
+
+.midi-before::before {
+    width: 0.75em;
+    height: 0.75em;
+    margin-right: 0.2em;
+    margin-left: 0;
+    vertical-align: -2px;
+    background-image: url('/midi/images/logo.svg');
+    background-size: contain;
+}
+
+@media(min-width: 30em) {
+    .midi-before::before {
+        margin-left: -0.95em;
+    }
+}

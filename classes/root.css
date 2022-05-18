@@ -1,0 +1,14 @@
+
+:root {
+    color: #bfb7a9;
+    background-color: #141B1E;
+}
+
+body.grid {
+    --x-gap: 1.6em;
+
+    align-content: start;
+    padding: var(--x-gap);
+    column-gap: var(--x-gap);;
+    row-gap: calc(2 * var(--x-gap));
+}

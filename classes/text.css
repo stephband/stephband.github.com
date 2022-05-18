@@ -1,0 +1,91 @@
+
+
+@font-face {
+    font-family: Euclid;
+    src: url('https://stephen.band/slide-show/docs/fonts/Euclid/EuclidCircularA-Regular-WebTrial.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Euclid;
+    src: url('https://stephen.band/slide-show/docs/fonts/Euclid/EuclidCircularA-Medium-WebXL.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: MartianMono;
+    src: url('https://stephen.band/slide-show/docs/fonts/Martian-Mono/MartianMonoVF.woff2') format('woff2');
+}
+
+
+.text-00,
+.text-01, h1 {
+    font-family: 'Euclid', sans-serif;
+    font-weight: 400;
+}
+
+.text-02, h2,
+.text-03, h3,
+.text-04, h4,
+.text-05, h5,
+.text-08, body {
+    font-family: 'MartianMono', sans-serif;
+    font-weight: 400;
+}
+
+
+/*
+http://stephen.band/font-size/?breakpoints=320,1440&body=16,18&.text-00=72,160&h2=25,40.82142857142858
+*/
+
+.text-00       { font-size: calc(2.92857143rem + 7.85714286vw); font-weight: 600; line-height: 0.9em; }
+.text-01, h1   { font-size: calc(1.5255102rem + 2.37244898vw);  font-weight: 600; line-height: 0.9em; }
+.text-02, h2,
+.text-03, h3,
+.text-04, h4,
+.text-05, h5,
+.text-08, body { font-size: calc(0.88392857rem + 0.26785714vw); font-weight: 400; line-height: 1.6em; }
+
+.text-00       { color: #F5426C; }
+.text-01, h1   { color: #B2CB3A; }
+.text-02, h2   { color: #9AB7C7; }
+.text-03, h3   { color: #779AAB; }
+.text-04, h4,
+.text-05, h5,
+.text-08, body { color: #5E7F8F; }
+
+a[href] {
+   color: #63ACDD;
+   text-decoration: none;
+}
+
+a[href^="mailto:"] {
+   color: #5FAB9A;
+}
+
+a:hover {
+   text-decoration: underline;
+}
+
+a:focus-visible {
+   text-decoration: underline;
+}
+
+.text-00 + p,
+.text-01 + p { margin-top: 1.6em; }
+
+/*
+section::before {
+   display: block;
+   content: '/*\A\A';
+   white-space: pre;
+}
+
+section::after {
+   display: block;
+   content: '\A* /';
+   white-space: pre;
+}
+*/

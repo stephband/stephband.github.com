@@ -1,27 +1,37 @@
----
-layout: site
-css: ['/css/index.classes.css']
----
-<div class="site_wrap wrap">
-	<h2>Error 404</h2>
-	<p>That's not here. maybe you're looking for one of these:</p>
+<!DOCTYPE html>
+<html lang="en" is="sparky" class="js"><head>
+	<meta charset="utf-8" />
+	<meta name="author" content="stephband" />
+	<meta name="description" content="Front-end development. Music." />
+	<meta name="viewport" content="width=device-width" />
 
-	<ul class="repos_index index">
-		<li>
-			<h3><a href="http://stephband.info/bolt/">Bolt</a></h3>
-			A CSS class-based, jQuery event driven front-end framework for making swee-et interfaces.
-		</li>
-		<li>
-			<h3><a href="http://stephband.info/jparallax/">jQuery.parallax</a></h3>
-			Moves nodes in response to mouse movement, in a parallaxy kind of way.
-		</li>
-		<li>
-			<h3><a href="http://stephband.info/jquery.event.move">jQuery.event.move</a></h3>
-			jQuery special events <b>movestart</b>, <b>move</b> and <b>moveend</b> for tracking touch and mouse moves, throttled to browser animation frames.
-		</li>
-		<li>
-			<h3><a href="http://stephband.info/jquery.event.swipe">jQuery.event.swipe</a></h3>
-			jQuery special events for the gestures <b>swipeleft</b>, <b>swiperight</b>, <b>swipeup</b> and <b>swipedown</b>.
-		</li>
-	</ul>
-</div>
+	<meta name="twitter:card" content="summary"></meta>
+	<meta name="twitter:site" content="@stephband"></meta>
+	<meta property="og:url" content="https://stephen.band/" />
+	<meta property="og:title" content="Stephen Band" />
+	<meta property="og:description" content="Front-end development. Music." />
+	<meta property="og:image" content="https://stephen.band/images/bg_header.png" />
+
+	<title>Stephen Band</title>
+
+	<script>
+	document.documentElement.className += ' js content-loading loading';
+	window.addEventListener('DOMContentLoaded', () => document.documentElement.classList.remove('content-loading'));
+	window.addEventListener('load', () => document.documentElement.classList.remove('loading'));
+	window.DEBUG = false;
+	</script>
+
+	<link rel="shortcut icon" href="images/logo-64x64.ico">
+	<link rel="icon" type="image/png" href="images/logo-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="images/logo-64x64.png" sizes="64x64">
+	<link rel="icon" type="image/png" href="images/logo-128x128.png" sizes="128x128">
+
+	<link rel="stylesheet" href="./module.css">
+</head>
+
+<body class="6x-grid grid" style="grid-auto-flow: row;">
+	<header class="6x">
+		<h1 class="text-00" style="color: #5a998b;">404.</h1>
+		<p>Pants.</p>
+	</header>
+</body>
