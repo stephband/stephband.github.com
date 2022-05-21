@@ -9,6 +9,7 @@ body.grid {
 
     align-content: start;
     padding: var(--x-gap);
+    padding-bottom: calc(3 * var(--x-gap));
     column-gap: var(--x-gap);;
     row-gap: calc(3 * var(--x-gap));
 }
