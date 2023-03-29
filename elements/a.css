@@ -1,0 +1,10 @@
+
+a:not([class]) {
+    color: var(--slate3);
+    text-decoration: none;
+}
+
+a:not([class]):hover {
+    color: var(--sky);
+    text-decoration: underline;
+}

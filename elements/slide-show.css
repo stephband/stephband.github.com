@@ -1,0 +1,31 @@
+
+slide-show {
+    color: rgba(180, 180, 180, 0.7);
+    /*--padding-left: var(--x-gap);
+    --padding-right: var(--x-gap);*/
+    column-gap: calc(0.5 * var(--x-gap));
+}
+
+/*
+slide-show::part(controls) {
+    margin-top: -3em;
+}
+*/
+
+slide-show::part(page-button) {
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">\
+        <circle cx="10" cy="10" r="4" stroke="none" fill="rgba(180,180,180,0.3)"></circle>\
+    </svg>');
+}
+
+slide-show::part(page-button-active) {
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">\
+        <circle cx="10" cy="10" r="4" stroke="none" fill="rgba(220,220,220,0.7)"></circle>\
+    </svg>');
+}
+
+@media (max-width: 768px) {
+    slide-show::part(pagination) {
+        display: none;
+    }
+}

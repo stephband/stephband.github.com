@@ -5,24 +5,26 @@
 @import "../bolt/elements/body.css";
 @import "../bolt/elements/type.css";
 @import "../bolt/elements/a.css";
-@import "../bolt/elements/code.css";
 @import "../bolt/elements/table.css";
 
-@import "../bolt/classes/js.css";
 @import "../bolt/classes/button.css";
 @import "../bolt/classes/list.css";
 @import "../bolt/classes/thumb.css";
 @import "../bolt/classes/block.css";
+@import "../bolt/classes/striped-table.css";
 @import "../bolt/classes/color.css";
-@import "../bolt/classes/atoms.css";
+
 @import "../bolt/classes/device.css";
 
-@import "../bolt/documentation/prism-cruncher.css";
-/*@import "../slide-show/build/slide-show.css";*/
-
-@import './classes/root.css';
+@import './classes/atoms.css';
 @import './classes/text.css';
-@import './classes/content.css';
-@import './classes/button.css';
-@import './classes/grid.css';
-@import './classes/tracks-list.css';
+@import './classes/footer.css';
+@import './classes/color.css';
+
+@import './elements/a.css';
+@import './elements/audio.css';
+@import './elements/blockquote.css';
+@import './elements/body.css';
+@import './elements/root.css';
+@import './elements/code.css';
+@import './elements/slide-show.css';

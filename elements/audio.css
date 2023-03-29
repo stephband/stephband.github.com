@@ -1,0 +1,18 @@
+
+audio {
+    display: block;
+    margin: 0;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: var(--slate1);
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    text-shadow: none;
+}
+
+* + audio {
+    margin-top: calc(0.5 * var(--y-gap));
+}

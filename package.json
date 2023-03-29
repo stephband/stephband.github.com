@@ -1,25 +1,18 @@
 {
-  "name": "",
-  "description": "My website",
+  "name": "stephen.band",
+  "description": "",
   "version": "0.0.1",
-  "author": "@stephband",
+  "author": {
+    "name":    "Stephen Band",
+    "twitter": "@stephband",
+    "url":     "https://stephen.band/"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/stephband/stephen-band.git"
   },
   "bugs": {
-    "url": "https://github.com/stephband/bolt/issues/"
+    "url": "https://github.com/stephband/stephen-band/issues/"
   },
-  "license": "Private",
-  "devDependencies": {
-    "eslint": "^6.5.1",
-    "node-sass": "^4.13.1",
-    "rollup": "^1.32.1"
-  },
-  "scripts": {
-    "lint": "eslint ./*.js",
-    "build-sass": "node-sass --output-style compact --indent-width 4 ./sass/grid.scss ./components/grid.css",
-    "build-css": "npm run build-sass && node build-css.js dist/bolt.min.css"
-  },
-  "style": []
+  "license": "Private"
 }

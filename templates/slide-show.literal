@@ -1,0 +1,4 @@
+
+<slide-show class="${ data.class }" controls="pagination fullscreen ${ data.contols }" loop>
+    ${ data.slides.map((file) => include('./slide.literal', file)) }
+</slide-show>

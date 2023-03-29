@@ -1,0 +1,5 @@
+
+<figure class="block">
+    <img class="block" src="//sound.stephen.band/photos/Iceland/${ data.name }" draggable="false" />
+    <figcaption></figcaption>
+</figure>

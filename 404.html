@@ -1,37 +1,75 @@
 <!DOCTYPE html>
-<html lang="en" is="sparky" class="js"><head>
-	<meta charset="utf-8" />
-	<meta name="author" content="stephband" />
-	<meta name="description" content="Front-end development. Music." />
-	<meta name="viewport" content="width=device-width" />
+<html lang="en">
+<head>
+    <title></title>
 
-	<meta name="twitter:card" content="summary"></meta>
-	<meta name="twitter:site" content="@stephband"></meta>
-	<meta property="og:url" content="https://stephen.band/" />
-	<meta property="og:title" content="Stephen Band" />
-	<meta property="og:description" content="Front-end development. Music." />
-	<meta property="og:image" content="https://stephen.band/images/bg_header.png" />
+<meta charset="utf-8" />
+<meta name="author" content="Stephen Band" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width" />
 
-	<title>Stephen Band</title>
 
-	<script>
-	document.documentElement.className += ' js content-loading loading';
-	window.addEventListener('DOMContentLoaded', () => document.documentElement.classList.remove('content-loading'));
-	window.addEventListener('load', () => document.documentElement.classList.remove('loading'));
-	window.DEBUG = false;
-	</script>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@stephband">
+<meta property="og:title" content="undefined" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="undefined" />
+<meta property="og:url" content="undefined" />
 
-	<link rel="shortcut icon" href="images/logo-64x64.ico">
-	<link rel="icon" type="image/png" href="images/logo-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="images/logo-64x64.png" sizes="64x64">
-	<link rel="icon" type="image/png" href="images/logo-128x128.png" sizes="128x128">
 
-	<link rel="stylesheet" href="./module.css">
+
+
+<script title="load">
+    document.documentElement.className += ' js loading';
+    // window.addEventListener('DOMContentLoaded', () => document.documentElement.classList.remove('content-loading'));
+    // Wait for other load handlers to run first - Bolt does a few things on
+    // load (eg. targetable scrolls) and we want them to run before the loading
+    // class is removed
+    window.addEventListener('load', () => window.requestAnimationFrame(() => document.documentElement.classList.remove('loading')));
+</script>
+
+    <link rel="stylesheet" href="./module.css" />
+    <style>
+    body {
+        /* Normal body has no padding because slide-show on home page. Override. */
+        padding-top: calc(3 * var(--y-gap));
+        /* Normal body has padding because no footer on home page! Override. */
+        padding-bottom: 0;
+    }
+
+    header {
+        /* Force footer off bottom of page */
+        min-height: 100vh;
+    }
+    </style>
 </head>
 
-<body class="6x-grid grid" style="grid-auto-flow: row;">
-	<header class="6x">
-		<h1 class="text-00" style="color: #5a998b;">404.</h1>
-		<p>Pants.</p>
-	</header>
+<body class="8x-grid @s-12x-grid @m-15x-grid @l-18x-grid grid">
+    <header class="8x x1 @s-6x @m-x2 @l-x3">
+        <h1 class="text-00 slate1-fg">404.</h1>
+        <p class="lime-fg">Pants.</p>
+    </header>
+
+    
+<footer class="8x @s-12x @m-15x @l-18x 8x-grid @s-12x-grid @m-15x-grid @l-18x-grid grid footer">
+    <div class="x1 8x @s-4x x-stretch y-start">
+        <h3>Elements</h3>
+        <a class="block" href="https://stephen.band/slide-show/"><code>&lt;slide-show&gt;</code></a>
+        <a class="block" href="https://stephen.band/details-toggle/"><code>&lt;details-toggle&gt;</code></a>
+        <a class="block" href="https://stephen.band/form-elements/rotary-input/"><code>&lt;rotary-input&gt;</code></a>
+        <a class="block" href="https://stephen.band/form-elements/range-input/"><code>&lt;range-input&gt;</code></a>
+        <a class="block" href="https://stephen.band/form-elements/y-input/"><code>&lt;y-input&gt;</code></a>
+        <a class="block" href="https://stephen.band/form-elements/xy-input/"><code>&lt;xy-input&gt;</code></a>
+        <a class="block" href="https://stephen.band/form-elements/number-control/"><code>&lt;number-control&gt;</code></a>
+        <a class="block" href="https://stephen.band/form-elements/select-control/"><code>&lt;select-control&gt;</code></a>
+        <a class="block" href="https://stephen.band/literal/element-template/"><code>&lt;element-template&gt;</code></a>
+        <a class="block" href="https://stephen.band/literal/literal-include/"><code>&lt;literal-include&gt;</code></a>
+    </div>
+
+    <div class="x1 8x @s-4x @s-x5 x-stretch y-start">
+        <h3>Tools</h3>
+        <a class="block" href="https://stephen.band/font-size/">Font-size calculator</a>
+    </div>
+</footer>
+
 </body>

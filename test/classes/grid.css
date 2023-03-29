@@ -1,0 +1,10 @@
+
+.test-block {
+    position: absolute;
+    left: 0;
+    align-self: start;
+    justify-self: stretch;
+    color: white;
+    background-color: black;
+    opacity: 0.666667;
+}

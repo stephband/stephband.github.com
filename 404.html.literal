@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    ${ include("../literal/templates/head.literal", "./package.json") }
+    <link rel="stylesheet" href="./module.css" />
+    <style>
+    body {
+        /* Normal body has no padding because slide-show on home page. Override. */
+        padding-top: calc(3 * var(--y-gap));
+        /* Normal body has padding because no footer on home page! Override. */
+        padding-bottom: 0;
+    }
+
+    header {
+        /* Force footer off bottom of page */
+        min-height: 100vh;
+    }
+    </style>
+</head>
+
+<body class="8x-grid @s-12x-grid @m-15x-grid @l-18x-grid grid">
+    <header class="8x x1 @s-6x @m-x2 @l-x3">
+        <h1 class="text-00 slate1-fg">404.</h1>
+        <p class="lime-fg">Pants.</p>
+    </header>
+
+    ${ include('./templates/footer.literal', './package.json') }
+</body>

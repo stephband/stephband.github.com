@@ -1,115 +1,129 @@
 <!DOCTYPE html>
-<html lang="en" is="sparky" class="js"><head>
-    <meta charset="utf-8" />
-    <meta name="author" content="stephband" />
-    <meta name="description" content="Front-end development. Music." />
-    <meta name="viewport" content="width=device-width" />
+<!-- Literal template "/Users/stephband/Sites/stephenband/index.html.literal" -->
 
-    <meta name="twitter:card" content="summary"></meta>
-    <meta name="twitter:site" content="@stephband"></meta>
-    <meta property="og:url" content="https://stephen.band/" />
-    <meta property="og:title" content="Stephen Band" />
-    <meta property="og:description" content="Front-end development. Music." />
-    <meta property="og:image" content="https://stephen.band/images/bg_header.png" />
+<html lang="en">
+<head>
+    <title></title>
 
-    <title>Stephen Band</title>
+<meta charset="utf-8" />
+<meta name="author" content="Stephen Band" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width" />
 
-    <script>
-    document.documentElement.className += ' js content-loading loading';
-    window.addEventListener('DOMContentLoaded', () => document.documentElement.classList.remove('content-loading'));
-    window.addEventListener('load', () => document.documentElement.classList.remove('loading'));
-    window.DEBUG = false;
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@stephband">
+<meta property="og:title" content="undefined" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="undefined" />
+<meta property="og:url" content="undefined" />
+
+
+
+
+<script title="load">
+    document.documentElement.className += ' js loading';
+    // window.addEventListener('DOMContentLoaded', () => document.documentElement.classList.remove('content-loading'));
+    // Wait for other load handlers to run first - Bolt does a few things on
+    // load (eg. targetable scrolls) and we want them to run before the loading
+    // class is removed
+    window.addEventListener('load', () => window.requestAnimationFrame(() => document.documentElement.classList.remove('loading')));
+</script>
+
+
+    <script title="site">
+        window.slideshowStylesheet = 'http://stephen.band/slide-show/build/slide-show-shadow.css';
     </script>
 
-    <link rel="shortcut icon" href="images/logo-64x64.ico">
-    <link rel="icon" type="image/png" href="images/logo-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="images/logo-64x64.png" sizes="64x64">
-    <link rel="icon" type="image/png" href="images/logo-128x128.png" sizes="128x128">
-
-    <link rel="stylesheet" href="./module.css">
-    <style>
-        slide-show {
-            --padding-left: var(--x-gap);
-            --padding-right: var(--x-gap);
-            /* +1px just to remove rounding errors */
-            column-gap: calc(var(--x-gap) + 1px);
-        }
-
-        slide-show::part(pagination) {
-            padding-bottom: 0;
-        }
-
-        slide-show::part(page-button) {
-            padding-left: 1em;
-            height: 1em;
-        }
-
-        * + slide-show {
-            margin-top: var(--x-gap);
-        }
-
-        * > slide-show {
-            margin-left: calc(-1 * var(--x-gap));
-            margin-right: calc(-1 * var(--x-gap));
-        }
-
-        audio {
-            display: block;
-            width: 100%;
-        }
-
-        p + audio {
-            margin-top: 0.5em;
-        }
-
-        small {
-            display: block;
-            color: #485b68;
-            font-size: inherit;
-        }
-
-        audio + small {
-            margin-top: 0.4em;
-        }
-    </style>
+    <link rel="stylesheet" href="./build/module.css" />
 </head>
 
-<body class="3x-grid @2-6x-grid @4-9x-grid grid" style="grid-auto-flow: row;">
-    <header class="x1 3x @2-x-2 @2-4x @4-6x">
-        <h1 class="text-00">Create.<br/>Eat.<br/>Repeat.</h1>
-    </header>
+<body class="8x-grid @s-12x-grid @m-15x-grid @l-18x-grid grid">
+    
+<slide-show class="8x @s-12x @m-15x @l-18x x-flood" controls="pagination fullscreen " loop>
+    
+<figure class="block">
+    <img class="block" src="//sound.stephen.band/photos/Iceland/01-PANA7221-P3.jpg" draggable="false" />
+    <figcaption></figcaption>
+</figure>
 
-    <section class="x1 3x @2-x-2 @4-4x" style="margin-top: 2em;">
-        <h2>The &lt;slide-show&gt; custom element</h2>
-        <p>An accessible, scrollable, styleable, horizontal carousel custom element.</p>
-        <p><a href="https://stephen.band/slide-show">stephen.band/slide-show/</a></p>
-        <slide-show class="" loop controls="pagination fullscreen">
-            <img src="https://stephen.band/slide-show/docs/images/donkeys.jpg" draggable="false" alt="A rowdy group of curious donkeys"/>
-            <img src="https://stephen.band/slide-show/docs/images/tractor.jpg" draggable="false" alt="A lonely, rusted tractor abandonned on the edge of the arctic ocean"/>
-            <img src="https://stephen.band/slide-show/docs/images/mauverin.jpg" draggable="false" alt="The shadow of a the summit of the Mauverin cast over the alpine valley of Nant"/>
-            <img src="https://stephen.band/slide-show/docs/images/rocks.jpg" draggable="false" alt="Wet moss and lichen-covered rocks in a shallow pool"/>
-            <img src="https://stephen.band/slide-show/docs/images/summit.jpg" draggable="false" alt="Golden autumn meadows in front of a rocky summit dusted with snow"/>
-        </slide-show>
+<figure class="block">
+    <img class="block" src="//sound.stephen.band/photos/Iceland/02-PANA1531-sRGB.jpg" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<figure class="block">
+    <img class="block" src="//sound.stephen.band/photos/Iceland/03-PANA4217-sRGB.JPG" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<figure class="block">
+    <img class="block" src="//sound.stephen.band/photos/Iceland/04-PANA2795-sRGB.jpg" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<figure class="block">
+    <img class="block" src="//sound.stephen.band/photos/Iceland/05-PANA4254-none.jpg" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<figure class="block">
+    <img class="block" src="//sound.stephen.band/photos/Iceland/06-PANA3179-sRGB.jpg" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<figure class="block">
+    <img class="block" src="//sound.stephen.band/photos/Iceland/07-PANA4571-sRGB.jpg" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<figure class="block">
+    <img class="block" src="//sound.stephen.band/photos/Iceland/08-PANA5985-P3.jpg" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+<figure class="block">
+    <img class="block" src="//sound.stephen.band/photos/Iceland/09-PANA6688-sRGB-4096.jpg" draggable="false" />
+    <figcaption></figcaption>
+</figure>
+
+</slide-show>
+
+
+    <section class="8x x1 @s-6x @m-x2 @l-x3">
+        <h3>Custom Elements</h3>
+        <a class="block" href="https://stephen.band/slide-show/"><code>&lt;slide-show&gt;</code></a>
+        <a class="block" href="https://stephen.band/details-toggle/"><code>&lt;details-toggle&gt;</code></a>
+        <a class="block" href="https://stephen.band/form-elements/rotary-input/"><code>&lt;rotary-input&gt;</code></a>
+        <a class="block" href="https://stephen.band/form-elements/range-input/"><code>&lt;range-input&gt;</code></a>
+        <a class="block" href="https://stephen.band/form-elements/y-input/"><code>&lt;y-input&gt;</code></a>
+        <a class="block" href="https://stephen.band/form-elements/xy-input/"><code>&lt;xy-input&gt;</code></a>
+        <a class="block" href="https://stephen.band/form-elements/number-control/"><code>&lt;number-control&gt;</code></a>
+        <a class="block" href="https://stephen.band/form-elements/select-control/"><code>&lt;select-control&gt;</code></a>
+        <a class="block" href="https://stephen.band/literal/element-template/"><code>&lt;element-template&gt;</code></a>
+        <a class="block" href="https://stephen.band/literal/literal-include/"><code>&lt;literal-include&gt;</code></a>
     </section>
 
-    <section class="x1 3x @2-x-2 @4-4x">
-        <h2>Font size calculator</h2>
-        <p>Generate CSS for viewport-scaleable font sizes.</p>
-        <p><a href="https://stephen.band/font-size/">stephen.band/font-size/</a></p>
-    </section>
-
-    <section class="x1 3x @2-x-2 @4-4x">
-        <h2>The Night Is Still Young</h2>
-        <p><span style="color: #485b68;">Words</span> Vanessa Sin <span style="color: #485b68;">Music</span> Stephen Band/Vanessa Sin</p>
+    <section class="8x x1 @s-6x @s-x7 @m-x8 @l-x9">
+        <h3>The Night Is Still Young</h3>
+        <p><span class="slate0-fg">Words</span> Vanessa Sin<br/><span class="slate0-fg">Music</span> Stephen Band/Vanessa Sin</p>
         <audio src="./audio/The Night Is Still Young.m4a" controls="" preload="none"></audio>
+
+        <blockquote>
+            <p>Merci pour ta disponibilité et pour ton super et efficace travail. Ton
+            aide a été vraiment précieuse et notre spectacle a eu un super son grâce à toi!</p>
+            <p class="text-10" style="font-style: normal;">Ramaya Tegegne<br/>Director: <span>Framer Framed</span>,
+            <a class="aqua-fg" href="https://www.theatredelusine.ch/spectacle/seme-la-greve/">Seme de Grève</a></p>
+        </blockquote>
     </section>
 
-    <!--footer class="x1 3x @2-x-2 @2-4x @4-6x" style="margin-top: 2em;">
-        <h2 class="text-01">Hire me.</h2>
-        <p style="margin-top: 0.18em;">I create web things at <a href="https://cruncher.ch">Cruncher</a>.<br/><a href="mailto:hello@cruncher.ch">hello@cruncher.ch</a></p>
-    </footer-->
+    <section class="8x x1 @s-6x @m-x2 @l-x3">
+        <h3>Font size calculator</h3>
+        <p>Generate CSS for viewport-scaleable font sizes.</p>
+        <p style="margin-top: 0;"><a href="https://stephen.band/font-size/">stephen.band/font-size/</a></p>
+    </section>
 
     <script type="module">
-        import '../slide-show/build/slide-show.js';
+        import './build/module.js';
     </script>
-</body></html>
+</body>

@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    ${ include("../literal/templates/head.literal", "./package.json") }
+
+    <script title="site">
+        window.slideshowStylesheet = 'http://stephen.band/slide-show/build/slide-show-shadow.css';
+    </script>
+
+    <link rel="stylesheet" href="./build/module.css" />
+</head>
+
+<body class="8x-grid @s-12x-grid @m-15x-grid @l-18x-grid grid">
+    ${ include("./templates/slide-show.literal", {
+        class:    "8x @s-12x @m-15x @l-18x x-flood",
+        controls: "pagination fullscreen",
+        slides:   await fetch("http://sound.stephen.band/photos/Iceland/").then((r) => r.json())
+    }) }
+
+    <section class="8x x1 @s-6x @m-x2 @l-x3">
+        <h3>Custom Elements</h3>
+        <a class="block" href="https://stephen.band/slide-show/"><code>&lt;slide-show&gt;</code></a>
+        <a class="block" href="https://stephen.band/details-toggle/"><code>&lt;details-toggle&gt;</code></a>
+        <a class="block" href="https://stephen.band/form-elements/rotary-input/"><code>&lt;rotary-input&gt;</code></a>
+        <a class="block" href="https://stephen.band/form-elements/range-input/"><code>&lt;range-input&gt;</code></a>
+        <a class="block" href="https://stephen.band/form-elements/y-input/"><code>&lt;y-input&gt;</code></a>
+        <a class="block" href="https://stephen.band/form-elements/xy-input/"><code>&lt;xy-input&gt;</code></a>
+        <a class="block" href="https://stephen.band/form-elements/number-control/"><code>&lt;number-control&gt;</code></a>
+        <a class="block" href="https://stephen.band/form-elements/select-control/"><code>&lt;select-control&gt;</code></a>
+        <a class="block" href="https://stephen.band/literal/element-template/"><code>&lt;element-template&gt;</code></a>
+        <a class="block" href="https://stephen.band/literal/literal-include/"><code>&lt;literal-include&gt;</code></a>
+    </section>
+
+    <section class="8x x1 @s-6x @s-x7 @m-x8 @l-x9">
+        <h3>The Night Is Still Young</h3>
+        <p><span class="slate0-fg">Words</span> Vanessa Sin<br/><span class="slate0-fg">Music</span> Stephen Band/Vanessa Sin</p>
+        <audio src="./audio/The Night Is Still Young.m4a" controls="" preload="none"></audio>
+
+        <blockquote>
+            <p>Merci pour ta disponibilité et pour ton super et efficace travail. Ton
+            aide a été vraiment précieuse et notre spectacle a eu un super son grâce à toi!</p>
+            <p class="text-10" style="font-style: normal;">Ramaya Tegegne<br/>Director: <span>Framer Framed</span>,
+            <a class="aqua-fg" href="https://www.theatredelusine.ch/spectacle/seme-la-greve/">Seme de Grève</a></p>
+        </blockquote>
+    </section>
+
+    <section class="8x x1 @s-6x @m-x2 @l-x3">
+        <h3>Font size calculator</h3>
+        <p>Generate CSS for viewport-scaleable font sizes.</p>
+        <p style="margin-top: 0;"><a href="https://stephen.band/font-size/">stephen.band/font-size/</a></p>
+    </section>
+
+    <script type="module">
+        import './build/module.js';
+    </script>
+</body>

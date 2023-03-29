@@ -1,0 +1,12 @@
+blockquote {
+    color: var(--beige);
+    margin-left: 0;
+}
+
+blockquote > p + p {
+    margin-top: 1.05em !important;
+}
+
+* + blockquote {
+    margin-top: 2.1em;
+}
