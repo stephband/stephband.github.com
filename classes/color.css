@@ -25,9 +25,13 @@
 .slate3-fg { color: #b7d6e7; }
 .slate3-bg { background-color: #b7d6e7; }
 
-:root      { --beige: #bfb7a9; }
-.beige-fg  { color: #bfb7a9; }
-.beige-bg  { background-color: #bfb7a9; }
+:root      { --beige: #958f84; }
+.beige-fg  { color: #958f84; }
+.beige-bg  { background-color: #958f84; }
+
+:root      { --beige1: #bfb7a9; }
+.beige1-fg { color: #bfb7a9; }
+.beige1-bg { background-color: #bfb7a9; }
 
 :root      { --pink: #F5426C; }
 .pink-fg   { color: #F5426C; }

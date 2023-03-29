@@ -5,7 +5,7 @@ audio {
 }
 
 audio::-webkit-media-controls-panel {
-    background-color: var(--slate1);
+    background-color: var(--beige);
 }
 
 audio::-webkit-media-controls-current-time-display,
