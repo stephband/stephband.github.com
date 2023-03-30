@@ -1,4 +1,4 @@
 
-<slide-show class="${ data.class }" controls="fullscreen ${ data.contols }" loop>
+<slide-show class="${ data.class }" controls="fullscreen ${ data.contols }" loop autoplay>
     ${ data.slides.map((file) => include('./slide.literal', file)) }
 </slide-show>
