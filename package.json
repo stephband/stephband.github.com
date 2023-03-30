@@ -1,5 +1,6 @@
 {
   "name": "stephen.band",
+  "title": "Stephen Band",
   "description": "",
   "version": "0.0.1",
   "author": {
@@ -14,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/stephband/stephen-band/issues/"
   },
-  "license": "Private"
+  "license": "Private",
+  "card": {
+    "image": "https://stephen.band/images/card.png"
+  }
 }
