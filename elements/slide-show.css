@@ -1,8 +1,6 @@
 
 slide-show {
     color: rgba(180, 180, 180, 0.7);
-    /*--padding-left: var(--x-gap);
-    --padding-right: var(--x-gap);*/
     column-gap: calc(0.5 * var(--x-gap));
 }
 
@@ -24,8 +22,55 @@ slide-show::part(page-button-active) {
     </svg>');
 }
 
+slide-show > figure {
+    position: relative;
+}
+
+slide-show > figure > figcaption {
+    position: absolute;
+    bottom: calc(0.5 * var(--x-gap));
+    right: calc(0.5 * var(--x-gap));
+    text-align: right;
+    opacity: 0;
+    transition: opacity 0.6s linear;
+}
+
+slide-show > figure:hover > figcaption,
+slide-show > figure:focus > figcaption {
+    opacity: 1;
+    transition: opacity 0.24s linear;
+}
+
+slide-show > figure > figcaption > .text-06 {
+    color: rgba(255,255,255,0.7);
+    text-shadow: 0 0 0.375em rgba(0,0,0,0.6);
+}
+
+slide-show > figure > figcaption > .text-10 {
+    color: rgba(255,255,255,0.5);
+    text-shadow: 0 0 0.25em rgba(0,0,0,0.6);
+}
+
+slide-show > figure > figcaption > * + p {
+    margin-top: 0;
+}
+
 @media (max-width: 768px) {
     slide-show::part(pagination) {
         display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    slide-show {
+        padding-top: calc(0.5 * var(--x-gap));
+        --padding-left: calc(0.5 * var(--x-gap));
+        --padding-right: calc(0.5 * var(--x-gap));
+    }
+
+    slide-show:fullscreen {
+        padding-top: 0;
+        --padding-left: calc(0.5 * var(--x-gap));
+        --padding-right: calc(0.5 * var(--x-gap));
     }
 }

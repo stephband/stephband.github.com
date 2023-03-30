@@ -15,7 +15,12 @@
     ${ include("./templates/slide-show.literal", {
         class:    "8x @s-12x @m-15x @l-18x x-flood",
         controls: "pagination fullscreen",
-        slides:   await fetch("http://sound.stephen.band/photos/Iceland/").then((r) => r.json())
+        slides:   await fetch("http://sound.stephen.band/photos/Iceland/index.json")
+            .then((r) => r.json())
+            .catch((error) => {
+                console.log(error);
+                return {};
+            })
     }) }
 
     <section class="8x x1 @s-6x @m-x2 @l-x3 beige1-fg">
