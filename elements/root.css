@@ -3,4 +3,5 @@
     color: var(--beige);
     color: var(--slate2);
     background-color: var(--slate);
+    background-image: linear-gradient(to bottom, black 0%, rgba(0,0,0,0) 60vw);
 }

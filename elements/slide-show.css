@@ -1,6 +1,6 @@
 
 slide-show {
-    --slide-duration: 14s;
+    --slide-duration: 16s;
 
     color: rgba(180, 180, 180, 0.7);
     column-gap: calc(0.5 * var(--x-gap));
