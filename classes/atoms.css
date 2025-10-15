@@ -1,4 +1,4 @@
-/* Literal template "/Users/stephband/Sites/stephenband/classes/atoms.css.literal" */
+/* Literal template "/classes/atoms.css.literal" */
 
 
 /**
@@ -202,6 +202,14 @@ Define the vertical grid gap (with units).
 	position: fixed !important;
 }
 
+/**
+.relative
+**/
+
+.relative {
+	position: relative !important;
+	top: auto;
+}
 
 /**
 .sticky
@@ -213,16 +221,18 @@ Define the vertical grid gap (with units).
 	top: 0;
 }
 
+
+
+
+.columns,
 .columns {
-    --x-gap: 1.4rem;
+    --x-gap: 1.4em;
 }
 
 .columns {
     display: block !important;
     column-gap: var(--x-gap);
-    
 }
-
 
 .\31 -columns  { columns: 1 !important; }
 .\32 -columns  { columns: 2 !important; }
@@ -234,24 +244,64 @@ Define the vertical grid gap (with units).
 .\38 -columns  { columns: 8 !important; }
 
 
-.flex           { display: flex !important; }
-.flex > li      { display: block; }
 
+
+.flex,
+.flex {
+    --x-gap: 1.4em;
+    --y-gap: 2.1em;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: var(--x-gap);
+    row-gap:    var(--y-gap);
+}
+
+.flex > *  { flex: 0 0 auto; margin: 0; }
+.flex > li { display: block; }
+
+.wrap      { flex-wrap: wrap; }
+.no-wrap   { flex-wrap: nowrap; }
+
+.x-flex    { flex-direction: row; }
+.y-flex    { flex-direction: column; }
+
+.y-flex > .x-start  { align-self: start; }
+.y-flex > .x-center { align-self: center; }
+.y-flex > .x-end    { align-self: end; }
+
+/* Attempt to keep focus box-shadows over the top of their siblings */
+.flex *              { z-index: 0; }
+.flex .select-button { z-index: 1; }
+.flex *:focus        { z-index: 2; }
+
+
+.grid,
 .grid {
-    --x-gap: 1.4rem;
-    --y-gap: 2.1rem;
+    --x-gap: 1.4em;
+    --y-gap: 2.1em;
 }
 
 .grid {
-    display: grid !important;
+    display: grid;
+
     /* Horizontal layout */
     grid-auto-flow: row;
+
     /* Create equal columns by default. */
     grid-auto-columns: minmax(0, 1fr);
     column-gap: var(--x-gap, 0);
     row-gap:    var(--y-gap, 0);
-    
-    
+
+    /* Stretch by default */
+    justify-items: stretch;
+    align-items: stretch;
+
+    /* Make grids behave as centered wraps by default. */
+    margin: 0 auto;
 }
 
 a.grid,
@@ -260,9 +310,9 @@ a.grid:focus {
     text-decoration: none;
 }
 
-.grid[hidden] {
-    /* Override display grid !important declaration with hidden attribute */
-    display: none !important;
+.grid > * {
+    /* Make children stretch to fill by default */
+    margin: 0;
 }
 
 .grid > li {
@@ -322,6 +372,7 @@ a.grid:focus {
 .\36 x { grid-column-end: span 6 !important; }
 .\37 x { grid-column-end: span 7 !important; }
 .\38 x { grid-column-end: span 8 !important; }
+.nx { grid-column-end: -1 !important; }
 
 .x-end {
     justify-self: end !important;
@@ -352,31 +403,31 @@ a.grid:focus {
 .x-unbleedl {
     margin-left:  calc(0.5 * var(--x-gap));
     margin-right: 0;
-    max-width:    calc(100% - var(0.5 * --x-gap));
-    width:        calc(100% - var(0.5 * --x-gap));
+    max-width:    calc(100% - 0.5 * var(--x-gap));
+    width:        calc(100% - 0.5 * var(--x-gap));
 }
 
 .x-unbleedr {
     margin-left:  0;
     margin-right: calc(0.5 * var(--x-gap));
-    max-width:    calc(100% - var(0.5 * --x-gap));
-    width:        calc(100% - var(0.5 * --x-gap));
+    max-width:    calc(100% - 0.5 * var(--x-gap));
+    width:        calc(100% - 0.5 * var(--x-gap));
 }
 
 .x-bleedl {
     justify-self: stretch !important;
     margin-left:  calc(var(--x-gap) / -2);
     margin-right: 0;
-    max-width:    calc(100% + var(0.5 * --x-gap));
-    width:        calc(100% + var(0.5 * --x-gap));
+    max-width:    calc(100% + 0.5 * var(--x-gap));
+    width:        calc(100% + 0.5 * var(--x-gap));
 }
 
 .x-bleedr {
     justify-self: stretch !important;
     margin-left:  0;
     margin-right: calc(var(--x-gap) / -2);
-    max-width:    calc(100% + var(0.5 * --x-gap));
-    width:        calc(100% + var(0.5 * --x-gap));
+    max-width:    calc(100% + 0.5 * var(--x-gap));
+    width:        calc(100% + 0.5 * var(--x-gap));
 }
 
 .x-bleed {
@@ -385,6 +436,18 @@ a.grid:focus {
     margin-right: calc(var(--x-gap) / -2);
     max-width:    calc(100% + var(--x-gap));
     width:        calc(100% + var(--x-gap));
+}
+
+.x-bleed > * > tr > th:first-child,
+.x-bleed > * > tr > td:first-child {
+    /* Make bled tables cell content align with grid column start */
+    padding-left: calc(0.5 * var(--x-gap));
+}
+
+.x-bleed > * > tr > th:last-child,
+.x-bleed > * > tr > td:last-child {
+    /* Make bled tables cell content align with grid column end */
+    padding-right: calc(0.5 * var(--x-gap));
 }
 
 .x-floodl {
@@ -431,6 +494,7 @@ a.grid:focus {
 .\31 y { grid-row-end: span 1 !important; }
 .\32 y { grid-row-end: span 2 !important; }
 .\33 y { grid-row-end: span 3 !important; }
+.ny { grid-row-end: -1 !important; }
 
 .y-end {
     align-self:    end !important;
@@ -519,11 +583,17 @@ a.grid:focus {
 .right-align    { text-align: right !important; }
 .center-align   { text-align: center !important; }
 .justify-align  { text-align: justify !important; }
-.size-18  { --size: 1.125rem; }
-.size-24  { --size: 1.5rem; }
-.size-30  { --size: 1.875rem; }
-.size-48  { --size: 3rem; }
-.size-60  { --size: 3.75rem; }
+
+
+
+
+.size-18 { --size: 1.125rem; }
+.size-24 { --size: 1.5rem; }
+.size-30 { --size: 1.875rem; }
+.size-36 { --size: 2.25rem; }
+.size-42 { --size: 2.625rem; }
+.size-48 { --size: 3rem; }
+.size-60 { --size: 3.75rem; }
 
 .margin-0         { margin-top: 0      !important; }
 .margin-8         { margin-top: 0.5rem !important; }
@@ -553,6 +623,14 @@ a.grid:focus {
 	position: fixed !important;
 }
 
+/**
+.relative
+**/
+
+.\@s-relative {
+	position: relative !important;
+	top: auto;
+}
 
 /**
 .sticky
@@ -564,16 +642,18 @@ a.grid:focus {
 	top: 0;
 }
 
-.columns {
-    --x-gap: 2.1rem;
+
+
+
+.columns,
+.\@s-columns {
+    --x-gap: 2.1em;
 }
 
 .\@s-columns {
     display: block !important;
     column-gap: var(--x-gap);
-    --x-gap: 2.1rem;
 }
-
 
 .\@s-1-columns  { columns: 1 !important; }
 .\@s-2-columns  { columns: 2 !important; }
@@ -589,24 +669,64 @@ a.grid:focus {
 .\@s-12-columns  { columns: 12 !important; }
 
 
-.\@s-flex           { display: flex !important; }
-.\@s-flex > li      { display: block; }
 
-.grid {
-    --x-gap: 2.1rem;
-    --y-gap: 2.1rem;
+
+.flex,
+.\@s-flex {
+    --x-gap: 2.1em;
+    --y-gap: 2.1em;
+}
+
+.\@s-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: var(--x-gap);
+    row-gap:    var(--y-gap);
+}
+
+.\@s-flex > *  { flex: 0 0 auto; margin: 0; }
+.\@s-flex > li { display: block; }
+
+.\@s-wrap      { flex-wrap: wrap; }
+.\@s-no-wrap   { flex-wrap: nowrap; }
+
+.\@s-x-flex    { flex-direction: row; }
+.\@s-y-flex    { flex-direction: column; }
+
+.\@s-y-flex > .x-start  { align-self: start; }
+.\@s-y-flex > .x-center { align-self: center; }
+.\@s-y-flex > .x-end    { align-self: end; }
+
+/* Attempt to keep focus box-shadows over the top of their siblings */
+.\@s-flex *              { z-index: 0; }
+.\@s-flex .select-button { z-index: 1; }
+.\@s-flex *:focus        { z-index: 2; }
+
+
+.grid,
+.\@s-grid {
+    --x-gap: 2.1em;
+    --y-gap: 2.1em;
 }
 
 .\@s-grid {
-    display: grid !important;
+    display: grid;
+
     /* Horizontal layout */
     grid-auto-flow: row;
+
     /* Create equal columns by default. */
     grid-auto-columns: minmax(0, 1fr);
     column-gap: var(--x-gap, 0);
     row-gap:    var(--y-gap, 0);
-    --x-gap: 2.1rem;
-    --y-gap: 2.1rem;
+
+    /* Stretch by default */
+    justify-items: stretch;
+    align-items: stretch;
+
+    /* Make grids behave as centered wraps by default. */
+    margin: 0 auto;
 }
 
 a.\@s-grid,
@@ -615,9 +735,9 @@ a.\@s-grid:focus {
     text-decoration: none;
 }
 
-.\@s-grid[hidden] {
-    /* Override display grid !important declaration with hidden attribute */
-    display: none !important;
+.\@s-grid > * {
+    /* Make children stretch to fill by default */
+    margin: 0;
 }
 
 .\@s-grid > li {
@@ -689,6 +809,7 @@ a.\@s-grid:focus {
 .\@s-10x { grid-column-end: span 10 !important; }
 .\@s-11x { grid-column-end: span 11 !important; }
 .\@s-12x { grid-column-end: span 12 !important; }
+.\@s-nx { grid-column-end: -1 !important; }
 
 .\@s-x-end {
     justify-self: end !important;
@@ -719,31 +840,31 @@ a.\@s-grid:focus {
 .\@s-x-unbleedl {
     margin-left:  calc(0.5 * var(--x-gap));
     margin-right: 0;
-    max-width:    calc(100% - var(0.5 * --x-gap));
-    width:        calc(100% - var(0.5 * --x-gap));
+    max-width:    calc(100% - 0.5 * var(--x-gap));
+    width:        calc(100% - 0.5 * var(--x-gap));
 }
 
 .\@s-x-unbleedr {
     margin-left:  0;
     margin-right: calc(0.5 * var(--x-gap));
-    max-width:    calc(100% - var(0.5 * --x-gap));
-    width:        calc(100% - var(0.5 * --x-gap));
+    max-width:    calc(100% - 0.5 * var(--x-gap));
+    width:        calc(100% - 0.5 * var(--x-gap));
 }
 
 .\@s-x-bleedl {
     justify-self: stretch !important;
     margin-left:  calc(var(--x-gap) / -2);
     margin-right: 0;
-    max-width:    calc(100% + var(0.5 * --x-gap));
-    width:        calc(100% + var(0.5 * --x-gap));
+    max-width:    calc(100% + 0.5 * var(--x-gap));
+    width:        calc(100% + 0.5 * var(--x-gap));
 }
 
 .\@s-x-bleedr {
     justify-self: stretch !important;
     margin-left:  0;
     margin-right: calc(var(--x-gap) / -2);
-    max-width:    calc(100% + var(0.5 * --x-gap));
-    width:        calc(100% + var(0.5 * --x-gap));
+    max-width:    calc(100% + 0.5 * var(--x-gap));
+    width:        calc(100% + 0.5 * var(--x-gap));
 }
 
 .\@s-x-bleed {
@@ -752,6 +873,18 @@ a.\@s-grid:focus {
     margin-right: calc(var(--x-gap) / -2);
     max-width:    calc(100% + var(--x-gap));
     width:        calc(100% + var(--x-gap));
+}
+
+.\@s-x-bleed > * > tr > th:first-child,
+.\@s-x-bleed > * > tr > td:first-child {
+    /* Make bled tables cell content align with grid column start */
+    padding-left: calc(0.5 * var(--x-gap));
+}
+
+.\@s-x-bleed > * > tr > th:last-child,
+.\@s-x-bleed > * > tr > td:last-child {
+    /* Make bled tables cell content align with grid column end */
+    padding-right: calc(0.5 * var(--x-gap));
 }
 
 .\@s-x-floodl {
@@ -798,6 +931,7 @@ a.\@s-grid:focus {
 .\@s-1y { grid-row-end: span 1 !important; }
 .\@s-2y { grid-row-end: span 2 !important; }
 .\@s-3y { grid-row-end: span 3 !important; }
+.\@s-ny { grid-row-end: -1 !important; }
 
 .\@s-y-end {
     align-self:    end !important;
@@ -886,11 +1020,10 @@ a.\@s-grid:focus {
 .\@s-right-align    { text-align: right !important; }
 .\@s-center-align   { text-align: center !important; }
 .\@s-justify-align  { text-align: justify !important; }
-.\@s-size-18  { --size: 1.125rem; }
-.\@s-size-24  { --size: 1.5rem; }
-.\@s-size-30  { --size: 1.875rem; }
-.\@s-size-48  { --size: 3rem; }
-.\@s-size-60  { --size: 3.75rem; }
+
+
+
+
 
 .\@s-margin-0         { margin-top: 0      !important; }
 .\@s-margin-8         { margin-top: 0.5rem !important; }
@@ -921,6 +1054,14 @@ a.\@s-grid:focus {
 	position: fixed !important;
 }
 
+/**
+.relative
+**/
+
+.\@m-relative {
+	position: relative !important;
+	top: auto;
+}
 
 /**
 .sticky
@@ -932,16 +1073,18 @@ a.\@s-grid:focus {
 	top: 0;
 }
 
-.columns {
-    --x-gap: 2.1rem;
+
+
+
+.columns,
+.\@m-columns {
+    --x-gap: 2.1em;
 }
 
 .\@m-columns {
     display: block !important;
     column-gap: var(--x-gap);
-    --x-gap: 2.1rem;
 }
-
 
 .\@m-1-columns  { columns: 1 !important; }
 .\@m-2-columns  { columns: 2 !important; }
@@ -960,24 +1103,64 @@ a.\@s-grid:focus {
 .\@m-15-columns  { columns: 15 !important; }
 
 
-.\@m-flex           { display: flex !important; }
-.\@m-flex > li      { display: block; }
 
-.grid {
-    --x-gap: 2.1rem;
-    --y-gap: 2.1rem;
+
+.flex,
+.\@m-flex {
+    --x-gap: 2.1em;
+    --y-gap: 2.1em;
+}
+
+.\@m-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: var(--x-gap);
+    row-gap:    var(--y-gap);
+}
+
+.\@m-flex > *  { flex: 0 0 auto; margin: 0; }
+.\@m-flex > li { display: block; }
+
+.\@m-wrap      { flex-wrap: wrap; }
+.\@m-no-wrap   { flex-wrap: nowrap; }
+
+.\@m-x-flex    { flex-direction: row; }
+.\@m-y-flex    { flex-direction: column; }
+
+.\@m-y-flex > .x-start  { align-self: start; }
+.\@m-y-flex > .x-center { align-self: center; }
+.\@m-y-flex > .x-end    { align-self: end; }
+
+/* Attempt to keep focus box-shadows over the top of their siblings */
+.\@m-flex *              { z-index: 0; }
+.\@m-flex .select-button { z-index: 1; }
+.\@m-flex *:focus        { z-index: 2; }
+
+
+.grid,
+.\@m-grid {
+    --x-gap: 2.1em;
+    --y-gap: 2.1em;
 }
 
 .\@m-grid {
-    display: grid !important;
+    display: grid;
+
     /* Horizontal layout */
     grid-auto-flow: row;
+
     /* Create equal columns by default. */
     grid-auto-columns: minmax(0, 1fr);
     column-gap: var(--x-gap, 0);
     row-gap:    var(--y-gap, 0);
-    --x-gap: 2.1rem;
-    --y-gap: 2.1rem;
+
+    /* Stretch by default */
+    justify-items: stretch;
+    align-items: stretch;
+
+    /* Make grids behave as centered wraps by default. */
+    margin: 0 auto;
 }
 
 a.\@m-grid,
@@ -986,9 +1169,9 @@ a.\@m-grid:focus {
     text-decoration: none;
 }
 
-.\@m-grid[hidden] {
-    /* Override display grid !important declaration with hidden attribute */
-    display: none !important;
+.\@m-grid > * {
+    /* Make children stretch to fill by default */
+    margin: 0;
 }
 
 .\@m-grid > li {
@@ -1069,6 +1252,7 @@ a.\@m-grid:focus {
 .\@m-13x { grid-column-end: span 13 !important; }
 .\@m-14x { grid-column-end: span 14 !important; }
 .\@m-15x { grid-column-end: span 15 !important; }
+.\@m-nx { grid-column-end: -1 !important; }
 
 .\@m-x-end {
     justify-self: end !important;
@@ -1099,31 +1283,31 @@ a.\@m-grid:focus {
 .\@m-x-unbleedl {
     margin-left:  calc(0.5 * var(--x-gap));
     margin-right: 0;
-    max-width:    calc(100% - var(0.5 * --x-gap));
-    width:        calc(100% - var(0.5 * --x-gap));
+    max-width:    calc(100% - 0.5 * var(--x-gap));
+    width:        calc(100% - 0.5 * var(--x-gap));
 }
 
 .\@m-x-unbleedr {
     margin-left:  0;
     margin-right: calc(0.5 * var(--x-gap));
-    max-width:    calc(100% - var(0.5 * --x-gap));
-    width:        calc(100% - var(0.5 * --x-gap));
+    max-width:    calc(100% - 0.5 * var(--x-gap));
+    width:        calc(100% - 0.5 * var(--x-gap));
 }
 
 .\@m-x-bleedl {
     justify-self: stretch !important;
     margin-left:  calc(var(--x-gap) / -2);
     margin-right: 0;
-    max-width:    calc(100% + var(0.5 * --x-gap));
-    width:        calc(100% + var(0.5 * --x-gap));
+    max-width:    calc(100% + 0.5 * var(--x-gap));
+    width:        calc(100% + 0.5 * var(--x-gap));
 }
 
 .\@m-x-bleedr {
     justify-self: stretch !important;
     margin-left:  0;
     margin-right: calc(var(--x-gap) / -2);
-    max-width:    calc(100% + var(0.5 * --x-gap));
-    width:        calc(100% + var(0.5 * --x-gap));
+    max-width:    calc(100% + 0.5 * var(--x-gap));
+    width:        calc(100% + 0.5 * var(--x-gap));
 }
 
 .\@m-x-bleed {
@@ -1132,6 +1316,18 @@ a.\@m-grid:focus {
     margin-right: calc(var(--x-gap) / -2);
     max-width:    calc(100% + var(--x-gap));
     width:        calc(100% + var(--x-gap));
+}
+
+.\@m-x-bleed > * > tr > th:first-child,
+.\@m-x-bleed > * > tr > td:first-child {
+    /* Make bled tables cell content align with grid column start */
+    padding-left: calc(0.5 * var(--x-gap));
+}
+
+.\@m-x-bleed > * > tr > th:last-child,
+.\@m-x-bleed > * > tr > td:last-child {
+    /* Make bled tables cell content align with grid column end */
+    padding-right: calc(0.5 * var(--x-gap));
 }
 
 .\@m-x-floodl {
@@ -1178,6 +1374,7 @@ a.\@m-grid:focus {
 .\@m-1y { grid-row-end: span 1 !important; }
 .\@m-2y { grid-row-end: span 2 !important; }
 .\@m-3y { grid-row-end: span 3 !important; }
+.\@m-ny { grid-row-end: -1 !important; }
 
 .\@m-y-end {
     align-self:    end !important;
@@ -1266,11 +1463,10 @@ a.\@m-grid:focus {
 .\@m-right-align    { text-align: right !important; }
 .\@m-center-align   { text-align: center !important; }
 .\@m-justify-align  { text-align: justify !important; }
-.\@m-size-18  { --size: 1.125rem; }
-.\@m-size-24  { --size: 1.5rem; }
-.\@m-size-30  { --size: 1.875rem; }
-.\@m-size-48  { --size: 3rem; }
-.\@m-size-60  { --size: 3.75rem; }
+
+
+
+
 
 .\@m-margin-0         { margin-top: 0      !important; }
 .\@m-margin-8         { margin-top: 0.5rem !important; }
@@ -1301,6 +1497,14 @@ a.\@m-grid:focus {
 	position: fixed !important;
 }
 
+/**
+.relative
+**/
+
+.\@l-relative {
+	position: relative !important;
+	top: auto;
+}
 
 /**
 .sticky
@@ -1312,16 +1516,18 @@ a.\@m-grid:focus {
 	top: 0;
 }
 
-.columns {
-    --x-gap: 2.1rem;
+
+
+
+.columns,
+.\@l-columns {
+    --x-gap: 2.1em;
 }
 
 .\@l-columns {
     display: block !important;
     column-gap: var(--x-gap);
-    --x-gap: 2.1rem;
 }
-
 
 .\@l-1-columns  { columns: 1 !important; }
 .\@l-2-columns  { columns: 2 !important; }
@@ -1343,24 +1549,64 @@ a.\@m-grid:focus {
 .\@l-18-columns  { columns: 18 !important; }
 
 
-.\@l-flex           { display: flex !important; }
-.\@l-flex > li      { display: block; }
 
-.grid {
-    --x-gap: 2.1rem;
-    --y-gap: 2.1rem;
+
+.flex,
+.\@l-flex {
+    --x-gap: 2.1em;
+    --y-gap: 2.1em;
+}
+
+.\@l-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: var(--x-gap);
+    row-gap:    var(--y-gap);
+}
+
+.\@l-flex > *  { flex: 0 0 auto; margin: 0; }
+.\@l-flex > li { display: block; }
+
+.\@l-wrap      { flex-wrap: wrap; }
+.\@l-no-wrap   { flex-wrap: nowrap; }
+
+.\@l-x-flex    { flex-direction: row; }
+.\@l-y-flex    { flex-direction: column; }
+
+.\@l-y-flex > .x-start  { align-self: start; }
+.\@l-y-flex > .x-center { align-self: center; }
+.\@l-y-flex > .x-end    { align-self: end; }
+
+/* Attempt to keep focus box-shadows over the top of their siblings */
+.\@l-flex *              { z-index: 0; }
+.\@l-flex .select-button { z-index: 1; }
+.\@l-flex *:focus        { z-index: 2; }
+
+
+.grid,
+.\@l-grid {
+    --x-gap: 2.1em;
+    --y-gap: 2.1em;
 }
 
 .\@l-grid {
-    display: grid !important;
+    display: grid;
+
     /* Horizontal layout */
     grid-auto-flow: row;
+
     /* Create equal columns by default. */
     grid-auto-columns: minmax(0, 1fr);
     column-gap: var(--x-gap, 0);
     row-gap:    var(--y-gap, 0);
-    --x-gap: 2.1rem;
-    --y-gap: 2.1rem;
+
+    /* Stretch by default */
+    justify-items: stretch;
+    align-items: stretch;
+
+    /* Make grids behave as centered wraps by default. */
+    margin: 0 auto;
 }
 
 a.\@l-grid,
@@ -1369,9 +1615,9 @@ a.\@l-grid:focus {
     text-decoration: none;
 }
 
-.\@l-grid[hidden] {
-    /* Override display grid !important declaration with hidden attribute */
-    display: none !important;
+.\@l-grid > * {
+    /* Make children stretch to fill by default */
+    margin: 0;
 }
 
 .\@l-grid > li {
@@ -1461,6 +1707,7 @@ a.\@l-grid:focus {
 .\@l-16x { grid-column-end: span 16 !important; }
 .\@l-17x { grid-column-end: span 17 !important; }
 .\@l-18x { grid-column-end: span 18 !important; }
+.\@l-nx { grid-column-end: -1 !important; }
 
 .\@l-x-end {
     justify-self: end !important;
@@ -1491,31 +1738,31 @@ a.\@l-grid:focus {
 .\@l-x-unbleedl {
     margin-left:  calc(0.5 * var(--x-gap));
     margin-right: 0;
-    max-width:    calc(100% - var(0.5 * --x-gap));
-    width:        calc(100% - var(0.5 * --x-gap));
+    max-width:    calc(100% - 0.5 * var(--x-gap));
+    width:        calc(100% - 0.5 * var(--x-gap));
 }
 
 .\@l-x-unbleedr {
     margin-left:  0;
     margin-right: calc(0.5 * var(--x-gap));
-    max-width:    calc(100% - var(0.5 * --x-gap));
-    width:        calc(100% - var(0.5 * --x-gap));
+    max-width:    calc(100% - 0.5 * var(--x-gap));
+    width:        calc(100% - 0.5 * var(--x-gap));
 }
 
 .\@l-x-bleedl {
     justify-self: stretch !important;
     margin-left:  calc(var(--x-gap) / -2);
     margin-right: 0;
-    max-width:    calc(100% + var(0.5 * --x-gap));
-    width:        calc(100% + var(0.5 * --x-gap));
+    max-width:    calc(100% + 0.5 * var(--x-gap));
+    width:        calc(100% + 0.5 * var(--x-gap));
 }
 
 .\@l-x-bleedr {
     justify-self: stretch !important;
     margin-left:  0;
     margin-right: calc(var(--x-gap) / -2);
-    max-width:    calc(100% + var(0.5 * --x-gap));
-    width:        calc(100% + var(0.5 * --x-gap));
+    max-width:    calc(100% + 0.5 * var(--x-gap));
+    width:        calc(100% + 0.5 * var(--x-gap));
 }
 
 .\@l-x-bleed {
@@ -1524,6 +1771,18 @@ a.\@l-grid:focus {
     margin-right: calc(var(--x-gap) / -2);
     max-width:    calc(100% + var(--x-gap));
     width:        calc(100% + var(--x-gap));
+}
+
+.\@l-x-bleed > * > tr > th:first-child,
+.\@l-x-bleed > * > tr > td:first-child {
+    /* Make bled tables cell content align with grid column start */
+    padding-left: calc(0.5 * var(--x-gap));
+}
+
+.\@l-x-bleed > * > tr > th:last-child,
+.\@l-x-bleed > * > tr > td:last-child {
+    /* Make bled tables cell content align with grid column end */
+    padding-right: calc(0.5 * var(--x-gap));
 }
 
 .\@l-x-floodl {
@@ -1570,6 +1829,7 @@ a.\@l-grid:focus {
 .\@l-1y { grid-row-end: span 1 !important; }
 .\@l-2y { grid-row-end: span 2 !important; }
 .\@l-3y { grid-row-end: span 3 !important; }
+.\@l-ny { grid-row-end: -1 !important; }
 
 .\@l-y-end {
     align-self:    end !important;
@@ -1658,11 +1918,10 @@ a.\@l-grid:focus {
 .\@l-right-align    { text-align: right !important; }
 .\@l-center-align   { text-align: center !important; }
 .\@l-justify-align  { text-align: justify !important; }
-.\@l-size-18  { --size: 1.125rem; }
-.\@l-size-24  { --size: 1.5rem; }
-.\@l-size-30  { --size: 1.875rem; }
-.\@l-size-48  { --size: 3rem; }
-.\@l-size-60  { --size: 3.75rem; }
+
+
+
+
 
 .\@l-margin-0         { margin-top: 0      !important; }
 .\@l-margin-8         { margin-top: 0.5rem !important; }
@@ -1675,6 +1934,3 @@ a.\@l-grid:focus {
 .\@l-margin-80        { margin-top: 5rem   !important; }
 .\@l-margin-96        { margin-top: 6rem   !important; }
 }
-
-
-

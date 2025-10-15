@@ -11,17 +11,18 @@
     <link rel="stylesheet" href="./build/module.css" />
 </head>
 
-<body class="8x-grid @s-12x-grid @m-15x-grid @l-18x-grid grid">
-    ${ include("./templates/slide-show.literal", {
-        class:    "8x @s-12x @m-15x @l-18x x-flood",
-        controls: "pagination fullscreen",
-        slides:   await fetch("http://sound.stephen.band/photos/Iceland/index.json")
-            .then((r) => r.json())
-            .catch((error) => {
-                console.log(error);
-                return {};
-            })
-    }) }
+<body>
+    <header class="ratio-2:1" style="background-image: url('./images/header-stephen-chair.avif');"></header>
+
+    <!--slide-show class="8x @s-12x @m-15x @l-18x x-flood" controls="pagination fullscreen" loop>$ {
+        (await fetch("http://sound.stephen.band/photos/Iceland/index.json")
+        .then((r) => r.json())
+        .catch((error) => {
+            console.log(error);
+            return [];
+        }))
+        .map(include('../literal/templates/figure.literal'))
+    }</slide-show>
 
     <section class="8x x1 @s-6x @m-x2 @l-x3 beige1-fg">
         <h3 class="beige-fg">The Night Is Still Young</h3>
@@ -31,8 +32,9 @@
 
     <section class="8x x1 @m-x2 @l-x3">
         <blockquote>
-            <p>Merci pour ta disponibilité et pour ton super et efficace travail. Ton
-            aide a été vraiment précieuse et notre spectacle a eu un super son grâce à toi.</p>
+            <p><!-- Merci pour ta disponibilité et pour ton super et efficace travail. ->
+                Ton aide a été vraiment précieuse et notre spectacle a eu un super son grâce à toi.
+            </p>
 
             <p class="text-09 beige-fg" style="font-style: normal;">
                 <span class="beige1-fg">Ramaya Tegegne</span><br/>
@@ -41,6 +43,14 @@
             </p>
         </blockquote>
     </section>
+
+    <section class="8x x1 @s-6x @m-x2 @l-x3 beige1-fg">
+        <h3 class="beige-fg">Harmonic Circle</h3>
+        <p>An interactive tool for visualising scales inside the circle of fourths.</p>
+        <a class="block" href="https://stephen.band/harmony-circle/">Harmonic Circle</a>
+    </section>
+
+
 
     <section class="8x x1 @s-6x @m-x2 @l-x3">
         <h3>Custom Elements</h3>
@@ -60,7 +70,7 @@
         <h3>Font size calculator</h3>
         <p>Generate CSS for viewport-scaleable font sizes.</p>
         <p style="margin-top: 0;"><a href="https://stephen.band/font-size/">stephen.band/font-size/</a></p>
-    </section>
+    </section-->
 
     <script type="module">
         import './build/module.js';

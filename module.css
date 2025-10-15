@@ -1,20 +1,21 @@
 
-@import "../bolt/elements/html.css";
-@import "../bolt/elements/svg.css";
-@import "../bolt/elements/root.css";
-@import "../bolt/elements/body.css";
-@import "../bolt/elements/type.css";
-@import "../bolt/elements/a.css";
-@import "../bolt/elements/table.css";
+@import "https://cdn.jsdelivr.net/gh/stephband/bolt-2@1.0.x/elements/html.css";
+@import "https://cdn.jsdelivr.net/gh/stephband/bolt-2@1.0.x/elements/svg.css";
+@import "https://cdn.jsdelivr.net/gh/stephband/bolt-2@1.0.x/elements/root.css";
+@import "https://cdn.jsdelivr.net/gh/stephband/bolt-2@1.0.x/elements/body.css";
+@import "https://cdn.jsdelivr.net/gh/stephband/bolt-2@1.0.x/elements/type.css";
+@import "https://cdn.jsdelivr.net/gh/stephband/bolt-2@1.0.x/elements/a.css";
+@import "https://cdn.jsdelivr.net/gh/stephband/bolt-2@1.0.x/elements/table.css";
 
-@import "../bolt/classes/button.css";
-@import "../bolt/classes/list.css";
-@import "../bolt/classes/thumb.css";
-@import "../bolt/classes/block.css";
-@import "../bolt/classes/striped-table.css";
-@import "../bolt/classes/color.css";
+@import "https://cdn.jsdelivr.net/gh/stephband/bolt-2@1.0.x/classes/button.css";
+@import "https://cdn.jsdelivr.net/gh/stephband/bolt-2@1.0.x/classes/list.css";
+@import "https://cdn.jsdelivr.net/gh/stephband/bolt-2@1.0.x/classes/thumb.css";
+@import "https://cdn.jsdelivr.net/gh/stephband/bolt-2@1.0.x/classes/block.css";
+@import "https://cdn.jsdelivr.net/gh/stephband/bolt-2@1.0.x/classes/ratio.css";
+@import "https://cdn.jsdelivr.net/gh/stephband/bolt-2@1.0.x/classes/striped-table.css";
+@import "https://cdn.jsdelivr.net/gh/stephband/bolt-2@1.0.x/classes/color.css";
 
-@import "../bolt/classes/device.css";
+@import "https://cdn.jsdelivr.net/gh/stephband/bolt-2@1.0.x/classes/device.css";
 
 @import './classes/atoms.css';
 @import './classes/text.css';

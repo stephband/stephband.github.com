@@ -1,8 +1,0 @@
-
-<figure class="block">
-    <img class="block" src="//sound.stephen.band/photos/Iceland/${ data.name }" draggable="false" alt="${ data.alt }" />
-    <figcaption>
-        <h4 class="white-fg text-06" ${ data.title ? '' : 'hidden' }>${ data.title }</h4>
-        <p class="white-fg text-10" ${ data.location ? '' : 'hidden' }>${ data.location }</p>
-    </figcaption>
-</figure>

@@ -1,0 +1,12 @@
+{
+    "imports": {
+        "bolt/":       "https://cdn.jsdelivr.net/gh/stephband/bolt-2@1.0.x/",
+        "dom/":        "https://cdn.jsdelivr.net/gh/stephband/dom@1.4.x/modules/",
+        "fn/":         "https://cdn.jsdelivr.net/gh/stephband/fn@1.5.x/modules/",
+        "slide-show/": "https://cdn.jsdelivr.net/gh/stephband/slide-show@1.2.x/",
+        "midi/":       "https://cdn.jsdelivr.net/gh/stephband/midi@1.1.x/modules/",
+        "soundstage/": "https://cdn.jsdelivr.net/gh/stephband/midi@0.8.x/modules/"
+    },
+
+    "lock": false
+}

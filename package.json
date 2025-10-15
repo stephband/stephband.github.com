@@ -2,10 +2,11 @@
   "name": "stephen.band",
   "title": "Stephen Band",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name":    "Stephen Band",
     "twitter": "@stephband",
+    "bsky":    "stephen.band",
     "url":     "https://stephen.band/"
   },
   "repository": {
